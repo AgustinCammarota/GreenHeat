@@ -1,0 +1,26 @@
+<!-- Carousel Start -->
+<div class="carousel-container">
+    @for(slide of slides(); track slide; let i = $index) {
+        <div class="slide-container" [@slideAnimation]="currentIndex()">
+            @if (i === currentIndex()) {
+                <img class="slide-container__image"
+                     [ngSrc]="slide.base"
+                     [srcset]="slide.sizes"
+                     [alt]="slide.alt"
+                     sizes="(max-width: 600px) 100vw,(max-width: 900px) 100vw,900px"
+                     fill
+                     priority>
+            }
+        </div>
+    }
+
+    <div class="buttons-container">
+        <button (click)="onNextClick()" class="button-action action-left" type="button" i18n-aria-label="@@carouselButtonLeft" aria-label="Retroceder">
+            <img class="button-action__image" ngSrc="./assets/svg/arrow-left.svg" i18n-alt="@@iconCarouselLeftAlt" alt="Flecha" i18n-aria-label aria-label="Menu" width="24" height="24" fetchpriority="auto" loading="eager">
+        </button>
+        <button (click)="onPreviousClick()" class="button-action action-right" type="button" i18n-aria-label="@@carouselButtonRight" aria-label="Avanzar">
+            <img class="button-action__image" ngSrc="./assets/svg/arrow-right.svg" i18n-alt="@@iconCarouselRightAlt" alt="Flecha" i18n-aria-label aria-label="Menu" width="24" height="24" fetchpriority="auto" loading="eager">
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->

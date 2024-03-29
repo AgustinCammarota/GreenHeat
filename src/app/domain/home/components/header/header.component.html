@@ -1,0 +1,29 @@
+<!-- Navbar Start -->
+<div appObserverVisibility (scrolledToTop)="handleScroll($event)" appObserverDevice (mobileDeviceDetermined)="handleDevice($event)" class="reference-header" aria-hidden="true"></div>
+<header class="header" [@scrollTrigger]="isMaximize() && !this.isMobileDevice() ? 'minimize' : 'maximize'">
+    <nav class="navbar">
+        <div class="icon-container">
+            <img class="icon-container__image" ngSrc="./assets/svg/logo.svg" i18n-alt="@@iconLogoHeaderAlt" alt="Green Heat Clima" width="120" height="150" priority>
+            <h1 class="icon-container__text" i18n="@@iconLogoHeaderText">Green Heat Clima</h1>
+        </div>
+
+        <div class="nav-container">
+            <button type="button" class="nav-button-container" (click)="openMenu()" i18n-aria-label="@@buttonMenuHeaderLabel" aria-label="Menu">
+                <img class="nav-button-container__image" ngSrc="./assets/svg/menu.svg" i18n-alt="@@iconMenuHeaderAlt" alt="Menu" i18n-aria-label aria-label="Menu" width="32" height="32" fetchpriority="auto" loading="eager">
+            </button>
+
+            <ul class="list-container" [@openMenuTrigger]="isMenuOpen() ? 'open' : 'close'">
+                @for (items of listItemNavigation(); track items.description) {
+                    <li class="list-item-container">
+                        <a class="list-item-container__link" href="index.html">{{ items.description }}</a>
+                    </li>
+                }
+            </ul>
+
+            <button type="button" class="action-button-container" i18n-aria-label="@@iconHeaderWhatsappLabel" aria-label="Whatsapp" (click)="openWhatsapp()">
+                <img class="action-button-container__image" ngSrc="./assets/svg/whatsapp.svg" i18n-alt="iconHeaderWhatsappAlt" alt="Whatsapp" width="32" height="32" fetchpriority="auto" loading="eager">
+            </button>
+        </div>
+    </nav>
+</header>
+<!-- Navbar End -->

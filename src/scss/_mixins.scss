@@ -1,0 +1,29 @@
+/**
+ * File with mixin functions styles
+ * @access public
+ */
+
+/**
+ * Mixin font
+ * @param {Type} $family
+ * @param {Length} $size
+ * @param {Type} $weight
+ * @access public
+ */
+@mixin font($family, $size, $weight: normal) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+/**
+ * Mixin flexbox
+ * @param {Type} $justify
+ * @param {Type} $align
+ * @access public
+ */
+@mixin flexbox($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}

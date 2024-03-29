@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es-AR" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="aboutCarouselImageOne" datatype="html">
+        <source>Primera imagen del carousel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutCarouselImageTwo" datatype="html">
+        <source>Segunda imagen del carousel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="carouselButtonLeft" datatype="html">
+        <source>Retroceder</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="iconCarouselLeftAlt" datatype="html">
+        <source>Flecha</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2102825898069375693" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="carouselButtonRight" datatype="html">
+        <source>Avanzar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="iconCarouselRightAlt" datatype="html">
+        <source>Flecha</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="iconLogoHeaderAlt" datatype="html">
+        <source>Green Heat Clima</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="iconLogoHeaderText" datatype="html">
+        <source>Green Heat Clima</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="buttonMenuHeaderLabel" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="iconMenuHeaderAlt" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="iconHeaderWhatsappLabel" datatype="html">
+        <source>Whatsapp</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3366532496933188374" datatype="html">
+        <source>Whatsapp</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">iconHeaderWhatsappAlt</note>
+      </trans-unit>
+      <trans-unit id="linkHeaderAbout" datatype="html">
+        <source>Nosotros</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.ts</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linkHeaderServices" datatype="html">
+        <source>Servicios</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linkHeaderClients" datatype="html">
+        <source>Clientes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linkHeaderContact" datatype="html">
+        <source>Contacto</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

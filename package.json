@@ -3,11 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --configuration=es-AR",
+    "start:en": "ng serve --configuration=en-US",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:GreenHeat": "node dist/green-heat/server/server.mjs"
+    "serve:ssr:GreenHeat": "node dist/green-heat/server/es-AR/server.mjs",
+    "serve:ssr:GreenHeat:en": "node dist/green-heat/server/en-US/server.mjs",
+    "extract:locales": "ng extract-i18n --output-path src/locale",
+    "compodoc": "compodoc -p tsconfig.app.json",
+    "lint": "ng lint",
+    "lint:styles": "stylelint \"src/**/*.scss\""
   },
   "private": true,
   "dependencies": {
@@ -22,23 +28,36 @@
     "@angular/router": "^17.3.0",
     "@angular/ssr": "^17.3.0",
     "express": "^4.18.2",
+    "ngx-device-detector": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.0",
+    "@angular-eslint/builder": "17.3.0",
+    "@angular-eslint/eslint-plugin": "17.3.0",
+    "@angular-eslint/eslint-plugin-template": "17.3.0",
+    "@angular-eslint/schematics": "17.3.0",
+    "@angular-eslint/template-parser": "17.3.0",
     "@angular/cli": "^17.3.0",
     "@angular/compiler-cli": "^17.3.0",
+    "@angular/localize": "^17.3.0",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
+    "eslint": "^8.57.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "stylelint": "^16.3.0",
+    "stylelint-config-sass-guidelines": "^11.1.0",
+    "stylelint-scss": "^6.2.1",
     "typescript": "~5.4.2"
   }
 }

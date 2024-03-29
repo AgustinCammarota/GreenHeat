@@ -1,0 +1,29 @@
+@use "mixins";
+@use "vars";
+
+.about-section {
+  position: relative;
+  box-shadow: vars.$primary-box-shadow;
+  @include mixins.flexbox(center, center);
+
+  .carousel {
+    width: 50%;
+    height: 700px;
+
+    // Tablet and mobile media query
+    @media only screen and (max-width: vars.$desktop) {
+      width: 100%;
+    }
+  }
+
+  .about {
+    width: 50%;
+    height: 700px;
+
+    // Tablet and mobile media query
+    @media only screen and (max-width: vars.$desktop) {
+      width: 100%;
+      position: absolute;
+    }
+  }
+}
