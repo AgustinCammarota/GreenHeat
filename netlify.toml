@@ -5,7 +5,7 @@
   publish = "dist/green-heat/browser"
 [redirects]
   from = "/*”
-  to = "/es-AR/home”
+  to = "/es-AR/”
   status = 302
   conditions = {Language = ["es-AR"]}
 
