@@ -3,11 +3,6 @@
   command = "npm run build"
   functions = "netlify/functions"
   publish = "dist/green-heat/browser"
-[redirects]
-  from = "/*”
-  to = "/es-AR/”
-  status = 302
-  conditions = {Language = ["es-AR"]}
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
