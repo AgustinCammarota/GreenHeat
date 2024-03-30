@@ -5,7 +5,7 @@
   publish = "dist/green-heat/browser"
 [[redirects]]
   from = "/es-AR/*"
-  to = "/index.server.html"
+  to = "/es-AR/index.server.html"
   status = 200
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
