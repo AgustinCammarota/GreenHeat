@@ -3,23 +3,40 @@ const path = require('path');
 
 // Function to copy the contents of a directory
 
-const sourceDirectory = path.join('dist/green-heat/server/es-AR/index.server.html');
-const targetDirectory = path.join('dist/green-heat/server/index.server.html');
+const sourceDirectory = path.join('dist/green-heat/server/es-AR/');
+const targetDirectory = path.join('dist/green-heat/server/');
 
-// Check if the source file exists
-if (fs.existsSync(sourceDirectory)) {
-  // Get the absolute paths of the source and destination files
-  const sourceAbsolutePath = path.resolve(sourceDirectory);
-  const destinationAbsolutePath = path.resolve(targetDirectory);
+const sourceAbsolutePath = path.resolve(sourceDirectory);
+const destinationAbsolutePath = path.resolve(targetDirectory);
 
-  // Copy the source file to the destination
-  fs.copyFile(sourceAbsolutePath, destinationAbsolutePath, (err) => {
+function copyDirectoryContents(sourceDir, targetDir) {
+  fs.readdir(sourceAbsolutePath, (err, files) => {
     if (err) {
-      console.error('Error copying the file:', err);
-    } else {
-      console.log('File copied successfully.');
+      console.error(`Error reading source directory ${sourceAbsolutePath}:`, err);
+      return;
     }
+
+    // Create the target directory if it doesn't exist
+    if (!fs.existsSync(destinationAbsolutePath)) {
+      fs.mkdirSync(destinationAbsolutePath, { recursive: true });
+    }
+
+    // Copy each file from the source directory to the target directory
+    files.forEach(file => {
+      const sourceFile = path.join(sourceAbsolutePath, file);
+      const targetFile = path.join(destinationAbsolutePath, file);
+
+      // Check if the file is a directory
+      if (fs.statSync(sourceFile).isDirectory()) {
+        // Recursively copy the contents of the directory
+        copyDirectoryContents(sourceFile, targetFile);
+      } else {
+        // Copy the file to the target directory
+        fs.copyFileSync(sourceFile, targetFile);
+        console.log(`Copied ${sourceFile} to ${targetFile}`);
+      }
+    });
   });
-} else {
-  console.error('The source file does not exist.');
 }
+
+copyDirectoryContents(sourceAbsolutePath, destinationAbsolutePath);
