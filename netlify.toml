@@ -2,7 +2,11 @@
 [build]
   command = "npm run build"
   functions = "netlify/functions"
-  publish = "dist/green-heat/browser/es-AR"
+  publish = "dist/green-heat/browser"
+[[redirects]]
+from = "/es-AR/*"
+to = "/index.server.html"
+status = 200
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
