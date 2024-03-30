@@ -4,8 +4,8 @@
   functions = "netlify/functions"
   publish = "dist/green-heat/browser"
 [[redirects]]
-  from = "/es-AR/*"
-  to = "/es-AR/index.server.html"
+  from = "/index.server.html"
+  to = "dist/green-heat/server/es-AR/index.server.html"
   status = 200
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
