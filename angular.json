@@ -74,6 +74,7 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
+              "localize": false,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -84,12 +85,8 @@
             "en-US": {
               "localize": [
                 "en-US"
-              ]
-            },
-            "es-AR": {
-              "localize": [
-                "es-AR"
-              ]
+              ],
+              "baseHref": "/en-US/"
             }
           },
           "defaultConfiguration": "production"
@@ -97,14 +94,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "en-US": {
-              "buildTarget": "GreenHeat:build:development,en-US"
-            },
-            "es-AR": {
-              "buildTarget": "GreenHeat:build:development,es-AR"
-            },
             "production": {
               "buildTarget": "GreenHeat:build:production"
+            },
+            "en-US": {
+              "buildTarget": "GreenHeat:build:development,en-US"
             },
             "development": {
               "buildTarget": "GreenHeat:build:development"

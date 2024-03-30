@@ -4,7 +4,7 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { routes } from './app.routes';
-import {provideNetlifyLoader} from "@angular/common";
+// import {provideNetlifyLoader} from "@angular/common";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,7 +15,7 @@ export const appConfig: ApplicationConfig = {
       ),
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideNetlifyLoader(),
+    // provideNetlifyLoader(),
     { provide: LOCALE_ID, useValue: 'es-AR' }
   ]
 };
