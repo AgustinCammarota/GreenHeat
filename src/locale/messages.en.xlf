@@ -1,23 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="es-AR" datatype="plaintext" original="ng2.template">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="aboutSubTitle" datatype="html">
+        <source>¿Quiénes Somos?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutTitle" datatype="html">
+        <source>Climatización Sustentable</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutText" datatype="html">
+        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutContactButton" datatype="html">
+        <source>Contáctenos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.html</context>
+          <context context-type="linenumber">7,10</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="aboutCarouselImageOne" datatype="html">
         <source>Primera imagen del carousel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">35</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutCarouselImageTwo" datatype="html">
         <source>Segunda imagen del carousel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="carouselButtonLeft" datatype="html">

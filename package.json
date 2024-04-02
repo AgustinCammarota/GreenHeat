@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:en": "ng serve --configuration=en-US",
+    "start:en": "ng serve --configuration=en",
     "build": "ng build && node scripts/copy-proxy-server.js && node scripts/move-server-directory.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

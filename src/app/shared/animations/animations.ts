@@ -28,3 +28,24 @@ export const fadeOut = animation([
       style({ opacity: 0 })
   )
 ]);
+
+/**
+ * Fade in animation
+ */
+export const visibilityIn = animation([
+  style({ visibility: 'hidden' }),
+  animate(
+      "{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+      style({ visibility: 'visible' })
+  )
+]);
+
+/**
+ * Fade out animation
+ */
+export const visibilityOut = animation([
+  animate(
+      "{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+      style({ visibility: 'hidden' })
+  )
+]);

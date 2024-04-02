@@ -3,7 +3,7 @@ const path = require('path');
 
 // Function to copy the contents of a directory
 
-const sourceDirectory = path.join('dist/green-heat/server/es-AR/');
+const sourceDirectory = path.join('dist/green-heat/server/es/');
 const targetDirectory = path.join('dist/green-heat/server/');
 
 const sourceAbsolutePath = path.resolve(sourceDirectory);

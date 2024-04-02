@@ -27,6 +27,16 @@
     transform: translate(30px, 300px);
     will-change: transform;
 
+    // Desktop xl media query
+    @media only screen and (max-width: vars.$desktop-xl) {
+      transform: translate(30px, 250px);
+    }
+
+    // Tablet and mobile media query
+    @media only screen and (max-width: vars.$desktop) {
+      transform: translate(30px, 150px);
+    }
+
     .button-action {
       height: 50px;
       width: 50px;

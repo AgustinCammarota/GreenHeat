@@ -5,11 +5,11 @@
   "projects": {
     "GreenHeat": {
       "i18n": {
-        "sourceLocale": "es-AR",
+        "sourceLocale": "es",
         "locales": {
-          "en-US": {
+          "en": {
             "translation": "src/locale/messages.en.xlf",
-            "baseHref": "en-US/"
+            "baseHref": "/en/"
           }
         }
       },
@@ -64,7 +64,7 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
+                  "maximumWarning": "3kb",
                   "maximumError": "4kb"
                 }
               ],
@@ -82,14 +82,14 @@
                 }
               ]
             },
-            "en-US": {
+            "en": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
               "localize": [
-                "en-US"
+                "en"
               ],
-              "baseHref": "/en-US/",
+              "baseHref": "/en/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -106,8 +106,8 @@
             "production": {
               "buildTarget": "GreenHeat:build:production"
             },
-            "en-US": {
-              "buildTarget": "GreenHeat:build:development,en-US"
+            "en": {
+              "buildTarget": "GreenHeat:build:development,en"
             },
             "development": {
               "buildTarget": "GreenHeat:build:development"

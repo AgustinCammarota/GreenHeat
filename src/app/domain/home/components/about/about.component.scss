@@ -1,29 +1,114 @@
 @use "mixins";
 @use "vars";
+@use "typography";
 
 .about-section {
+  width: 100%;
+  height: 100%;
   position: relative;
   box-shadow: vars.$primary-box-shadow;
   @include mixins.flexbox(center, center);
+
+  // Tablet and mobile media query
+  @media only screen and (max-width: vars.$desktop) {
+    flex-direction: column;
+  }
 
   .carousel {
     width: 50%;
     height: 700px;
 
+    // Desktop xl media query
+    @media only screen and (max-width: vars.$desktop-xl) {
+      height: 600px;
+    }
+
     // Tablet and mobile media query
     @media only screen and (max-width: vars.$desktop) {
       width: 100%;
+      height: 400px;
     }
   }
 
   .about {
     width: 50%;
     height: 700px;
+    text-align: start;
+    flex-direction: column;
+    @include mixins.flexbox(center, flex-start);
+
+    // Desktop xl media query
+    @media only screen and (max-width: vars.$desktop-xl) {
+      height: 600px;
+    }
 
     // Tablet and mobile media query
     @media only screen and (max-width: vars.$desktop) {
       width: 100%;
-      position: absolute;
+      height: auto;
+      margin-bottom: 48px;
+      margin-top: 60px;
+      justify-content: start;
+    }
+
+    .about__subtitle {
+      margin-top: 32px;
+      padding: 0 16px 0 48px;
+      margin-bottom: 8px;
+      color: vars.$tertiary-green;
+      @include mixins.font(vars.$font-family-inter, 3rem, 500);
+
+      // Desktop xl media query
+      @media only screen and (max-width: vars.$desktop-xl) {
+        margin-top: 60px;
+        padding-left: 16px;
+        font-size: 2.5rem;
+      }
+    }
+
+    .about__title {
+      padding: 0 16px 0 48px;
+      color: vars.$primary-green;
+      @include mixins.font(vars.$font-family-inter, 2.5rem, 500);
+
+      // Desktop xl media query
+      @media only screen and (max-width: vars.$desktop-xl) {
+        padding-left: 16px;
+        font-size: 2rem;
+      }
+    }
+
+    .about__text {
+      width: 80%;
+      text-align: justify;
+      padding: 16px 16px 16px 48px;
+      color: vars.$primary-grey;
+      @include mixins.font(vars.$font-family-heebo, 1.2rem, 400);
+
+      // Desktop xl media query
+      @media only screen and (max-width: vars.$desktop-xl) {
+        width: auto;
+        padding-left: 16px;
+        font-size: 1rem;
+      }
+    }
+
+    .about__button {
+      margin-left: 48px;
+      height: 60px;
+      width: 200px;
+      color: vars.$primary-white;
+      background-color: vars.$primary-green;
+      @include mixins.font(vars.$font-family-heebo, 1.2rem, 400);
+
+      &:hover {
+        background-color: vars.$secondary-green;
+      }
+
+      // Desktop xl media query
+      @media only screen and (max-width: vars.$desktop-xl) {
+        margin-left: 16px;
+      }
     }
   }
 }

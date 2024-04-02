@@ -11,7 +11,7 @@ import { ObserverVisibilityDirective } from '@shared/directives/observer-visibil
 import { ObserverDeviceDirective } from '@shared/directives/observer-device.directive';
 import { Navigation } from '@home/interfaces';
 import { environment } from '@environments/environment.development'
-import { fadeIn, fadeOut } from '@shared/animations/animations';
+import { visibilityIn, visibilityOut } from '@shared/animations/animations';
 
 @Component({
   selector: 'app-header',
@@ -48,20 +48,20 @@ import { fadeIn, fadeOut } from '@shared/animations/animations';
       state(
           'open',
           style({
-            opacity: '1'
+            visibility: 'visible'
           }),
       ),
       state(
           'close',
           style({
-            opacity: '0'
+            visibility: 'hidden'
           }),
       ),
       transition("close => open", [
-        useAnimation(fadeIn, { params: { time: "0.2s" } })
+        useAnimation(visibilityIn, { params: { time: "0.2s" } })
       ]),
       transition("open => close", [
-        useAnimation(fadeOut, { params: { time: "0.2s" } })
+        useAnimation(visibilityOut, { params: { time: "0.2s" } })
       ])
     ])
   ]

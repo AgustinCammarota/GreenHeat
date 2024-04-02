@@ -5,6 +5,7 @@ import {
 } from '@angular/core';
 import { CarouselComponent } from '@home/components/carousel/carousel.component';
 import { Carousel } from '@home/interfaces';
+import { environment } from '@environments/environment.development';
 
 @Component({
   selector: 'app-about',
@@ -52,4 +53,12 @@ export class AboutComponent {
       alt: $localize `:@@aboutCarouselImageOne:Primera imagen del carousel`
     }
   ]);
+
+  /**
+   * Handle open whatsapp external URL
+   * @public
+   */
+  openWhatsapp(): void {
+    window.open(environment.whatsappUrl, '_blank');
+  }
 }

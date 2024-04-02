@@ -6,17 +6,21 @@
 // Color variables
 $primary-green: #5a9712;
 $primary-white: #ffff;
-$primary-blue: #0e2e50;
-$primary-grey: rgba(0, 0, 0, 0.1);
+$primary-orange: #f27412;
+$primary-grey: rgb(102, 101, 101);
 $primary-box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
 
 $secondary-green: #66ad12;
 $secondary-white: #f8f8f8;
+$secondary-grey: rgba(0, 0, 0, 0.2);
+
+$tertiary-green: #4e721f;
 
 // Viewports variables
 $phone: 599px;
 $tablet: 600px;
 $desktop: 900px;
+$desktop-xl: 1200px;
 
 // Font family variables
 $font-family-inter: 'Inter', sans-serif;
