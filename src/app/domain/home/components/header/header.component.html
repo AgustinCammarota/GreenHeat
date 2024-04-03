@@ -15,14 +15,14 @@
             <ul class="list-container" [@openMenuTrigger]="isMenuOpen() ? 'open' : 'close'">
                 @for (item of listItemNavigation(); track item.description) {
                     <li class="list-item-container">
-                        <a class="list-item-container__link" (click)="navToElement(item.link)">{{ item.description }}</a>
+                        <button type="button" class="list-item-container__link" (click)="navToElement(item.link)">{{ item.description }}</button>
                     </li>
                 }
             </ul>
 
-            <button type="button" class="action-button-container" i18n-aria-label="@@iconHeaderWhatsappLabel" aria-label="Whatsapp" (click)="openWhatsapp()">
-                <img class="action-button-container__image" ngSrc="./assets/svg/whatsapp.svg" i18n-alt="iconHeaderWhatsappAlt" alt="Whatsapp" width="32" height="32" fetchpriority="auto" loading="eager">
-            </button>
+            <a class="action-link-container" i18n-aria-label="@@iconHeaderWhatsappLabel" [href]="whatsappUrl" aria-label="Whatsapp" target="_blank">
+                <img class="action-link-container__image" ngSrc="./assets/svg/whatsapp.svg" i18n-alt="iconHeaderWhatsappAlt" alt="Whatsapp" width="32" height="32" fetchpriority="auto" loading="eager">
+            </a>
         </div>
     </nav>
 </header>

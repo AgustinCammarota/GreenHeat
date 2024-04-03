@@ -93,13 +93,17 @@
       }
     }
 
-    .about__button {
+    .about__link {
+      padding: 6px 16px;
+      border: 1px solid transparent;
+      border-radius: 5px;
       margin-left: 48px;
       height: 60px;
       width: 200px;
       color: vars.$primary-white;
       background-color: vars.$primary-green;
       @include mixins.font(vars.$font-family-heebo, 1.2rem, 400);
+      @include mixins.flexbox(center, center);
 
       &:hover {
         background-color: vars.$secondary-green;

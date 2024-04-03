@@ -55,10 +55,11 @@ export class AboutComponent {
   ]);
 
   /**
-   * Handle open whatsapp external URL
+   * Return whatsapp URL
    * @public
+   * @return {string}
    */
-  openWhatsapp(): void {
-    window.open(environment.whatsappUrl, '_blank');
+  get whatsappUrl(): string {
+    return environment.whatsappUrl;
   }
 }

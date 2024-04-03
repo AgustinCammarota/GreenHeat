@@ -24,7 +24,7 @@
         <source>Segunda imagen del carousel</source>
       </segment>
     </unit>
-    <unit id="aboutContactButton">
+    <unit id="aboutContactLink">
       <segment>
         <source>Contáctenos</source>
       </segment>

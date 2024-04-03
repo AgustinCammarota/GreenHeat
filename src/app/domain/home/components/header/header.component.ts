@@ -156,19 +156,20 @@ export class HeaderComponent {
   }
 
   /**
-   * Handle open whatsapp external URL
-   * @public
-   */
-  openWhatsapp(): void {
-    window.open(environment.whatsappUrl, '_blank');
-  }
-
-  /**
    * Handle navigation to element
    * @param {string} section
    * @public
    */
   navToElement(section: string): void {
     this.navSection.emit(section);
+  }
+
+  /**
+   * Return whatsapp URL
+   * @public
+   * @return {string}
+   */
+  get whatsappUrl(): string {
+    return environment.whatsappUrl;
   }
 }
