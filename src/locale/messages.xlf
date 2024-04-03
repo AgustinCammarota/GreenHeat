@@ -1,167 +1,228 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="es" datatype="plaintext" original="ng2.template">
-    <body>
-      <trans-unit id="aboutSubTitle" datatype="html">
-        <source>¿Quiénes Somos?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.html</context>
-          <context context-type="linenumber">4,5</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="aboutTitle" datatype="html">
-        <source>Climatización Sustentable</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.html</context>
-          <context context-type="linenumber">5,6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="aboutText" datatype="html">
-        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.html</context>
-          <context context-type="linenumber">6,7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="aboutContactButton" datatype="html">
-        <source>Contáctenos</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.html</context>
-          <context context-type="linenumber">7,10</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="aboutCarouselImageOne" datatype="html">
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="es">
+  <file id="ngi18n" original="ng.template">
+    <unit id="2102825898069375693">
+      <segment>
+        <source>Menu</source>
+      </segment>
+    </unit>
+    <unit id="3366532496933188374">
+      <notes>
+        <note category="description">iconHeaderWhatsappAlt</note>
+      </notes>
+      <segment>
+        <source>Whatsapp</source>
+      </segment>
+    </unit>
+    <unit id="aboutCarouselImageOne">
+      <segment>
         <source>Primera imagen del carousel</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
-          <context context-type="linenumber">53</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="aboutCarouselImageTwo" datatype="html">
+      </segment>
+    </unit>
+    <unit id="aboutCarouselImageTwo">
+      <segment>
         <source>Segunda imagen del carousel</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/about/about.component.ts</context>
-          <context context-type="linenumber">44</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="carouselButtonLeft" datatype="html">
+      </segment>
+    </unit>
+    <unit id="aboutContactButton">
+      <segment>
+        <source>Contáctenos</source>
+      </segment>
+    </unit>
+    <unit id="aboutSubTitle">
+      <segment>
+        <source>¿Quiénes Somos?</source>
+      </segment>
+    </unit>
+    <unit id="aboutText">
+      <segment>
+        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
+      </segment>
+    </unit>
+    <unit id="aboutTitle">
+      <segment>
+        <source>Climatización Sustentable</source>
+      </segment>
+    </unit>
+    <unit id="buttonMenuHeaderLabel">
+      <segment>
+        <source>Menu</source>
+      </segment>
+    </unit>
+    <unit id="carouselButtonLeft">
+      <segment>
         <source>Retroceder</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
-          <context context-type="linenumber">18,19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="iconCarouselLeftAlt" datatype="html">
-        <source>Flecha</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2102825898069375693" datatype="html">
-        <source>Menu</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="carouselButtonRight" datatype="html">
+      </segment>
+    </unit>
+    <unit id="carouselButtonRight">
+      <segment>
         <source>Avanzar</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
-          <context context-type="linenumber">21,22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="iconCarouselRightAlt" datatype="html">
+      </segment>
+    </unit>
+    <unit id="iconCarouselLeftAlt">
+      <segment>
         <source>Flecha</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/carousel/carousel.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="iconLogoHeaderAlt" datatype="html">
-        <source>Green Heat Clima</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
-          <context context-type="linenumber">6</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="iconLogoHeaderText" datatype="html">
-        <source>Green Heat Clima</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
-          <context context-type="linenumber">7,10</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="buttonMenuHeaderLabel" datatype="html">
-        <source>Menu</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="iconMenuHeaderAlt" datatype="html">
-        <source>Menu</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="iconHeaderWhatsappLabel" datatype="html">
+      </segment>
+    </unit>
+    <unit id="iconCarouselRightAlt">
+      <segment>
+        <source>Flecha</source>
+      </segment>
+    </unit>
+    <unit id="iconHeaderWhatsappLabel">
+      <segment>
         <source>Whatsapp</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
-          <context context-type="linenumber">23,24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3366532496933188374" datatype="html">
-        <source>Whatsapp</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-        <note priority="1" from="description">iconHeaderWhatsappAlt</note>
-      </trans-unit>
-      <trans-unit id="linkHeaderAbout" datatype="html">
+      </segment>
+    </unit>
+    <unit id="iconLogoHeaderAlt">
+      <segment>
+        <source>Green Heat Clima</source>
+      </segment>
+    </unit>
+    <unit id="iconLogoHeaderText">
+      <segment>
+        <source>Green Heat Clima</source>
+      </segment>
+    </unit>
+    <unit id="iconMenuHeaderAlt">
+      <segment>
+        <source>Menu</source>
+      </segment>
+    </unit>
+    <unit id="linkHeaderAbout">
+      <segment>
         <source>Nosotros</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.ts</context>
-          <context context-type="linenumber">99</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="linkHeaderServices" datatype="html">
-        <source>Servicios</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.ts</context>
-          <context context-type="linenumber">103</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="linkHeaderClients" datatype="html">
+      </segment>
+    </unit>
+    <unit id="linkHeaderClients">
+      <segment>
         <source>Clientes</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.ts</context>
-          <context context-type="linenumber">107</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="linkHeaderContact" datatype="html">
+      </segment>
+    </unit>
+    <unit id="linkHeaderContact">
+      <segment>
         <source>Contacto</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/domain/home/components/header/header.component.ts</context>
-          <context context-type="linenumber">111</context>
-        </context-group>
-      </trans-unit>
-    </body>
+      </segment>
+    </unit>
+    <unit id="linkHeaderServices">
+      <segment>
+        <source>Servicios</source>
+      </segment>
+    </unit>
+    <unit id="aboutLoadingSection">
+      <segment>
+        <source>Cargando sección de about...</source>
+      </segment>
+    </unit>
+    <unit id="altImgCardFive">
+      <segment>
+        <source>Planificación</source>
+      </segment>
+    </unit>
+    <unit id="altImgCardFour">
+      <segment>
+        <source>Asesoramiento</source>
+      </segment>
+    </unit>
+    <unit id="altImgCardOne">
+      <segment>
+        <source>Tecnología</source>
+      </segment>
+    </unit>
+    <unit id="altImgCardSix">
+      <segment>
+        <source>Post Venta</source>
+      </segment>
+    </unit>
+    <unit id="altImgCardThree">
+      <segment>
+        <source>Formación</source>
+      </segment>
+    </unit>
+    <unit id="altImgCardTwo">
+      <segment>
+        <source>Materiales</source>
+      </segment>
+    </unit>
+    <unit id="descriptionCardFive">
+      <segment>
+        <source>Tu obra de principio a fin. Materiales y mano de obra.</source>
+      </segment>
+    </unit>
+    <unit id="descriptionCardFour">
+      <segment>
+        <source>Equipo de ventas técnicas a disposición de tu proyecto.</source>
+      </segment>
+    </unit>
+    <unit id="descriptionCardOne">
+      <segment>
+        <source>Contamos con la última tecnología, domótica, solar, condensación, termorregulación y mucho más...</source>
+      </segment>
+    </unit>
+    <unit id="descriptionCardSix">
+      <segment>
+        <source>El mejor service y repuestos.</source>
+      </segment>
+    </unit>
+    <unit id="descriptionCardThree">
+      <segment>
+        <source>Nuestros técnicos están altamente capacitados para tener una respuesta rápida a cada problema.</source>
+      </segment>
+    </unit>
+    <unit id="descriptionCardTwo">
+      <segment>
+        <source>Usamos las mejores y más reconocidas marcas europeas, de esta manera brindamos un producto final de alta calidad.</source>
+      </segment>
+    </unit>
+    <unit id="serviceDividerAriaLabel">
+      <segment>
+        <source>Division</source>
+      </segment>
+    </unit>
+    <unit id="servicesLoadingSection">
+      <segment>
+        <source>Cargando sección de servicios...</source>
+      </segment>
+    </unit>
+    <unit id="serviceSubtitle">
+      <segment>
+        <source>Te Brindamos</source>
+      </segment>
+    </unit>
+    <unit id="serviceTitle">
+      <segment>
+        <source>Nuestros Mejores Servicios</source>
+      </segment>
+    </unit>
+    <unit id="titleCardFive">
+      <segment>
+        <source>Planificación</source>
+      </segment>
+    </unit>
+    <unit id="titleCardFour">
+      <segment>
+        <source>Asesoramiento</source>
+      </segment>
+    </unit>
+    <unit id="titleCardOne">
+      <segment>
+        <source>Tecnología</source>
+      </segment>
+    </unit>
+    <unit id="titleCardSix">
+      <segment>
+        <source>Post Venta</source>
+      </segment>
+    </unit>
+    <unit id="titleCardThree">
+      <segment>
+        <source>Formación</source>
+      </segment>
+    </unit>
+    <unit id="titleCardTwo">
+      <segment>
+        <source>Materiales</source>
+      </segment>
+    </unit>
   </file>
 </xliff>

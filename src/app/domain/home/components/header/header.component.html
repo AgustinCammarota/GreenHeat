@@ -13,9 +13,9 @@
             </button>
 
             <ul class="list-container" [@openMenuTrigger]="isMenuOpen() ? 'open' : 'close'">
-                @for (items of listItemNavigation(); track items.description) {
+                @for (item of listItemNavigation(); track item.description) {
                     <li class="list-item-container">
-                        <a class="list-item-container__link" href="index.html">{{ items.description }}</a>
+                        <a class="list-item-container__link" (click)="navToElement(item.link)">{{ item.description }}</a>
                     </li>
                 }
             </ul>

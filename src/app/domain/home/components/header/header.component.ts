@@ -1,7 +1,7 @@
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-  Component, inject,
+  Component, EventEmitter, inject, Output,
   signal,
   WritableSignal
 } from '@angular/core';
@@ -68,6 +68,13 @@ import { visibilityIn, visibilityOut } from '@shared/animations/animations';
 })
 export class HeaderComponent {
   /**
+   * Emit navigation section
+   * @type {EventEmitter}
+   * @default EventEmitter
+   * @public
+   */
+  @Output() navSection: EventEmitter<string> = new EventEmitter<string>();
+  /**
    * Validate if is header maximized
    * @type {WritableSignal}
    * @default false
@@ -97,19 +104,19 @@ export class HeaderComponent {
   listItemNavigation: WritableSignal<Navigation[]> = signal<Navigation[]>([
     {
       description: $localize `:@@linkHeaderAbout:Nosotros`,
-      link: '/about'
+      link: 'aboutSection'
     },
     {
       description: $localize `:@@linkHeaderServices:Servicios`,
-      link: '/services'
+      link: 'serviceSection'
     },
     {
       description: $localize `:@@linkHeaderClients:Clientes`,
-      link: '/clients'
+      link: 'clientSection'
     },
     {
       description: $localize `:@@linkHeaderContact:Contacto`,
-      link: '/contact'
+      link: 'contactSection'
     }
   ]);
   /**
@@ -154,5 +161,14 @@ export class HeaderComponent {
    */
   openWhatsapp(): void {
     window.open(environment.whatsappUrl, '_blank');
+  }
+
+  /**
+   * Handle navigation to element
+   * @param {string} section
+   * @public
+   */
+  navToElement(section: string): void {
+    this.navSection.emit(section);
   }
 }

@@ -1,0 +1,74 @@
+@use "typography";
+@use "mixins";
+@use "vars";
+
+.service-section {
+  padding: 16px;
+  margin-top: 84px;
+
+  .service__subtitle {
+    margin-bottom: 4px;
+    text-align: center;
+    color: vars.$tertiary-green;
+    @include mixins.font(vars.$font-family-inter, 2rem, 700);
+  }
+
+  .service__title {
+    margin-bottom: 32px;
+    text-align: center;
+    color: vars.$primary-green;
+    @include mixins.font(vars.$font-family-inter, 2.3rem, 700);
+  }
+
+  .service__divider {
+    display: block;
+    width: 200px;
+    height: 5px;
+    margin: 0 auto;
+    background-color: vars.$tertiary-green;
+  }
+
+  .card-container {
+    margin-top: 84px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 24px;
+    @include mixins.flexbox(center, center);
+
+    .card {
+      width: 250px;
+      height: 250px;
+      padding: 16px;
+      border: 2px dotted vars.$tertiary-green;
+      border-radius: 8px;
+      flex-direction: column;
+      box-shadow: vars.$secondary-box-shadow;
+      @include mixins.flexbox(center, center);
+
+      .card-image-container {
+        padding: 15px;
+        border: 3px dotted vars.$primary-orange;
+        border-radius: 50%;
+      }
+
+      .card__title {
+        margin-top: 8px;
+        margin-bottom: 4px;
+        color: vars.$tertiary-green;
+        @include mixins.font(vars.$font-family-heebo, 1.5rem, 700);
+      }
+
+      .card__text {
+        margin: 0;
+        text-align: center;
+        color: vars.$primary-grey;
+        @include mixins.font(vars.$font-family-heebo, 1rem, 500);
+      }
+
+      &:hover {
+        background-color: vars.$tertiary-white;
+      }
+    }
+  }
+}
