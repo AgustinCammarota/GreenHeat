@@ -1,0 +1,13 @@
+<!-- Service Section Start -->
+<section class="service-section" id="serviceSection">
+    <h3 class="service__subtitle" i18n="@@serviceSubtitle">Te Brindamos</h3>
+    <h2 class="service__title" i18n="@@serviceTitle">Nuestros Mejores Servicios</h2>
+    <span #reference class="service__divider" aria-hidden="true"></span>
+
+    @defer (on viewport(reference)) {
+        <app-card [cards]="cards()"/>
+    } @placeholder {
+        <p i18n="@@serviceLoadingCards">Cargando tarjetas...</p>
+    }
+</section>
+<!-- Service Section End -->

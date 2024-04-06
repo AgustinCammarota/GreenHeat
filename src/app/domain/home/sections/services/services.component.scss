@@ -1,0 +1,30 @@
+@use "typography";
+@use "mixins";
+@use "vars";
+
+.service-section {
+  padding: 16px;
+  margin-top: 84px;
+
+  .service__subtitle {
+    margin-bottom: 4px;
+    text-align: center;
+    color: vars.$tertiary-green;
+    @include mixins.font(vars.$font-family-inter, 2rem, 700);
+  }
+
+  .service__title {
+    margin-bottom: 32px;
+    text-align: center;
+    color: vars.$primary-green;
+    @include mixins.font(vars.$font-family-inter, 2.3rem, 700);
+  }
+
+  .service__divider {
+    display: block;
+    width: 200px;
+    height: 5px;
+    margin: 0 auto;
+    background-color: vars.$tertiary-green;
+  }
+}

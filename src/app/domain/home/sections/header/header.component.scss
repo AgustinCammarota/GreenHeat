@@ -1,0 +1,17 @@
+@use "vars";
+@use "mixins";
+@use "typography";
+
+.header-section {
+  .header {
+    width: 100%;
+    max-width: 1600px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    will-change: transform;
+    transform: translate(-50%, 0);
+    z-index: 10;
+  }
+}

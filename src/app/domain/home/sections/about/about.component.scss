@@ -61,7 +61,7 @@
       // Desktop xl media query
       @media only screen and (max-width: vars.$desktop-xl) {
         margin-top: 60px;
-        padding-left: 16px;
+        padding: 0 16px;
         font-size: 2.5rem;
       }
     }
@@ -73,22 +73,20 @@
 
       // Desktop xl media query
       @media only screen and (max-width: vars.$desktop-xl) {
-        padding-left: 16px;
+        padding: 0 16px;
         font-size: 2rem;
       }
     }
 
     .about__text {
-      width: 80%;
       text-align: justify;
-      padding: 16px 16px 16px 48px;
+      padding: 16px 48px;
       color: vars.$primary-grey;
       @include mixins.font(vars.$font-family-heebo, 1.2rem, 400);
 
       // Desktop xl media query
       @media only screen and (max-width: vars.$desktop-xl) {
-        width: auto;
-        padding-left: 16px;
+        padding: 16px;
         font-size: 1rem;
       }
     }
@@ -97,12 +95,12 @@
       padding: 6px 16px;
       border: 1px solid transparent;
       border-radius: 5px;
-      margin-left: 48px;
+      margin: 0 48px;
       height: 60px;
       width: 200px;
       color: vars.$primary-white;
       background-color: vars.$primary-green;
-      @include mixins.font(vars.$font-family-heebo, 1.2rem, 400);
+      @include mixins.font(vars.$font-family-heebo, 1.2rem, 700);
       @include mixins.flexbox(center, center);
 
       &:hover {
@@ -111,7 +109,7 @@
 
       // Desktop xl media query
       @media only screen and (max-width: vars.$desktop-xl) {
-        margin-left: 16px;
+        margin: 0 16px;
       }
     }
   }

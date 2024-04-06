@@ -1,26 +1,23 @@
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-  Component, EventEmitter, inject, Output,
+  Component, inject, output, OutputEmitterRef,
   signal,
   WritableSignal
 } from '@angular/core';
-import { NgOptimizedImage, NgStyle } from '@angular/common'
-import { animate, state, style, transition, trigger, useAnimation } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ObserverVisibilityDirective } from '@shared/directives/observer-visibility.directive';
 import { ObserverDeviceDirective } from '@shared/directives/observer-device.directive';
-import { Navigation } from '@home/interfaces';
-import { environment } from '@environments/environment.development'
-import { visibilityIn, visibilityOut } from '@shared/animations/animations';
+import { NavigationItems } from '@home/interfaces';
+import { NavComponent } from '@home/components/nav/nav.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    NgOptimizedImage,
     ObserverVisibilityDirective,
     ObserverDeviceDirective,
-    NgStyle
+    NavComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -43,37 +40,17 @@ import { visibilityIn, visibilityOut } from '@shared/animations/animations';
       ),
       transition('minimize => maximize', [animate('0.3s ease-in')]),
       transition('maximize => minimize', [animate('0.3s ease-in')]),
-    ]),
-    trigger('openMenuTrigger', [
-      state(
-          'open',
-          style({
-            visibility: 'visible'
-          }),
-      ),
-      state(
-          'close',
-          style({
-            visibility: 'hidden'
-          }),
-      ),
-      transition("close => open", [
-        useAnimation(visibilityIn, { params: { time: "0.2s" } })
-      ]),
-      transition("open => close", [
-        useAnimation(visibilityOut, { params: { time: "0.2s" } })
-      ])
     ])
   ]
 })
 export class HeaderComponent {
   /**
    * Emit navigation section
-   * @type {EventEmitter}
-   * @default EventEmitter
+   * @type {OutputEmitterRef}
+   * @default OutputEmitterRef
    * @public
    */
-  @Output() navSection: EventEmitter<string> = new EventEmitter<string>();
+  navigation: OutputEmitterRef<string> = output<string>();
   /**
    * Validate if is header maximized
    * @type {WritableSignal}
@@ -87,13 +64,6 @@ export class HeaderComponent {
    * @default false
    * @public
    */
-  isMenuOpen: WritableSignal<boolean> = signal<boolean>(false);
-  /**
-   * Validate if is menu opened
-   * @type {WritableSignal}
-   * @default false
-   * @public
-   */
   isMobileDevice: WritableSignal<boolean> = signal<boolean>(false);
   /**
    * Array with navigation items
@@ -101,7 +71,7 @@ export class HeaderComponent {
    * @default []
    * @public
    */
-  listItemNavigation: WritableSignal<Navigation[]> = signal<Navigation[]>([
+  listItemNavigation: WritableSignal<NavigationItems[]> = signal<NavigationItems[]>([
     {
       description: $localize `:@@linkHeaderAbout:Nosotros`,
       link: 'aboutSection'
@@ -148,28 +118,11 @@ export class HeaderComponent {
   }
 
   /**
-   * Handle on click open menu
-   * @public
-   */
-  openMenu(): void {
-    this.isMenuOpen.update(value => !value);
-  }
-
-  /**
    * Handle navigation to element
-   * @param {string} section
+   * @param {string} event
    * @public
    */
-  navToElement(section: string): void {
-    this.navSection.emit(section);
-  }
-
-  /**
-   * Return whatsapp URL
-   * @public
-   * @return {string}
-   */
-  get whatsappUrl(): string {
-    return environment.whatsappUrl;
+  handlerNavigation(event: string): void {
+    this.navigation.emit(event);
   }
 }

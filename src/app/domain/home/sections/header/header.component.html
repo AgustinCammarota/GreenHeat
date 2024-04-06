@@ -1,0 +1,7 @@
+<!-- Header Section Start -->
+<section class="header-section" id="headerSection" appObserverVisibility (scrolledToTop)="handleScroll($event)" appObserverDevice (mobileDeviceDetermined)="handleDevice($event)">
+    <div class="header" [@scrollTrigger]="isMaximize() && !this.isMobileDevice() ? 'minimize' : 'maximize'">
+        <app-nav [navItems]="listItemNavigation()" (navSection)="handlerNavigation($event)"/>
+    </div>
+</section>
+<!-- Header Section End -->

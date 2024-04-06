@@ -1,12 +1,12 @@
-import {ChangeDetectionStrategy, Component, signal, WritableSignal} from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
+import { CardComponent } from '@home/components/card/card.component';
 import { Card } from '@home/interfaces';
 
 @Component({
   selector: 'app-services',
   standalone: true,
   imports: [
-    NgOptimizedImage
+    CardComponent
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss',

@@ -141,12 +141,6 @@
         <target>Nuestros Mejores Servicios</target>
       </segment>
     </unit>
-    <unit id="serviceDividerAriaLabel">
-      <segment state="initial">
-        <source>Division</source>
-        <target>Division</target>
-      </segment>
-    </unit>
     <unit id="titleCardOne">
       <segment state="initial">
         <source>Tecnología</source>
@@ -265,6 +259,12 @@
       <segment state="initial">
         <source>Cargando sección de servicios...</source>
         <target>Cargando sección de servicios...</target>
+      </segment>
+    </unit>
+    <unit id="serviceLoadingCards">
+      <segment state="initial">
+        <source>Cargando tarjetas...</source>
+        <target>Cargando tarjetas...</target>
       </segment>
     </unit>
   </file>

@@ -1,14 +1,12 @@
 import { ChangeDetectionStrategy, Component, ElementRef, inject } from '@angular/core';
-import { HeaderComponent } from '@home/components/header/header.component';
-import { ObserverVisibilityDirective } from '@shared/directives/observer-visibility.directive';
-import { AboutComponent } from '@home/components/about/about.component';
-import { ServicesComponent } from '@home/components/services/services.component';
+import { AboutComponent } from '@home/sections/about/about.component';
+import { ServicesComponent } from '@home/sections/services/services.component';
+import { HeaderComponent } from '@home/sections/header/header.component';
 
 @Component({
   standalone: true,
   imports: [
     HeaderComponent,
-    ObserverVisibilityDirective,
     AboutComponent,
     ServicesComponent
   ],

@@ -2,10 +2,9 @@ import {
   afterNextRender,
   Directive,
   ElementRef,
-  EventEmitter,
   inject,
-  OnDestroy,
-  Output,
+  OnDestroy, output,
+  OutputEmitterRef,
 } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
@@ -16,11 +15,11 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 export class ObserverVisibilityDirective implements OnDestroy {
   /**
    * Emit scrolled to top event
-   * @type {EventEmitter}
-   * @default EventEmitter
+   * @type {OutputEmitterRef}
+   * @default OutputEmitterRef
    * @public
    */
-  @Output() scrolledToTop: EventEmitter<boolean> = new EventEmitter<boolean>();
+  scrolledToTop: OutputEmitterRef<boolean> = output<boolean>();
   /**
    * Instance of intersection observer
    * @type {IntersectionObserver}

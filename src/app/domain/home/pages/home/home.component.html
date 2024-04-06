@@ -1,13 +1,15 @@
-<app-header (navSection)="scrollToElement($event)"/>
+<header>
+    <app-header (navigation)="scrollToElement($event)"/>
+</header>
 
 <main class="container">
-    @defer (on viewport) {
+    @defer (on immediate; prefetch on idle) {
         <app-about/>
     } @placeholder {
         <p i18n="@@aboutLoadingSection">Cargando sección de about...</p>
     }
 
-    @defer (on viewport) {
+    @defer (on viewport; prefetch on idle) {
         <app-services/>
     } @placeholder {
         <p i18n="@@servicesLoadingSection">Cargando sección de servicios...</p>

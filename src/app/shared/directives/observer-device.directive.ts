@@ -1,4 +1,4 @@
-import { afterNextRender, Directive, EventEmitter, inject, OnDestroy, Output } from '@angular/core';
+import {afterNextRender, Directive, inject, OnDestroy, output, OutputEmitterRef} from '@angular/core';
 import { DeviceDetectorService } from "ngx-device-detector";
 
 @Directive({
@@ -8,11 +8,11 @@ import { DeviceDetectorService } from "ngx-device-detector";
 export class ObserverDeviceDirective implements OnDestroy {
   /**
    * Determinate if device is mobile / tablet
-   * @type {EventEmitter}
-   * @default EventEmitter
+   * @type {OutputEmitterRef}
+   * @default OutputEmitterRef
    * @public
    */
-  @Output() mobileDeviceDetermined: EventEmitter<boolean> = new EventEmitter<boolean>();
+  mobileDeviceDetermined: OutputEmitterRef<boolean> = output<boolean>();
   /**
    * Instance of device detector service
    * @type {DeviceDetectorService}

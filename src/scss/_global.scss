@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  background-color: vars.$primary-white;
+  background-color: vars.$tertiary-white;
   box-sizing: border-box;
   @include mixins.font(vars.$font-family-inter, 1rem, 300);
 }

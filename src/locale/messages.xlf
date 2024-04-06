@@ -174,11 +174,6 @@
         <source>Usamos las mejores y más reconocidas marcas europeas, de esta manera brindamos un producto final de alta calidad.</source>
       </segment>
     </unit>
-    <unit id="serviceDividerAriaLabel">
-      <segment>
-        <source>Division</source>
-      </segment>
-    </unit>
     <unit id="servicesLoadingSection">
       <segment>
         <source>Cargando sección de servicios...</source>
@@ -222,6 +217,11 @@
     <unit id="titleCardTwo">
       <segment>
         <source>Materiales</source>
+      </segment>
+    </unit>
+    <unit id="serviceLoadingCards">
+      <segment>
+        <source>Cargando tarjetas...</source>
       </segment>
     </unit>
   </file>

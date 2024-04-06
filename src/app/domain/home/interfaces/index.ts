@@ -1,9 +1,9 @@
-import { Navigation } from './navigation.interface';
+import { NavigationItems } from './navigation-items.interface';
 import { Carousel } from './carousel.interface';
 import { Card } from './card.interface';
 
 export {
-  Navigation,
+  NavigationItems,
   Carousel,
   Card
 }
