@@ -6,10 +6,7 @@
         <source>Menu</source>
       </segment>
     </unit>
-    <unit id="3366532496933188374">
-      <notes>
-        <note category="description">iconHeaderWhatsappAlt</note>
-      </notes>
+    <unit id="iconHeaderWhatsappAlt">
       <segment>
         <source>Whatsapp</source>
       </segment>
@@ -222,6 +219,16 @@
     <unit id="serviceLoadingCards">
       <segment>
         <source>Cargando tarjetas...</source>
+      </segment>
+    </unit>
+    <unit id="iconScrollTopAlt">
+      <segment>
+        <source>Flecha Arriba</source>
+      </segment>
+    </unit>
+    <unit id="iconScrollTopLabel">
+      <segment>
+        <source>Flecha Arriba</source>
       </segment>
     </unit>
   </file>

@@ -1,15 +1,19 @@
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-  Component, inject, output, OutputEmitterRef,
+  Component,
+  inject,
+  output,
+  OutputEmitterRef,
   signal,
   WritableSignal
 } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ObserverVisibilityDirective } from '@shared/directives/observer-visibility.directive';
 import { ObserverDeviceDirective } from '@shared/directives/observer-device.directive';
-import { NavigationItems } from '@home/interfaces';
+import { NavigationItems, Sections } from '@home/interfaces';
 import { NavComponent } from '@home/components/nav/nav.component';
+import { ScrollTopComponent } from '@home/components/scroll-top/scroll-top.component';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +21,8 @@ import { NavComponent } from '@home/components/nav/nav.component';
   imports: [
     ObserverVisibilityDirective,
     ObserverDeviceDirective,
-    NavComponent
+    NavComponent,
+    ScrollTopComponent
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -59,6 +64,13 @@ export class HeaderComponent {
    */
   isMaximize: WritableSignal<boolean> = signal<boolean>(false);
   /**
+   * Validate if is visible scroll to top
+   * @type {WritableSignal}
+   * @default false
+   * @public
+   */
+  isVisibleScrollToTop: WritableSignal<boolean> = signal<boolean>(false);
+  /**
    * Validate if is menu opened
    * @type {WritableSignal}
    * @default false
@@ -74,19 +86,19 @@ export class HeaderComponent {
   listItemNavigation: WritableSignal<NavigationItems[]> = signal<NavigationItems[]>([
     {
       description: $localize `:@@linkHeaderAbout:Nosotros`,
-      link: 'aboutSection'
+      section: Sections.aboutSection
     },
     {
       description: $localize `:@@linkHeaderServices:Servicios`,
-      link: 'serviceSection'
+      section: Sections.serviceSection
     },
     {
       description: $localize `:@@linkHeaderClients:Clientes`,
-      link: 'clientSection'
+      section: Sections.clientSection
     },
     {
       description: $localize `:@@linkHeaderContact:Contacto`,
-      link: 'contactSection'
+      section: Sections.contactSection
     }
   ]);
   /**
@@ -104,6 +116,7 @@ export class HeaderComponent {
    */
   handleScroll(event: boolean): void {
     this.isMaximize.set(event);
+    this.isVisibleScrollToTop.set(!event);
     this.cdr.detectChanges();
   }
 

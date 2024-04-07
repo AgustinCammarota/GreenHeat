@@ -6,7 +6,6 @@ import {
   OnDestroy, output,
   OutputEmitterRef,
 } from '@angular/core';
-import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Directive({
   selector: '[appObserverVisibility]',
@@ -34,22 +33,9 @@ export class ObserverVisibilityDirective implements OnDestroy {
    * @private
    */
   private elementRef: ElementRef = inject(ElementRef);
-  /**
-   * Instance of device detector service
-   * @type {DeviceDetectorService}
-   * @default DeviceDetectorService
-   * @private
-   */
-  private deviceDetectorService: DeviceDetectorService = inject(DeviceDetectorService);
 
   constructor() {
     afterNextRender(() => {
-      // If it is a mobile or tablet device not do anything.
-      if (this.deviceDetectorService.isMobile() || this.deviceDetectorService.isTablet()) {
-        this.scrolledToTop.emit(false);
-        return;
-      }
-
       const options: IntersectionObserverInit = {
         root: null,
         rootMargin: '0px',

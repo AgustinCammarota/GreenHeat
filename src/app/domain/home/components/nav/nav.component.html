@@ -7,19 +7,19 @@
 
     <div class="nav-container">
         <button type="button" class="nav-button-container" (click)="openMenu()" i18n-aria-label="@@buttonMenuHeaderLabel" aria-label="Menu">
-            <img class="nav-button-container__image" ngSrc="./assets/svg/menu.svg" i18n-alt="@@iconMenuHeaderAlt" alt="Menu" i18n-aria-label aria-label="Menu" width="32" height="32" fetchpriority="auto" loading="eager">
+            <img class="nav-button-container__image" ngSrc="./assets/svg/menu.svg" i18n-alt="@@iconMenuHeaderAlt" alt="Menu" width="32" height="32" fetchpriority="auto" loading="eager">
         </button>
 
         <ul class="list-container" [@openMenuTrigger]="isMenuOpen() ? 'open' : 'close'">
             @for (item of navItems(); track item.description) {
                 <li class="list-item-container">
-                    <button type="button" class="list-item-container__link" (click)="navToElement(item.link)">{{ item.description }}</button>
+                    <button type="button" class="list-item-container__link" (click)="navToElement(item.section)">{{ item.description }}</button>
                 </li>
             }
         </ul>
 
-        <a class="action-link-container" i18n-aria-label="@@iconHeaderWhatsappLabel" [href]="whatsappUrl" aria-label="Whatsapp" target="_blank">
-            <img class="action-link-container__image" ngSrc="./assets/svg/whatsapp.svg" i18n-alt="iconHeaderWhatsappAlt" alt="Whatsapp" width="32" height="32" fetchpriority="auto" loading="eager">
+        <a class="action-link-container" i18n-aria-label="@@iconHeaderWhatsappLabel" aria-label="Whatsapp" [href]="whatsappUrl" target="_blank">
+            <img class="action-link-container__image" ngSrc="./assets/svg/whatsapp.svg" i18n-alt="@@iconHeaderWhatsappAlt" alt="Whatsapp" width="32" height="32" fetchpriority="auto" loading="eager">
         </a>
     </div>
 </nav>

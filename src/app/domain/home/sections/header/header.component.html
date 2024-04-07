@@ -3,5 +3,9 @@
     <div class="header" [@scrollTrigger]="isMaximize() && !this.isMobileDevice() ? 'minimize' : 'maximize'">
         <app-nav [navItems]="listItemNavigation()" (navSection)="handlerNavigation($event)"/>
     </div>
+
+    @defer (when isVisibleScrollToTop()) {
+        <app-scroll-top [isVisible]="isVisibleScrollToTop()" (scrollToTop)="handlerNavigation($event)"/>
+    }
 </section>
 <!-- Header Section End -->

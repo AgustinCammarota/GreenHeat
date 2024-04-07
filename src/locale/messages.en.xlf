@@ -96,10 +96,7 @@
         <target>Whatsapp</target>
       </segment>
     </unit>
-    <unit id="3366532496933188374">
-      <notes>
-        <note category="description">iconHeaderWhatsappAlt</note>
-      </notes>
+    <unit id="iconHeaderWhatsappAlt">
       <segment state="initial">
         <source>Whatsapp</source>
         <target>Whatsapp</target>
@@ -265,6 +262,18 @@
       <segment state="initial">
         <source>Cargando tarjetas...</source>
         <target>Cargando tarjetas...</target>
+      </segment>
+    </unit>
+    <unit id="iconScrollTopLabel">
+      <segment state="initial">
+        <source>Flecha Arriba</source>
+        <target>Flecha Arriba</target>
+      </segment>
+    </unit>
+    <unit id="iconScrollTopAlt">
+      <segment state="initial">
+        <source>Flecha Arriba</source>
+        <target>Flecha Arriba</target>
       </segment>
     </unit>
   </file>

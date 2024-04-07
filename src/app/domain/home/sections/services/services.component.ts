@@ -45,7 +45,7 @@ export class ServicesComponent {
       altImg: $localize `:@@altImgCardFour:Asesoramiento`
     },
     {
-      icon: './assets/svg/comment.svg',
+      icon: './assets/svg/planning.svg',
       title: $localize `:@@titleCardFive:Planificación`,
       description: $localize `:@@descriptionCardFive:Tu obra de principio a fin. Materiales y mano de obra.`,
       altImg: $localize `:@@altImgCardFive:Planificación`

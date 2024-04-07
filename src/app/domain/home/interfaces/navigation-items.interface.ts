@@ -1,4 +1,11 @@
 export interface NavigationItems {
-  link: string;
+  section: Sections;
   description: string
+}
+
+export enum Sections {
+  aboutSection = 'aboutSection',
+  serviceSection = 'serviceSection',
+  clientSection = 'clientSection',
+  contactSection = 'contactSection'
 }

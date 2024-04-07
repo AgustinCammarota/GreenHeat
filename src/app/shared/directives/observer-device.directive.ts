@@ -1,4 +1,4 @@
-import {afterNextRender, Directive, inject, OnDestroy, output, OutputEmitterRef} from '@angular/core';
+import { afterNextRender, Directive, inject, OnDestroy, output, OutputEmitterRef } from '@angular/core';
 import { DeviceDetectorService } from "ngx-device-detector";
 
 @Directive({

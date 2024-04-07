@@ -1,9 +1,10 @@
-import { NavigationItems } from './navigation-items.interface';
+import { NavigationItems, Sections } from './navigation-items.interface';
 import { Carousel } from './carousel.interface';
 import { Card } from './card.interface';
 
 export {
   NavigationItems,
   Carousel,
-  Card
+  Card,
+  Sections
 }

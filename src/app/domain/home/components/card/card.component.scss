@@ -19,9 +19,10 @@
     border-radius: 8px;
     flex-direction: column;
     box-shadow: vars.$secondary-box-shadow;
-    @include mixins.flexbox(center, center);
+    @include mixins.flexbox(start, center);
 
     .card-image-container {
+      margin-top: 16px;
       padding: 15px;
       border: 3px dotted vars.$primary-orange;
       border-radius: 50%;
