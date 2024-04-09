@@ -1,41 +1,5 @@
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="es" trgLang="en">
   <file id="ngi18n" original="ng.template">
-    <unit id="aboutSubTitle">
-      <segment state="initial">
-        <source>¿Quiénes Somos?</source>
-        <target>¿Quiénes Somos?</target>
-      </segment>
-    </unit>
-    <unit id="aboutTitle">
-      <segment state="initial">
-        <source>Climatización Sustentable</source>
-        <target>Climatización Sustentable</target>
-      </segment>
-    </unit>
-    <unit id="aboutText">
-      <segment state="initial">
-        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
-        <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</target>
-      </segment>
-    </unit>
-    <unit id="aboutContactLink">
-      <segment state="initial">
-        <source>Contáctenos</source>
-        <target>Contáctenos</target>
-      </segment>
-    </unit>
-    <unit id="aboutCarouselImageOne">
-      <segment state="initial">
-        <source>Primera imagen del carousel</source>
-        <target>Primera imagen del carousel</target>
-      </segment>
-    </unit>
-    <unit id="aboutCarouselImageTwo">
-      <segment state="initial">
-        <source>Segunda imagen del carousel</source>
-        <target>Segunda imagen del carousel</target>
-      </segment>
-    </unit>
     <unit id="carouselButtonLeft">
       <segment state="initial">
         <source>Retroceder</source>
@@ -102,6 +66,156 @@
         <target>Whatsapp</target>
       </segment>
     </unit>
+    <unit id="iconScrollTopLabel">
+      <segment state="initial">
+        <source>Flecha Arriba</source>
+        <target>Flecha Arriba</target>
+      </segment>
+    </unit>
+    <unit id="iconScrollTopAlt">
+      <segment state="initial">
+        <source>Flecha Arriba</source>
+        <target>Flecha Arriba</target>
+      </segment>
+    </unit>
+    <unit id="aboutLoadingSection">
+      <segment state="initial">
+        <source>Cargando sección de about...</source>
+        <target>Cargando sección de about...</target>
+      </segment>
+    </unit>
+    <unit id="servicesLoadingSection">
+      <segment state="initial">
+        <source>Cargando sección de servicios...</source>
+        <target>Cargando sección de servicios...</target>
+      </segment>
+    </unit>
+    <unit id="clientsLoadingSection">
+      <segment state="initial">
+        <source>Cargando sección de clientes...</source>
+        <target>Cargando sección de clientes...</target>
+      </segment>
+    </unit>
+    <unit id="aboutSubTitle">
+      <segment state="initial">
+        <source>¿Quiénes Somos?</source>
+        <target>¿Quiénes Somos?</target>
+      </segment>
+    </unit>
+    <unit id="aboutTitle">
+      <segment state="initial">
+        <source>Climatización Sustentable</source>
+        <target>Climatización Sustentable</target>
+      </segment>
+    </unit>
+    <unit id="aboutText">
+      <segment state="initial">
+        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
+        <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</target>
+      </segment>
+    </unit>
+    <unit id="aboutContactLink">
+      <segment state="initial">
+        <source>Contáctenos</source>
+        <target>Contáctenos</target>
+      </segment>
+    </unit>
+    <unit id="aboutCarouselImageOne">
+      <segment state="initial">
+        <source>Primera imagen del carousel</source>
+        <target>Primera imagen del carousel</target>
+      </segment>
+    </unit>
+    <unit id="aboutCarouselImageTwo">
+      <segment state="initial">
+        <source>Segunda imagen del carousel</source>
+        <target>Segunda imagen del carousel</target>
+      </segment>
+    </unit>
+    <unit id="clientTitle">
+      <segment state="initial">
+        <source>Las mejores marcas</source>
+        <target>Las mejores marcas</target>
+      </segment>
+    </unit>
+    <unit id="clientSubtitle">
+      <segment state="initial">
+        <source>Trabajamos con</source>
+        <target>Trabajamos con</target>
+      </segment>
+    </unit>
+    <unit id="brandTitleOne">
+      <segment state="initial">
+        <source>Ariston</source>
+        <target>Ariston</target>
+      </segment>
+    </unit>
+    <unit id="brandAltImgOne">
+      <segment state="initial">
+        <source>Ariston</source>
+        <target>Ariston</target>
+      </segment>
+    </unit>
+    <unit id="brandTitleTwo">
+      <segment state="initial">
+        <source>Baxi</source>
+        <target>Baxi</target>
+      </segment>
+    </unit>
+    <unit id="brandAltImgTwo">
+      <segment state="initial">
+        <source>Baxi</source>
+        <target>Baxi</target>
+      </segment>
+    </unit>
+    <unit id="brandTitleThree">
+      <segment state="initial">
+        <source>Giacomini</source>
+        <target>Giacomini</target>
+      </segment>
+    </unit>
+    <unit id="brandAltImgThree">
+      <segment state="initial">
+        <source>Giacomini</source>
+        <target>Giacomini</target>
+      </segment>
+    </unit>
+    <unit id="brandTitleFour">
+      <segment state="initial">
+        <source>Peisa</source>
+        <target>Peisa</target>
+      </segment>
+    </unit>
+    <unit id="brandAltImgFour">
+      <segment state="initial">
+        <source>Peisa</source>
+        <target>Peisa</target>
+      </segment>
+    </unit>
+    <unit id="brandTitleFive">
+      <segment state="initial">
+        <source>Triangular</source>
+        <target>Triangular</target>
+      </segment>
+    </unit>
+    <unit id="brandAltImgFive">
+      <segment state="initial">
+        <source>Triangular</source>
+        <target>Triangular</target>
+      </segment>
+    </unit>
+    <unit id="brandTitleSix">
+      <segment state="initial">
+        <source>Wilo</source>
+        <target>Wilo</target>
+      </segment>
+    </unit>
+    <unit id="brandAltImgSix">
+      <segment state="initial">
+        <source>Wilo</source>
+        <target>Wilo</target>
+      </segment>
+    </unit>
     <unit id="linkHeaderAbout">
       <segment state="initial">
         <source>Nosotros</source>
@@ -124,18 +238,6 @@
       <segment state="initial">
         <source>Contacto</source>
         <target>Contacto</target>
-      </segment>
-    </unit>
-    <unit id="serviceSubtitle">
-      <segment state="initial">
-        <source>Te Brindamos</source>
-        <target>Te Brindamos</target>
-      </segment>
-    </unit>
-    <unit id="serviceTitle">
-      <segment state="initial">
-        <source>Nuestros Mejores Servicios</source>
-        <target>Nuestros Mejores Servicios</target>
       </segment>
     </unit>
     <unit id="titleCardOne">
@@ -246,34 +348,16 @@
         <target>Post Venta</target>
       </segment>
     </unit>
-    <unit id="aboutLoadingSection">
+    <unit id="serviceTitle">
       <segment state="initial">
-        <source>Cargando sección de about...</source>
-        <target>Cargando sección de about...</target>
+        <source>Los mejores servicios</source>
+        <target>Los mejores servicios</target>
       </segment>
     </unit>
-    <unit id="servicesLoadingSection">
+    <unit id="serviceSubtitle">
       <segment state="initial">
-        <source>Cargando sección de servicios...</source>
-        <target>Cargando sección de servicios...</target>
-      </segment>
-    </unit>
-    <unit id="serviceLoadingCards">
-      <segment state="initial">
-        <source>Cargando tarjetas...</source>
-        <target>Cargando tarjetas...</target>
-      </segment>
-    </unit>
-    <unit id="iconScrollTopLabel">
-      <segment state="initial">
-        <source>Flecha Arriba</source>
-        <target>Flecha Arriba</target>
-      </segment>
-    </unit>
-    <unit id="iconScrollTopAlt">
-      <segment state="initial">
-        <source>Flecha Arriba</source>
-        <target>Flecha Arriba</target>
+        <source>Te brindamos</source>
+        <target>Te brindamos</target>
       </segment>
     </unit>
   </file>

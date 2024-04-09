@@ -6,11 +6,6 @@
         <source>Menu</source>
       </segment>
     </unit>
-    <unit id="iconHeaderWhatsappAlt">
-      <segment>
-        <source>Whatsapp</source>
-      </segment>
-    </unit>
     <unit id="aboutCarouselImageOne">
       <segment>
         <source>Primera imagen del carousel</source>
@@ -26,6 +21,11 @@
         <source>Contáctenos</source>
       </segment>
     </unit>
+    <unit id="aboutLoadingSection">
+      <segment>
+        <source>Cargando sección de about...</source>
+      </segment>
+    </unit>
     <unit id="aboutSubTitle">
       <segment>
         <source>¿Quiénes Somos?</source>
@@ -39,76 +39,6 @@
     <unit id="aboutTitle">
       <segment>
         <source>Climatización Sustentable</source>
-      </segment>
-    </unit>
-    <unit id="buttonMenuHeaderLabel">
-      <segment>
-        <source>Menu</source>
-      </segment>
-    </unit>
-    <unit id="carouselButtonLeft">
-      <segment>
-        <source>Retroceder</source>
-      </segment>
-    </unit>
-    <unit id="carouselButtonRight">
-      <segment>
-        <source>Avanzar</source>
-      </segment>
-    </unit>
-    <unit id="iconCarouselLeftAlt">
-      <segment>
-        <source>Flecha</source>
-      </segment>
-    </unit>
-    <unit id="iconCarouselRightAlt">
-      <segment>
-        <source>Flecha</source>
-      </segment>
-    </unit>
-    <unit id="iconHeaderWhatsappLabel">
-      <segment>
-        <source>Whatsapp</source>
-      </segment>
-    </unit>
-    <unit id="iconLogoHeaderAlt">
-      <segment>
-        <source>Green Heat Clima</source>
-      </segment>
-    </unit>
-    <unit id="iconLogoHeaderText">
-      <segment>
-        <source>Green Heat Clima</source>
-      </segment>
-    </unit>
-    <unit id="iconMenuHeaderAlt">
-      <segment>
-        <source>Menu</source>
-      </segment>
-    </unit>
-    <unit id="linkHeaderAbout">
-      <segment>
-        <source>Nosotros</source>
-      </segment>
-    </unit>
-    <unit id="linkHeaderClients">
-      <segment>
-        <source>Clientes</source>
-      </segment>
-    </unit>
-    <unit id="linkHeaderContact">
-      <segment>
-        <source>Contacto</source>
-      </segment>
-    </unit>
-    <unit id="linkHeaderServices">
-      <segment>
-        <source>Servicios</source>
-      </segment>
-    </unit>
-    <unit id="aboutLoadingSection">
-      <segment>
-        <source>Cargando sección de about...</source>
       </segment>
     </unit>
     <unit id="altImgCardFive">
@@ -141,6 +71,96 @@
         <source>Materiales</source>
       </segment>
     </unit>
+    <unit id="brandAltImgFive">
+      <segment>
+        <source>Triangular</source>
+      </segment>
+    </unit>
+    <unit id="brandAltImgFour">
+      <segment>
+        <source>Peisa</source>
+      </segment>
+    </unit>
+    <unit id="brandAltImgOne">
+      <segment>
+        <source>Ariston</source>
+      </segment>
+    </unit>
+    <unit id="brandAltImgSix">
+      <segment>
+        <source>Wilo</source>
+      </segment>
+    </unit>
+    <unit id="brandAltImgThree">
+      <segment>
+        <source>Giacomini</source>
+      </segment>
+    </unit>
+    <unit id="brandAltImgTwo">
+      <segment>
+        <source>Baxi</source>
+      </segment>
+    </unit>
+    <unit id="brandTitleFive">
+      <segment>
+        <source>Triangular</source>
+      </segment>
+    </unit>
+    <unit id="brandTitleFour">
+      <segment>
+        <source>Peisa</source>
+      </segment>
+    </unit>
+    <unit id="brandTitleOne">
+      <segment>
+        <source>Ariston</source>
+      </segment>
+    </unit>
+    <unit id="brandTitleSix">
+      <segment>
+        <source>Wilo</source>
+      </segment>
+    </unit>
+    <unit id="brandTitleThree">
+      <segment>
+        <source>Giacomini</source>
+      </segment>
+    </unit>
+    <unit id="brandTitleTwo">
+      <segment>
+        <source>Baxi</source>
+      </segment>
+    </unit>
+    <unit id="buttonMenuHeaderLabel">
+      <segment>
+        <source>Menu</source>
+      </segment>
+    </unit>
+    <unit id="carouselButtonLeft">
+      <segment>
+        <source>Retroceder</source>
+      </segment>
+    </unit>
+    <unit id="carouselButtonRight">
+      <segment>
+        <source>Avanzar</source>
+      </segment>
+    </unit>
+    <unit id="clientsLoadingSection">
+      <segment>
+        <source>Cargando sección de clientes...</source>
+      </segment>
+    </unit>
+    <unit id="clientSubtitle">
+      <segment>
+        <source>Trabajamos con</source>
+      </segment>
+    </unit>
+    <unit id="clientTitle">
+      <segment>
+        <source>Las mejores marcas</source>
+      </segment>
+    </unit>
     <unit id="descriptionCardFive">
       <segment>
         <source>Tu obra de principio a fin. Materiales y mano de obra.</source>
@@ -171,6 +191,71 @@
         <source>Usamos las mejores y más reconocidas marcas europeas, de esta manera brindamos un producto final de alta calidad.</source>
       </segment>
     </unit>
+    <unit id="iconCarouselLeftAlt">
+      <segment>
+        <source>Flecha</source>
+      </segment>
+    </unit>
+    <unit id="iconCarouselRightAlt">
+      <segment>
+        <source>Flecha</source>
+      </segment>
+    </unit>
+    <unit id="iconHeaderWhatsappAlt">
+      <segment>
+        <source>Whatsapp</source>
+      </segment>
+    </unit>
+    <unit id="iconHeaderWhatsappLabel">
+      <segment>
+        <source>Whatsapp</source>
+      </segment>
+    </unit>
+    <unit id="iconLogoHeaderAlt">
+      <segment>
+        <source>Green Heat Clima</source>
+      </segment>
+    </unit>
+    <unit id="iconLogoHeaderText">
+      <segment>
+        <source>Green Heat Clima</source>
+      </segment>
+    </unit>
+    <unit id="iconMenuHeaderAlt">
+      <segment>
+        <source>Menu</source>
+      </segment>
+    </unit>
+    <unit id="iconScrollTopAlt">
+      <segment>
+        <source>Flecha Arriba</source>
+      </segment>
+    </unit>
+    <unit id="iconScrollTopLabel">
+      <segment>
+        <source>Flecha Arriba</source>
+      </segment>
+    </unit>
+    <unit id="linkHeaderAbout">
+      <segment>
+        <source>Nosotros</source>
+      </segment>
+    </unit>
+    <unit id="linkHeaderClients">
+      <segment>
+        <source>Clientes</source>
+      </segment>
+    </unit>
+    <unit id="linkHeaderContact">
+      <segment>
+        <source>Contacto</source>
+      </segment>
+    </unit>
+    <unit id="linkHeaderServices">
+      <segment>
+        <source>Servicios</source>
+      </segment>
+    </unit>
     <unit id="servicesLoadingSection">
       <segment>
         <source>Cargando sección de servicios...</source>
@@ -178,12 +263,12 @@
     </unit>
     <unit id="serviceSubtitle">
       <segment>
-        <source>Te Brindamos</source>
+        <source>Te brindamos</source>
       </segment>
     </unit>
     <unit id="serviceTitle">
       <segment>
-        <source>Nuestros Mejores Servicios</source>
+        <source>Los mejores servicios</source>
       </segment>
     </unit>
     <unit id="titleCardFive">
@@ -214,21 +299,6 @@
     <unit id="titleCardTwo">
       <segment>
         <source>Materiales</source>
-      </segment>
-    </unit>
-    <unit id="serviceLoadingCards">
-      <segment>
-        <source>Cargando tarjetas...</source>
-      </segment>
-    </unit>
-    <unit id="iconScrollTopAlt">
-      <segment>
-        <source>Flecha Arriba</source>
-      </segment>
-    </unit>
-    <unit id="iconScrollTopLabel">
-      <segment>
-        <source>Flecha Arriba</source>
       </segment>
     </unit>
   </file>
