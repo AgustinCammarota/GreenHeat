@@ -1,12 +1,14 @@
 import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
 import { CardComponent } from '@home/components/card/card.component';
-import { Card } from '@home/interfaces';
+import { PresentationComponent } from '@home/components/presentation/presentation.component';
+import { Card, Presentation } from '@home/interfaces';
 
 @Component({
   selector: 'app-services',
   standalone: true,
   imports: [
-    CardComponent
+    CardComponent,
+    PresentationComponent
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss',
@@ -57,4 +59,14 @@ export class ServicesComponent {
       altImg: $localize `:@@altImgCardSix:Post Venta`
     }
   ]);
+  /**
+   * Presentation information
+   * @type {WritableSignal}
+   * @default {}
+   * @public
+   */
+  presentation: WritableSignal<Presentation> = signal<Presentation>({
+    title: $localize`:@@serviceTitle:Los mejores servicios`,
+    subTitle: $localize`:@@serviceSubtitle:Te brindamos`
+  });
 }

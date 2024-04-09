@@ -1,1 +1,10 @@
-<p>clients works!</p>
+<!-- Client Section Start -->
+<section class="client-section" id="clientSection">
+    <app-presentation [title]="presentation().title" [subTitle]="presentation().subTitle"/>
+    <div #reference aria-hidden="true"></div>
+
+    @defer (on viewport(reference)) {
+        <app-brand [brands]="brands()"/>
+    }
+</section>
+<!-- Client Section End -->

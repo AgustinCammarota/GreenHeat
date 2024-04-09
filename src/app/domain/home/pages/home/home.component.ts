@@ -2,13 +2,15 @@ import { ChangeDetectionStrategy, Component, ElementRef, inject } from '@angular
 import { AboutComponent } from '@home/sections/about/about.component';
 import { ServicesComponent } from '@home/sections/services/services.component';
 import { HeaderComponent } from '@home/sections/header/header.component';
+import { ClientsComponent } from '@home/sections/clients/clients.component';
 
 @Component({
   standalone: true,
   imports: [
     HeaderComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    ClientsComponent
   ],
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush

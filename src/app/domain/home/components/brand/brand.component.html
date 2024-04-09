@@ -1,0 +1,10 @@
+<!-- Brand Start -->
+<div class="brand-container" [@brandAnimation]>
+    @for (brand of brands(); track brand.description) {
+        <div class="brand">
+            <img class="brand__image" [ngSrc]="brand.icon" [alt]="brand.altImg" width="200" height="100" fetchpriority="auto" loading="eager">
+            <p class="brand__description"> {{ brand.description }} </p>
+        </div>
+    }
+</div>
+<!-- Brand End -->

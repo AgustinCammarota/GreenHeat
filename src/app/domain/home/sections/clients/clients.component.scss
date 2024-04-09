@@ -1,3 +1,6 @@
-div {
-  padding: 16px;
+@use "vars";
+
+.client-section {
+  padding: 84px 16px 64px 16px;
+  box-shadow: vars.$primary-box-shadow;
 }

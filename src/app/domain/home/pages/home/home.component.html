@@ -14,6 +14,12 @@
     } @placeholder {
         <p i18n="@@servicesLoadingSection">Cargando sección de servicios...</p>
     }
+
+    @defer (on viewport; prefetch on idle) {
+        <app-clients/>
+    } @placeholder {
+        <p i18n="@@clientsLoadingSection">Cargando sección de clientes...</p>
+    }
 </main>
 
 <footer>

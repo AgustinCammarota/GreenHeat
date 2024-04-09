@@ -1,39 +1,39 @@
 import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
 import { query, transition, trigger, useAnimation } from '@angular/animations';
 import { NgOptimizedImage } from '@angular/common';
-import { Card } from '@home/interfaces';
+import { Brand } from '@home/interfaces';
 import { fadeIn, fadeOut } from '@shared/animations/animations';
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-brand',
   standalone: true,
   imports: [
     NgOptimizedImage
   ],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.scss',
+  templateUrl: './brand.component.html',
+  styleUrl: './brand.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
-    trigger('cardAnimation', [
+    trigger('brandAnimation', [
       transition(':enter', [
-        query('.card', [
+        query('.brand', [
           useAnimation(fadeIn, { params: { time: "1s" } })
         ])
       ]),
       transition(':leave', [
-        query('.card', [
+        query('.brand', [
           useAnimation(fadeOut, { params: { time: "500ms" } })
         ])
       ])
     ])
   ]
 })
-export class CardComponent {
+export class BrandComponent {
   /**
-   * Array with cards items
+   * Brands card information
    * @type {InputSignal}
    * @default []
    * @public
    */
-  cards: InputSignal<Card[]> = input.required<Card[]>();
+  brands: InputSignal<Brand[]> = input.required<Brand[]>();
 }

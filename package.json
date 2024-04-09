@@ -10,7 +10,6 @@
     "test": "ng test",
     "serve:ssr:green-heat": "node dist/green-heat/proxy-server.mjs",
     "extract:locales": "ng extract-i18n --output-path src/locale",
-    "compodoc": "compodoc -p tsconfig.app.json",
     "lint": "ng lint",
     "lint:styles": "stylelint \"src/**/*.scss\""
   },

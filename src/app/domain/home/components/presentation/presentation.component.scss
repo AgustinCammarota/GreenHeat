@@ -1,0 +1,29 @@
+@use "mixins";
+@use "vars";
+@use "typography";
+
+.presentation-container {
+  .presentation-container__subtitle {
+    margin-bottom: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    color: vars.$tertiary-green;
+    @include mixins.font(vars.$font-family-inter, 1.8rem, 700);
+  }
+
+  .presentation-container__title {
+    margin-bottom: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: vars.$primary-green;
+    @include mixins.font(vars.$font-family-inter, 2.3rem, 700);
+  }
+
+  .presentation-container__divider {
+    display: block;
+    width: 200px;
+    height: 5px;
+    margin: 0 auto;
+    background-color: vars.$tertiary-green;
+  }
+}

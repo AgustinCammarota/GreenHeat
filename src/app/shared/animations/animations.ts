@@ -13,7 +13,7 @@ export const translateAnimation = animation([
  */
 export const fadeIn = animation([
   style({ opacity: 0, transform: 'translateY(-50px)' }),
-  stagger(100, [
+  stagger(200, [
     animate("{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
         style({ opacity: 1, transform: 'none' }))
   ])
@@ -24,7 +24,7 @@ export const fadeIn = animation([
  */
 export const fadeOut = animation([
   style({ opacity: 1, transform: 'none' }),
-  stagger(100, [
+  stagger(200, [
       animate("{{time}} cubic-bezier(0.785, 0.135, 0.15, 0.86)",
       style({ opacity: 0, transform: 'translateY(-50px)' }))
   ])
