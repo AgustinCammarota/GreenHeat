@@ -3,11 +3,7 @@
 </header>
 
 <main class="container">
-    @defer (on immediate; prefetch on idle) {
-        <app-about/>
-    } @placeholder {
-        <p i18n="@@aboutLoadingSection">Cargando sección de about...</p>
-    }
+    <app-about/>
 
     @defer (on viewport; prefetch on idle) {
         <app-services/>
