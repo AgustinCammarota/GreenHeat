@@ -21,11 +21,6 @@
         <source>Contáctenos</source>
       </segment>
     </unit>
-    <unit id="aboutLoadingSection">
-      <segment>
-        <source>Cargando sección de about...</source>
-      </segment>
-    </unit>
     <unit id="aboutSubTitle">
       <segment>
         <source>¿Quiénes Somos?</source>
@@ -299,6 +294,81 @@
     <unit id="titleCardTwo">
       <segment>
         <source>Materiales</source>
+      </segment>
+    </unit>
+    <unit id="authorText">
+      <segment>
+        <source><pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">© Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></source>
+      </segment>
+    </unit>
+    <unit id="contactLoadingSection">
+      <segment>
+        <source>Cargando sección de contacto...</source>
+      </segment>
+    </unit>
+    <unit id="formContactButton">
+      <segment>
+        <source>Enviar</source>
+      </segment>
+    </unit>
+    <unit id="formContactInputPlaceholder">
+      <segment>
+        <source>Email</source>
+      </segment>
+    </unit>
+    <unit id="formContactTextareaPlaceholder">
+      <segment>
+        <source>Mensaje</source>
+      </segment>
+    </unit>
+    <unit id="formContactTitle">
+      <segment>
+        <source>Contáctenos</source>
+      </segment>
+    </unit>
+    <unit id="informationIconInstagramAlt">
+      <segment>
+        <source>Instagram</source>
+      </segment>
+    </unit>
+    <unit id="informationIconMailAlt">
+      <segment>
+        <source>Correo</source>
+      </segment>
+    </unit>
+    <unit id="informationIconWhatsappAlt">
+      <segment>
+        <source>Whatsapp</source>
+      </segment>
+    </unit>
+    <unit id="informationInstagramText">
+      <segment>
+        <source>@greenheatclima</source>
+      </segment>
+    </unit>
+    <unit id="informationLinkCorreoLabel">
+      <segment>
+        <source>Correo</source>
+      </segment>
+    </unit>
+    <unit id="informationLinkInstagramLabel">
+      <segment>
+        <source>Instagram</source>
+      </segment>
+    </unit>
+    <unit id="informationLinkWhatsappLabel">
+      <segment>
+        <source>Whatsapp</source>
+      </segment>
+    </unit>
+    <unit id="informationMailText">
+      <segment>
+        <source>infoghclima@gmail.com</source>
+      </segment>
+    </unit>
+    <unit id="informationWhatsappText">
+      <segment>
+        <source>+54 9 11 6218-8835</source>
       </segment>
     </unit>
   </file>

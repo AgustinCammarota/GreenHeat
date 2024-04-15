@@ -78,12 +78,6 @@
         <target>Flecha Arriba</target>
       </segment>
     </unit>
-    <unit id="aboutLoadingSection">
-      <segment state="initial">
-        <source>Cargando sección de about...</source>
-        <target>Cargando sección de about...</target>
-      </segment>
-    </unit>
     <unit id="servicesLoadingSection">
       <segment state="initial">
         <source>Cargando sección de servicios...</source>
@@ -358,6 +352,96 @@
       <segment state="initial">
         <source>Te brindamos</source>
         <target>Te brindamos</target>
+      </segment>
+    </unit>
+    <unit id="formContactTitle">
+      <segment state="initial">
+        <source>Contáctenos</source>
+        <target>Contáctenos</target>
+      </segment>
+    </unit>
+    <unit id="formContactInputPlaceholder">
+      <segment state="initial">
+        <source>Email</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="formContactTextareaPlaceholder">
+      <segment state="initial">
+        <source>Mensaje</source>
+        <target>Mensaje</target>
+      </segment>
+    </unit>
+    <unit id="formContactButton">
+      <segment state="initial">
+        <source>Enviar</source>
+        <target>Enviar</target>
+      </segment>
+    </unit>
+    <unit id="informationLinkWhatsappLabel">
+      <segment state="initial">
+        <source>Whatsapp</source>
+        <target>Whatsapp</target>
+      </segment>
+    </unit>
+    <unit id="informationIconWhatsappAlt">
+      <segment state="initial">
+        <source>Whatsapp</source>
+        <target>Whatsapp</target>
+      </segment>
+    </unit>
+    <unit id="informationWhatsappText">
+      <segment state="initial">
+        <source>+54 9 11 6218-8835</source>
+        <target>+54 9 11 6218-8835</target>
+      </segment>
+    </unit>
+    <unit id="informationLinkInstagramLabel">
+      <segment state="initial">
+        <source>Instagram</source>
+        <target>Instagram</target>
+      </segment>
+    </unit>
+    <unit id="informationIconInstagramAlt">
+      <segment state="initial">
+        <source>Instagram</source>
+        <target>Instagram</target>
+      </segment>
+    </unit>
+    <unit id="informationInstagramText">
+      <segment state="initial">
+        <source>@greenheatclima</source>
+        <target>@greenheatclima</target>
+      </segment>
+    </unit>
+    <unit id="informationLinkCorreoLabel">
+      <segment state="initial">
+        <source>Correo</source>
+        <target>Correo</target>
+      </segment>
+    </unit>
+    <unit id="informationIconMailAlt">
+      <segment state="initial">
+        <source>Correo</source>
+        <target>Correo</target>
+      </segment>
+    </unit>
+    <unit id="informationMailText">
+      <segment state="initial">
+        <source>infoghclima@gmail.com</source>
+        <target>infoghclima@gmail.com</target>
+      </segment>
+    </unit>
+    <unit id="contactLoadingSection">
+      <segment state="initial">
+        <source>Cargando sección de contacto...</source>
+        <target>Cargando sección de contacto...</target>
+      </segment>
+    </unit>
+    <unit id="authorText">
+      <segment state="initial">
+        <source><pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">© Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></source>
+        <target><pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">© Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></target>
       </segment>
     </unit>
   </file>
