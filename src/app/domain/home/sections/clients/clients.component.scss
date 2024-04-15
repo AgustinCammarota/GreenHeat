@@ -1,6 +1,18 @@
 @use "vars";
 
 .client-section {
+  // the min-height is necessary for the scroll to element and deferrals views
+  min-height: 640px;
   padding: 84px 16px 64px;
   box-shadow: vars.$primary-box-shadow;
+
+  // Tablet and mobile media query
+  @media only screen and (max-width: vars.$desktop) {
+    min-height: 860px;
+  }
+
+  // Mobile media query
+  @media only screen and (max-width: vars.$tablet) {
+    min-height: 1500px;
+  }
 }

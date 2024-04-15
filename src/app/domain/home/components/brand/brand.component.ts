@@ -17,7 +17,7 @@ import { fadeIn, fadeOut } from '@shared/animations/animations';
     trigger('brandAnimation', [
       transition(':enter', [
         query('.brand', [
-          useAnimation(fadeIn, { params: { time: "1s" } })
+          useAnimation(fadeIn, { params: { time: "800ms" } })
         ])
       ]),
       transition(':leave', [

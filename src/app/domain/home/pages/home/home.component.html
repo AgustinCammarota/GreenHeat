@@ -5,13 +5,13 @@
 <main class="container">
     <app-about/>
 
-    @defer (on viewport; prefetch on idle) {
+    @defer (on immediate; prefetch on idle) {
         <app-services/>
     } @placeholder {
         <p i18n="@@servicesLoadingSection">Cargando sección de servicios...</p>
     }
 
-    @defer (on viewport; prefetch on idle) {
+    @defer (on immediate; prefetch on idle) {
         <app-clients/>
     } @placeholder {
         <p i18n="@@clientsLoadingSection">Cargando sección de clientes...</p>
@@ -19,5 +19,9 @@
 </main>
 
 <footer>
-
+    @defer (on immediate; prefetch on idle) {
+        <app-contact/>
+    } @placeholder {
+        <p i18n="@@contactLoadingSection">Cargando sección de contacto...</p>
+    }
 </footer>

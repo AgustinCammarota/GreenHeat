@@ -1,0 +1,17 @@
+<!-- Contact Section Start -->
+<section class="contact-container" id="contactSection">
+    <div class="contact-section" #formContainer>
+        <app-form class="form"/>
+
+        @defer (on viewport(formContainer)) {
+            <app-information class="information"/>
+        }
+    </div>
+
+    <div class="author-section">
+        <p class="author-section__text" i18n="@@authorText">
+            <span>© Green Heat Clima</span>, All Rights Reserved. Designed By <span>Cammarota.</span>
+        </p>
+    </div>
+</section>
+<!-- Contact Section Start -->

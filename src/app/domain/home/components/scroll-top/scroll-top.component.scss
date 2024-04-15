@@ -22,6 +22,10 @@
     color: vars.$primary-white;
     @include mixins.flexbox(center, center);
 
+    &:hover {
+      background-color: vars.$primary-green;
+    }
+
     .scroll-top-button__image {
       animation: moveUpDown ease-in-out 1.5s infinite;
       will-change: transform;

@@ -1,0 +1,93 @@
+@use "typography";
+@use "mixins";
+@use "vars";
+
+.information-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 84px;
+  flex-direction: column;
+  @include mixins.flexbox(space-around, flex-start);
+
+  // Tablet and mobile media query
+  @media only screen and (max-width: vars.$desktop) {
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid vars.$primary-white;
+    padding-top: 24px;
+    padding-left: 0;
+  }
+
+  // Mobile media query
+  @media only screen and (max-width: vars.$tablet) {
+    padding-top: 8px;
+  }
+
+  .information-link {
+    position: relative;
+    @include mixins.flexbox(center, center);
+
+    // Desktop media query
+    @media only screen and (min-width: vars.$desktop) {
+      &:not(:last-of-type)::after {
+        content: "";
+        position: absolute;
+        top: 79px;
+        left: 39px;
+        width: 2px;
+        height: 70%;
+        background-color: vars.$primary-white;
+        z-index: 10;
+      }
+    }
+
+    // Tablet and mobile media query
+    @media only screen and (max-width: vars.$desktop) {
+      flex-direction: column;
+    }
+
+    .information-link__picture {
+      width: 50px;
+      height: 50px;
+      padding: 12px;
+      border: 3px dotted vars.$primary-white;
+      border-radius: 50%;
+      @include mixins.flexbox(center, center);
+
+      img {
+        will-change: transform;
+      }
+    }
+
+    .information-link__text {
+      margin-left: 16px;
+      color: vars.$primary-white;
+      border-bottom: 2px solid transparent;
+      will-change: transform;
+      @include mixins.font(vars.$font-family-heebo, 1.2rem, 400);
+
+      // Tablet and mobile media query
+      @media only screen and (max-width: vars.$desktop) {
+        margin-left: 0;
+      }
+
+      // Mobile media query
+      @media only screen and (max-width: vars.$tablet) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .information-link__picture {
+        img {
+          transform: scale(1.1);
+        }
+      }
+
+      .information-link__text {
+        border-bottom: 2px solid vars.$primary-white;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

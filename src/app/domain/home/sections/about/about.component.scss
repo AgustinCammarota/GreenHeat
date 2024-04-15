@@ -100,7 +100,7 @@
       width: 200px;
       color: vars.$primary-white;
       background-color: vars.$primary-green;
-      @include mixins.font(vars.$font-family-heebo, 1.2rem, 700);
+      @include mixins.font(vars.$font-family-heebo, 1.2rem, 500);
       @include mixins.flexbox(center, center);
 
       &:hover {

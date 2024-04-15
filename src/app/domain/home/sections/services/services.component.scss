@@ -1,6 +1,18 @@
 @use "vars";
 
 .service-section {
+  // the min-height is necessary for the scroll to element and deferrals views
+  min-height: 920px;
   padding: 84px 16px 64px;
   background-color: vars.$primary-white;
+
+  // Custom media query
+  @media only screen and (max-width: 1000px) {
+    min-height: 1250px;
+  }
+
+  // Custom media query
+  @media only screen and (max-width: 660px) {
+    min-height: 2300px;
+  }
 }

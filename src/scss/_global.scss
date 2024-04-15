@@ -41,6 +41,19 @@ li {
   list-style: none;
 }
 
+input, textarea {
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid vars.$primary-grey;
+  resize: none;
+  @include mixins.font(vars.$font-family-heebo, 1rem, 300);
+
+  &:focus-visible {
+    outline-color: vars.$primary-green;
+  }
+}
+
 .container {
   width: 100vw;
   height: 100%;

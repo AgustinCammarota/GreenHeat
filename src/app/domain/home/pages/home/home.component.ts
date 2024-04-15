@@ -3,6 +3,7 @@ import { AboutComponent } from '@home/sections/about/about.component';
 import { ServicesComponent } from '@home/sections/services/services.component';
 import { HeaderComponent } from '@home/sections/header/header.component';
 import { ClientsComponent } from '@home/sections/clients/clients.component';
+import { ContactComponent } from '@home/sections/contact/contact.component';
 
 @Component({
   standalone: true,
@@ -10,7 +11,8 @@ import { ClientsComponent } from '@home/sections/clients/clients.component';
     HeaderComponent,
     AboutComponent,
     ServicesComponent,
-    ClientsComponent
+    ClientsComponent,
+    ContactComponent
   ],
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush

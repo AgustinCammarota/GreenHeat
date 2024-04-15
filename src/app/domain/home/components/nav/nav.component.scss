@@ -9,11 +9,6 @@
   box-shadow: vars.$primary-box-shadow;
   @include mixins.flexbox(space-between, center);
 
-  // Tablet and mobile media query
-  @media only screen and (max-width: vars.$desktop) {
-    box-shadow: none;
-  }
-
   .icon-container {
     @include mixins.flexbox(start, center);
 
