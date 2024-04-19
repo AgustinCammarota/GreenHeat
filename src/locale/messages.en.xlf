@@ -114,18 +114,6 @@
         <target>Contáctenos</target>
       </segment>
     </unit>
-    <unit id="aboutCarouselImageOne">
-      <segment state="initial">
-        <source>Primera imagen del carousel</source>
-        <target>Primera imagen del carousel</target>
-      </segment>
-    </unit>
-    <unit id="aboutCarouselImageTwo">
-      <segment state="initial">
-        <source>Segunda imagen del carousel</source>
-        <target>Segunda imagen del carousel</target>
-      </segment>
-    </unit>
     <unit id="clientTitle">
       <segment state="initial">
         <source>Las mejores marcas</source>
@@ -440,8 +428,14 @@
     </unit>
     <unit id="authorText">
       <segment state="initial">
-        <source><pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">© Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></source>
-        <target><pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">© Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></target>
+        <source> © <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></source>
+        <target> © <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></target>
+      </segment>
+    </unit>
+    <unit id="imageCarousel">
+      <segment state="initial">
+        <source>Imagen Carousel</source>
+        <target>Imagen Carousel</target>
       </segment>
     </unit>
   </file>
