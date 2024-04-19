@@ -11,7 +11,6 @@ import {
 import { NgOptimizedImage } from '@angular/common';
 import { interval, Subscription } from 'rxjs';
 import { transition, trigger, useAnimation } from '@angular/animations';
-import { Carousel } from '@home/interfaces';
 import { translateAnimation } from '@shared/animations/animations';
 
 @Component({
@@ -33,12 +32,12 @@ import { translateAnimation } from '@shared/animations/animations';
 })
 export class CarouselComponent implements OnDestroy {
   /**
-   * Array with carousel information
+   * Number of slider
    * @type {InputSignal}
    * @default []
    * @public
    */
-  slides:InputSignal<Carousel[]> = input.required<Carousel[]>();
+  slides:InputSignal<number[]> = input.required<number[]>();
   /**
    * Carousel current index
    * @type {WritableSignal}
@@ -97,11 +96,21 @@ export class CarouselComponent implements OnDestroy {
   }
 
   /**
+   * Get url image
+   * @param {number} slide
+   * @return string
+   * @public
+   */
+  getUrlImage(slide: number): string {
+    return `/green-heat/carousel-image-${slide + 1}`
+  }
+
+  /**
    * Start interval observer to change slide
    * @private
    */
   private startInterval(): void {
-    this.interval$ = interval(6000).subscribe(() => {
+    this.interval$ = interval(5000).subscribe(() => {
       this.currentIndex.update(value => (value + 1) % this.slides().length);
       this.cdr.detectChanges();
     });

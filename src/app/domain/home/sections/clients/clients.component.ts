@@ -35,32 +35,32 @@ export class ClientsComponent {
     {
       description: $localize`:@@brandTitleOne:Ariston`,
       altImg: $localize `:@@brandAltImgOne:Ariston`,
-      icon: './assets/svg/ariston.svg',
+      icon: '/green-heat/ariston.svg',
     },
     {
       description: $localize`:@@brandTitleTwo:Baxi`,
       altImg: $localize `:@@brandAltImgTwo:Baxi`,
-      icon: './assets/svg/baxi.svg',
+      icon: '/green-heat/baxi.svg',
     },
     {
       description: $localize`:@@brandTitleThree:Giacomini`,
       altImg: $localize `:@@brandAltImgThree:Giacomini`,
-      icon: './assets/svg/giacomini.svg',
+      icon: '/green-heat/giacomini.svg',
     },
     {
       description: $localize`:@@brandTitleFour:Peisa`,
       altImg: $localize `:@@brandAltImgFour:Peisa`,
-      icon: './assets/svg/peisa.svg',
+      icon: '/green-heat/peisa.svg',
     },
     {
       description: $localize`:@@brandTitleFive:Triangular`,
       altImg: $localize `:@@brandAltImgFive:Triangular`,
-      icon: './assets/svg/triangular.svg',
+      icon: '/green-heat/triangular.svg',
     },
     {
       description: $localize`:@@brandTitleSix:Wilo`,
       altImg: $localize `:@@brandAltImgSix:Wilo`,
-      icon: './assets/svg/wilo.svg',
+      icon: '/green-heat/wilo.svg',
     }
   ]);
 }

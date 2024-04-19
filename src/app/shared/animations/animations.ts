@@ -4,8 +4,8 @@ import { animate, animation, stagger, style } from '@angular/animations';
  * Translate animation
  */
 export const translateAnimation = animation([
-  style({ transform: 'translateX(100%)' }),
-  animate('{{ time }}')
+  style({ opacity: 0, transform: 'translateX(100%)' }),
+  animate('{{ time }}', style({ opacity: 1, transform: 'translateX(0)' }))
 ]);
 
 /**

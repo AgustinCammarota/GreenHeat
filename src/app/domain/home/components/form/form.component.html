@@ -1,7 +1,7 @@
 <!-- Form Start -->
 <div class="form-container">
     <h3 class="form-container__title" i18n="@@formContactTitle">Contáctenos</h3>
-    <form (ngSubmit)="sendEmail()" [formGroup]="formEmail" class="form" name="form-email" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+    <form (ngSubmit)="sendEmail()" [formGroup]="formEmail" class="form" name="form-email">
         <input formControlName="email" class="form__input" name="email" type="email" placeholder="Email" i18n-placeholder="@@formContactInputPlaceholder">
         <textarea formControlName="message" class="form__textarea" name="message" placeholder="Mensaje" i18n-placeholder="@@formContactTextareaPlaceholder"></textarea>
         <button class="form__button" type="submit" i18n="@@formContactButton">Enviar</button>
