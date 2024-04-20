@@ -99,12 +99,12 @@
       height: 60px;
       width: 200px;
       color: vars.$primary-white;
-      background-color: vars.$primary-green;
-      @include mixins.font(vars.$font-family-heebo, 1.2rem, 500);
+      background-color: vars.$tertiary-green;
+      @include mixins.font(vars.$font-family-heebo, 1.2rem, 600);
       @include mixins.flexbox(center, center);
 
       &:hover {
-        background-color: vars.$secondary-green;
+        background-color: vars.$primary-green;
       }
 
       // Desktop xl media query

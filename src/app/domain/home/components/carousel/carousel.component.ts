@@ -1,7 +1,6 @@
 import {
   afterNextRender,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component, inject,
   input,
   InputSignal, OnDestroy,
@@ -9,7 +8,7 @@ import {
   WritableSignal
 } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { interval, Subscription } from 'rxjs';
+import { interval, Subscription, takeUntil, timer } from 'rxjs';
 import { transition, trigger, useAnimation } from '@angular/animations';
 import { translateAnimation } from '@shared/animations/animations';
 
@@ -110,7 +109,11 @@ export class CarouselComponent implements OnDestroy {
    * @private
    */
   private startInterval(): void {
-    this.interval$ = interval(5000).subscribe(() => {
+    this.interval$ = interval(5000)
+        .pipe(
+            takeUntil(timer(80000))
+        )
+        .subscribe(() => {
       this.currentIndex.update(value => (value + 1) % this.slides().length);
       this.cdr.detectChanges();
     });

@@ -35,7 +35,7 @@
   .information {
     width: 50%;
     height: 400px;
-    min-width: 50%;
+    min-width: 50px;
 
     // Tablet and mobile media query
     @media only screen and (max-width: vars.$desktop) {
