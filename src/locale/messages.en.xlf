@@ -438,5 +438,23 @@
         <target>Imagen Carousel</target>
       </segment>
     </unit>
+    <unit id="appTitle">
+      <segment state="initial">
+        <source>GreenHeatClima</source>
+        <target>GreenHeatClima</target>
+      </segment>
+    </unit>
+    <unit id="appDescription">
+      <segment state="initial">
+        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</source>
+        <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</target>
+      </segment>
+    </unit>
+    <unit id="appKeywords">
+      <segment state="initial">
+        <source>Green Heat Clima, Servicios de Climatización, Calderas, Heladeras, Aires Acondicionados, Argentina</source>
+        <target>Green Heat Clima, Servicios de Climatización, Calderas, Heladeras, Aires Acondicionados, Argentina</target>
+      </segment>
+    </unit>
   </file>
 </xliff>
