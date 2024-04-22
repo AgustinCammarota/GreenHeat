@@ -8,9 +8,12 @@
 
 
 <url>
-  <loc>https://greenheatclima.com.ar/</loc>
+  <loc>https://greenheatclima.com.ar/es</loc>
   <lastmod>2024-04-20T00:30:35+00:00</lastmod>
 </url>
-
+  <url>
+    <loc>https://greenheatclima.com.ar/en</loc>
+    <lastmod>2024-04-20T00:30:35+00:00</lastmod>
+  </url>
 
 </urlset>
