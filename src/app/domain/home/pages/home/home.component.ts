@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
       name: 'description', content: $localize `:@@appDescription:Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.`
     });
     this.meta.updateTag({
-      name: 'keywords', content: $localize `:@@appKeywords:Green Heat Clima, Servicios de Climatización, Calderas, Heladeras, Aires Acondicionados, Argentina`
+      name: 'keywords', content: $localize `:@@appKeywords:Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.`
     });
   }
 }

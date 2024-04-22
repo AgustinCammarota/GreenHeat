@@ -1,6 +1,6 @@
 <!-- Service Section Start -->
 <section class="service-section" id="serviceSection">
-    <app-presentation [title]="presentation().title" [subTitle]="presentation().subTitle"/>
+    <app-title [title]="presentation().title" [subTitle]="presentation().subTitle"/>
     <div #reference aria-hidden="true"></div>
 
     @defer (on viewport(reference)) {

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { environment } from '@environments/environment.development';
 
 @Component({
   selector: 'app-presentation',
@@ -10,17 +11,11 @@ import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular
 })
 export class PresentationComponent {
   /**
-   * Input title required
-   * @type {InputSignal}
-   * @default ''
+   * Return whatsapp URL
    * @public
+   * @return {string}
    */
-  title: InputSignal<string> = input.required<string>();
-  /**
-   * Input subtitle required
-   * @type {InputSignal}
-   * @default ''
-   * @public
-   */
-  subTitle: InputSignal<string> = input.required<string>();
+  get whatsappUrl(): string {
+    return environment.whatsappUrl;
+  }
 }

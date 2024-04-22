@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { query, transition, trigger, useAnimation } from '@angular/animations';
 import { fadeIn, fadeOut } from '@shared/animations/animations';
-import { environment } from '@environments/environment.development';
+import { Information } from '@home/interfaces';
 
 @Component({
   selector: 'app-information',
@@ -30,29 +30,10 @@ import { environment } from '@environments/environment.development';
 })
 export class InformationComponent {
   /**
-   * Return whatsapp URL
+   * Array with information items
+   * @type InputSignal<Information[]>
+   * @default []
    * @public
-   * @return {string}
    */
-  get whatsappUrl(): string {
-    return environment.whatsappUrl;
-  }
-
-  /**
-   * Return instagram URL
-   * @public
-   * @return {string}
-   */
-  get instagramUrl(): string {
-    return environment.instagramUrl;
-  }
-
-  /**
-   * Return gmail URL
-   * @public
-   * @return {string}
-   */
-  get gmailUrl(): string {
-    return environment.gmailUrl;
-  }
+  informationItems: InputSignal<Information[]> = input.required<Information[]>();
 }

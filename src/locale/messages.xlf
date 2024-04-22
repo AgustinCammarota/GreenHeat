@@ -6,26 +6,6 @@
         <source>Menu</source>
       </segment>
     </unit>
-    <unit id="aboutContactLink">
-      <segment>
-        <source>Contáctenos</source>
-      </segment>
-    </unit>
-    <unit id="aboutSubTitle">
-      <segment>
-        <source>¿Quiénes Somos?</source>
-      </segment>
-    </unit>
-    <unit id="aboutText">
-      <segment>
-        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
-      </segment>
-    </unit>
-    <unit id="aboutTitle">
-      <segment>
-        <source>Climatización Sustentable</source>
-      </segment>
-    </unit>
     <unit id="altImgCardFive">
       <segment>
         <source>Planificación</source>
@@ -54,6 +34,26 @@
     <unit id="altImgCardTwo">
       <segment>
         <source>Materiales</source>
+      </segment>
+    </unit>
+    <unit id="appDescription">
+      <segment>
+        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</source>
+      </segment>
+    </unit>
+    <unit id="appKeywords">
+      <segment>
+        <source>Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.</source>
+      </segment>
+    </unit>
+    <unit id="appTitle">
+      <segment>
+        <source>GreenHeatClima</source>
+      </segment>
+    </unit>
+    <unit id="authorText">
+      <segment>
+        <source> © <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></source>
       </segment>
     </unit>
     <unit id="brandAltImgFive">
@@ -146,6 +146,11 @@
         <source>Las mejores marcas</source>
       </segment>
     </unit>
+    <unit id="contactLoadingSection">
+      <segment>
+        <source>Cargando sección de contacto...</source>
+      </segment>
+    </unit>
     <unit id="descriptionCardFive">
       <segment>
         <source>Tu obra de principio a fin. Materiales y mano de obra.</source>
@@ -174,6 +179,26 @@
     <unit id="descriptionCardTwo">
       <segment>
         <source>Usamos las mejores y más reconocidas marcas europeas, de esta manera brindamos un producto final de alta calidad.</source>
+      </segment>
+    </unit>
+    <unit id="formContactButton">
+      <segment>
+        <source>Enviar</source>
+      </segment>
+    </unit>
+    <unit id="formContactInputPlaceholder">
+      <segment>
+        <source>Email</source>
+      </segment>
+    </unit>
+    <unit id="formContactTextareaPlaceholder">
+      <segment>
+        <source>Mensaje</source>
+      </segment>
+    </unit>
+    <unit id="formContactTitle">
+      <segment>
+        <source>Contáctenos</source>
       </segment>
     </unit>
     <unit id="iconCarouselLeftAlt">
@@ -221,6 +246,41 @@
         <source>Flecha Arriba</source>
       </segment>
     </unit>
+    <unit id="imageCarousel">
+      <segment>
+        <source>Imagen Carousel</source>
+      </segment>
+    </unit>
+    <unit id="informationIconInstagramAlt">
+      <segment>
+        <source>Instagram</source>
+      </segment>
+    </unit>
+    <unit id="informationIconMailAlt">
+      <segment>
+        <source>Correo</source>
+      </segment>
+    </unit>
+    <unit id="informationIconWhatsappAlt">
+      <segment>
+        <source>Whatsapp</source>
+      </segment>
+    </unit>
+    <unit id="informationInstagramText">
+      <segment>
+        <source>@greenheatclima</source>
+      </segment>
+    </unit>
+    <unit id="informationMailText">
+      <segment>
+        <source>infoghclima@gmail.com</source>
+      </segment>
+    </unit>
+    <unit id="informationWhatsappText">
+      <segment>
+        <source>+54 9 11 6218-8835</source>
+      </segment>
+    </unit>
     <unit id="linkHeaderAbout">
       <segment>
         <source>Nosotros</source>
@@ -239,6 +299,26 @@
     <unit id="linkHeaderServices">
       <segment>
         <source>Servicios</source>
+      </segment>
+    </unit>
+    <unit id="presentationContactLink">
+      <segment>
+        <source>Contáctenos</source>
+      </segment>
+    </unit>
+    <unit id="presentationSubTitle">
+      <segment>
+        <source>¿Quiénes Somos?</source>
+      </segment>
+    </unit>
+    <unit id="presentationText">
+      <segment>
+        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
+      </segment>
+    </unit>
+    <unit id="presentationTitle">
+      <segment>
+        <source>Climatización Sustentable</source>
       </segment>
     </unit>
     <unit id="servicesLoadingSection">
@@ -284,101 +364,6 @@
     <unit id="titleCardTwo">
       <segment>
         <source>Materiales</source>
-      </segment>
-    </unit>
-    <unit id="authorText">
-      <segment>
-        <source> © <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></source>
-      </segment>
-    </unit>
-    <unit id="contactLoadingSection">
-      <segment>
-        <source>Cargando sección de contacto...</source>
-      </segment>
-    </unit>
-    <unit id="formContactButton">
-      <segment>
-        <source>Enviar</source>
-      </segment>
-    </unit>
-    <unit id="formContactInputPlaceholder">
-      <segment>
-        <source>Email</source>
-      </segment>
-    </unit>
-    <unit id="formContactTextareaPlaceholder">
-      <segment>
-        <source>Mensaje</source>
-      </segment>
-    </unit>
-    <unit id="formContactTitle">
-      <segment>
-        <source>Contáctenos</source>
-      </segment>
-    </unit>
-    <unit id="informationIconInstagramAlt">
-      <segment>
-        <source>Instagram</source>
-      </segment>
-    </unit>
-    <unit id="informationIconMailAlt">
-      <segment>
-        <source>Correo</source>
-      </segment>
-    </unit>
-    <unit id="informationIconWhatsappAlt">
-      <segment>
-        <source>Whatsapp</source>
-      </segment>
-    </unit>
-    <unit id="informationInstagramText">
-      <segment>
-        <source>@greenheatclima</source>
-      </segment>
-    </unit>
-    <unit id="informationLinkCorreoLabel">
-      <segment>
-        <source>Correo</source>
-      </segment>
-    </unit>
-    <unit id="informationLinkInstagramLabel">
-      <segment>
-        <source>Instagram</source>
-      </segment>
-    </unit>
-    <unit id="informationLinkWhatsappLabel">
-      <segment>
-        <source>Whatsapp</source>
-      </segment>
-    </unit>
-    <unit id="informationMailText">
-      <segment>
-        <source>infoghclima@gmail.com</source>
-      </segment>
-    </unit>
-    <unit id="informationWhatsappText">
-      <segment>
-        <source>+54 9 11 6218-8835</source>
-      </segment>
-    </unit>
-    <unit id="imageCarousel">
-      <segment>
-        <source>Imagen Carousel</source>
-      </segment>
-    </unit>
-    <unit id="appDescription">
-      <segment>
-        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</source>
-      </segment>
-    </unit>
-    <unit id="appKeywords">
-      <segment>
-        <source>Green Heat Clima, Servicios de Climatización, Calderas, Heladeras, Aires Acondicionados, Argentina</source>
-      </segment>
-    </unit>
-    <unit id="appTitle">
-      <segment>
-        <source>GreenHeatClima</source>
       </segment>
     </unit>
   </file>

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
 import { CardComponent } from '@home/components/card/card.component';
-import { PresentationComponent } from '@home/components/presentation/presentation.component';
+import { TitleComponent } from '@home/components/title/title.component';
 import { Card, Presentation } from '@home/interfaces';
 
 @Component({
@@ -8,7 +8,7 @@ import { Card, Presentation } from '@home/interfaces';
   standalone: true,
   imports: [
     CardComponent,
-    PresentationComponent
+    TitleComponent
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss',

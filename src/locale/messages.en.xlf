@@ -1,21 +1,9 @@
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="es" trgLang="en">
   <file id="ngi18n" original="ng.template">
-    <unit id="carouselButtonLeft">
+    <unit id="imageCarousel">
       <segment state="initial">
-        <source>Retroceder</source>
-        <target>Retroceder</target>
-      </segment>
-    </unit>
-    <unit id="iconCarouselLeftAlt">
-      <segment state="initial">
-        <source>Flecha</source>
-        <target>Flecha</target>
-      </segment>
-    </unit>
-    <unit id="2102825898069375693">
-      <segment state="initial">
-        <source>Menu</source>
-        <target>Menu</target>
+        <source>Imagen Carousel</source>
+        <target>Imagen Carousel</target>
       </segment>
     </unit>
     <unit id="carouselButtonRight">
@@ -28,6 +16,48 @@
       <segment state="initial">
         <source>Flecha</source>
         <target>Flecha</target>
+      </segment>
+    </unit>
+    <unit id="2102825898069375693">
+      <segment state="initial">
+        <source>Menu</source>
+        <target>Menu</target>
+      </segment>
+    </unit>
+    <unit id="carouselButtonLeft">
+      <segment state="initial">
+        <source>Retroceder</source>
+        <target>Retroceder</target>
+      </segment>
+    </unit>
+    <unit id="iconCarouselLeftAlt">
+      <segment state="initial">
+        <source>Flecha</source>
+        <target>Flecha</target>
+      </segment>
+    </unit>
+    <unit id="formContactTitle">
+      <segment state="initial">
+        <source>Contáctenos</source>
+        <target>Contáctenos</target>
+      </segment>
+    </unit>
+    <unit id="formContactInputPlaceholder">
+      <segment state="initial">
+        <source>Email</source>
+        <target>Email</target>
+      </segment>
+    </unit>
+    <unit id="formContactTextareaPlaceholder">
+      <segment state="initial">
+        <source>Mensaje</source>
+        <target>Mensaje</target>
+      </segment>
+    </unit>
+    <unit id="formContactButton">
+      <segment state="initial">
+        <source>Enviar</source>
+        <target>Enviar</target>
       </segment>
     </unit>
     <unit id="iconLogoHeaderAlt">
@@ -66,6 +96,30 @@
         <target>Whatsapp</target>
       </segment>
     </unit>
+    <unit id="presentationSubTitle">
+      <segment state="initial">
+        <source>¿Quiénes Somos?</source>
+        <target>¿Quiénes Somos?</target>
+      </segment>
+    </unit>
+    <unit id="presentationTitle">
+      <segment state="initial">
+        <source>Climatización Sustentable</source>
+        <target>Climatización Sustentable</target>
+      </segment>
+    </unit>
+    <unit id="presentationText">
+      <segment state="initial">
+        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
+        <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</target>
+      </segment>
+    </unit>
+    <unit id="presentationContactLink">
+      <segment state="initial">
+        <source>Contáctenos</source>
+        <target>Contáctenos</target>
+      </segment>
+    </unit>
     <unit id="iconScrollTopLabel">
       <segment state="initial">
         <source>Flecha Arriba</source>
@@ -90,28 +144,28 @@
         <target>Cargando sección de clientes...</target>
       </segment>
     </unit>
-    <unit id="aboutSubTitle">
+    <unit id="contactLoadingSection">
       <segment state="initial">
-        <source>¿Quiénes Somos?</source>
-        <target>¿Quiénes Somos?</target>
+        <source>Cargando sección de contacto...</source>
+        <target>Cargando sección de contacto...</target>
       </segment>
     </unit>
-    <unit id="aboutTitle">
+    <unit id="appTitle">
       <segment state="initial">
-        <source>Climatización Sustentable</source>
-        <target>Climatización Sustentable</target>
+        <source>GreenHeatClima</source>
+        <target>GreenHeatClima</target>
       </segment>
     </unit>
-    <unit id="aboutText">
+    <unit id="appDescription">
       <segment state="initial">
-        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</source>
-        <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</target>
+        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</source>
+        <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</target>
       </segment>
     </unit>
-    <unit id="aboutContactLink">
+    <unit id="appKeywords">
       <segment state="initial">
-        <source>Contáctenos</source>
-        <target>Contáctenos</target>
+        <source>Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.</source>
+        <target>Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.</target>
       </segment>
     </unit>
     <unit id="clientTitle">
@@ -196,6 +250,48 @@
       <segment state="initial">
         <source>Wilo</source>
         <target>Wilo</target>
+      </segment>
+    </unit>
+    <unit id="authorText">
+      <segment state="initial">
+        <source> © <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></source>
+        <target> © <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></target>
+      </segment>
+    </unit>
+    <unit id="informationIconWhatsappAlt">
+      <segment state="initial">
+        <source>Whatsapp</source>
+        <target>Whatsapp</target>
+      </segment>
+    </unit>
+    <unit id="informationWhatsappText">
+      <segment state="initial">
+        <source>+54 9 11 6218-8835</source>
+        <target>+54 9 11 6218-8835</target>
+      </segment>
+    </unit>
+    <unit id="informationIconInstagramAlt">
+      <segment state="initial">
+        <source>Instagram</source>
+        <target>Instagram</target>
+      </segment>
+    </unit>
+    <unit id="informationInstagramText">
+      <segment state="initial">
+        <source>@greenheatclima</source>
+        <target>@greenheatclima</target>
+      </segment>
+    </unit>
+    <unit id="informationIconMailAlt">
+      <segment state="initial">
+        <source>Correo</source>
+        <target>Correo</target>
+      </segment>
+    </unit>
+    <unit id="informationMailText">
+      <segment state="initial">
+        <source>infoghclima@gmail.com</source>
+        <target>infoghclima@gmail.com</target>
       </segment>
     </unit>
     <unit id="linkHeaderAbout">
@@ -340,120 +436,6 @@
       <segment state="initial">
         <source>Te brindamos</source>
         <target>Te brindamos</target>
-      </segment>
-    </unit>
-    <unit id="formContactTitle">
-      <segment state="initial">
-        <source>Contáctenos</source>
-        <target>Contáctenos</target>
-      </segment>
-    </unit>
-    <unit id="formContactInputPlaceholder">
-      <segment state="initial">
-        <source>Email</source>
-        <target>Email</target>
-      </segment>
-    </unit>
-    <unit id="formContactTextareaPlaceholder">
-      <segment state="initial">
-        <source>Mensaje</source>
-        <target>Mensaje</target>
-      </segment>
-    </unit>
-    <unit id="formContactButton">
-      <segment state="initial">
-        <source>Enviar</source>
-        <target>Enviar</target>
-      </segment>
-    </unit>
-    <unit id="informationLinkWhatsappLabel">
-      <segment state="initial">
-        <source>Whatsapp</source>
-        <target>Whatsapp</target>
-      </segment>
-    </unit>
-    <unit id="informationIconWhatsappAlt">
-      <segment state="initial">
-        <source>Whatsapp</source>
-        <target>Whatsapp</target>
-      </segment>
-    </unit>
-    <unit id="informationWhatsappText">
-      <segment state="initial">
-        <source>+54 9 11 6218-8835</source>
-        <target>+54 9 11 6218-8835</target>
-      </segment>
-    </unit>
-    <unit id="informationLinkInstagramLabel">
-      <segment state="initial">
-        <source>Instagram</source>
-        <target>Instagram</target>
-      </segment>
-    </unit>
-    <unit id="informationIconInstagramAlt">
-      <segment state="initial">
-        <source>Instagram</source>
-        <target>Instagram</target>
-      </segment>
-    </unit>
-    <unit id="informationInstagramText">
-      <segment state="initial">
-        <source>@greenheatclima</source>
-        <target>@greenheatclima</target>
-      </segment>
-    </unit>
-    <unit id="informationLinkCorreoLabel">
-      <segment state="initial">
-        <source>Correo</source>
-        <target>Correo</target>
-      </segment>
-    </unit>
-    <unit id="informationIconMailAlt">
-      <segment state="initial">
-        <source>Correo</source>
-        <target>Correo</target>
-      </segment>
-    </unit>
-    <unit id="informationMailText">
-      <segment state="initial">
-        <source>infoghclima@gmail.com</source>
-        <target>infoghclima@gmail.com</target>
-      </segment>
-    </unit>
-    <unit id="contactLoadingSection">
-      <segment state="initial">
-        <source>Cargando sección de contacto...</source>
-        <target>Cargando sección de contacto...</target>
-      </segment>
-    </unit>
-    <unit id="authorText">
-      <segment state="initial">
-        <source> © <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></source>
-        <target> © <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Green Heat Clima</pc>, All Rights Reserved. Designed By <pc id="1" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN" type="other" dispStart="&lt;span&gt;" dispEnd="&lt;/span&gt;">Cammarota.</pc></target>
-      </segment>
-    </unit>
-    <unit id="imageCarousel">
-      <segment state="initial">
-        <source>Imagen Carousel</source>
-        <target>Imagen Carousel</target>
-      </segment>
-    </unit>
-    <unit id="appTitle">
-      <segment state="initial">
-        <source>GreenHeatClima</source>
-        <target>GreenHeatClima</target>
-      </segment>
-    </unit>
-    <unit id="appDescription">
-      <segment state="initial">
-        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</source>
-        <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</target>
-      </segment>
-    </unit>
-    <unit id="appKeywords">
-      <segment state="initial">
-        <source>Green Heat Clima, Servicios de Climatización, Calderas, Heladeras, Aires Acondicionados, Argentina</source>
-        <target>Green Heat Clima, Servicios de Climatización, Calderas, Heladeras, Aires Acondicionados, Argentina</target>
       </segment>
     </unit>
   </file>

@@ -53,12 +53,12 @@
       width: 100%;
       height: 48px;
       margin-top: 24px;
-      background-color: vars.$secondary-green;
+      background-color: vars.$tertiary-grey;
       color: vars.$primary-white;
-      @include mixins.font(vars.$font-family-heebo, 1rem, 500);
+      @include mixins.font(vars.$font-family-heebo, 1.2rem, 500);
 
       &:hover {
-        background-color: vars.$primary-green;
+        background-color: vars.$primary-grey;
       }
     }
   }

@@ -30,12 +30,9 @@
     }
   }
 
-  .about {
+  .presentation {
     width: 50%;
     height: 700px;
-    text-align: start;
-    flex-direction: column;
-    @include mixins.flexbox(center, flex-start);
 
     // Desktop xl media query
     @media only screen and (max-width: vars.$desktop-xl) {
@@ -46,71 +43,6 @@
     @media only screen and (max-width: vars.$desktop) {
       width: 100%;
       height: auto;
-      margin-bottom: 48px;
-      margin-top: 60px;
-      justify-content: start;
-    }
-
-    .about__subtitle {
-      margin-top: 32px;
-      padding: 0 16px 0 48px;
-      margin-bottom: 8px;
-      color: vars.$tertiary-green;
-      @include mixins.font(vars.$font-family-inter, 3rem, 500);
-
-      // Desktop xl media query
-      @media only screen and (max-width: vars.$desktop-xl) {
-        margin-top: 60px;
-        padding: 0 16px;
-        font-size: 2.5rem;
-      }
-    }
-
-    .about__title {
-      padding: 0 16px 0 48px;
-      color: vars.$primary-green;
-      @include mixins.font(vars.$font-family-inter, 2.5rem, 500);
-
-      // Desktop xl media query
-      @media only screen and (max-width: vars.$desktop-xl) {
-        padding: 0 16px;
-        font-size: 2rem;
-      }
-    }
-
-    .about__text {
-      text-align: justify;
-      padding: 16px 48px;
-      color: vars.$primary-grey;
-      @include mixins.font(vars.$font-family-heebo, 1.2rem, 400);
-
-      // Desktop xl media query
-      @media only screen and (max-width: vars.$desktop-xl) {
-        padding: 16px;
-        font-size: 1rem;
-      }
-    }
-
-    .about__link {
-      padding: 6px 16px;
-      border: 1px solid transparent;
-      border-radius: 5px;
-      margin: 0 48px;
-      height: 60px;
-      width: 200px;
-      color: vars.$primary-white;
-      background-color: vars.$tertiary-green;
-      @include mixins.font(vars.$font-family-heebo, 1.2rem, 600);
-      @include mixins.flexbox(center, center);
-
-      &:hover {
-        background-color: vars.$primary-green;
-      }
-
-      // Desktop xl media query
-      @media only screen and (max-width: vars.$desktop-xl) {
-        margin: 0 16px;
-      }
     }
   }
 }

@@ -4,13 +4,14 @@ import {
   signal, WritableSignal
 } from '@angular/core';
 import { CarouselComponent } from '@home/components/carousel/carousel.component';
-import { environment } from '@environments/environment.development';
+import { PresentationComponent } from '@home/components/presentation/presentation.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [
-      CarouselComponent
+    CarouselComponent,
+    PresentationComponent
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
@@ -26,13 +27,4 @@ export class AboutComponent {
   carrouselImagesNumber: WritableSignal<number[]> = signal<number[]>(
       Array.from({ length: 16 }, (_, index: number) => index)
   );
-
-  /**
-   * Return whatsapp URL
-   * @public
-   * @return {string}
-   */
-  get whatsappUrl(): string {
-    return environment.whatsappUrl;
-  }
 }

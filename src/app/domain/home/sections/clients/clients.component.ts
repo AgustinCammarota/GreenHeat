@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@angular/core';
-import { PresentationComponent } from '@home/components/presentation/presentation.component';
+import { TitleComponent } from '@home/components/title/title.component';
 import { BrandComponent } from '@home/components/brand/brand.component';
 import { Brand, Presentation } from '@home/interfaces';
 
@@ -7,7 +7,7 @@ import { Brand, Presentation } from '@home/interfaces';
   selector: 'app-clients',
   standalone: true,
   imports: [
-    PresentationComponent,
+    TitleComponent,
     BrandComponent
   ],
   templateUrl: './clients.component.html',

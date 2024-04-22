@@ -4,7 +4,7 @@
         <app-form class="form"/>
 
         @defer (on viewport(formContainer)) {
-            <app-information class="information"/>
+            <app-information [informationItems]="contactInformation()" class="information"/>
         }
     </div>
 
