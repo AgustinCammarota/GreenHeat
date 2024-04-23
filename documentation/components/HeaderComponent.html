@@ -1,0 +1,999 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>green-heat documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+
+               if ($darkModeToggles.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">green-heat documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  HeaderComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/domain/home/sections/header/header.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-header</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">Standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                                <code><a href="../directives/ObserverVisibilityDirective.html" target="_self" >ObserverVisibilityDirective</a></code>
+                                <code><a href="../directives/ObserverDeviceDirective.html" target="_self" >ObserverDeviceDirective</a></code>
+                                <code><a href="../components/NavComponent.html" target="_self" >NavComponent</a></code>
+                                <code><a href="../components/ScrollTopComponent.html" target="_self" >ScrollTopComponent</a></code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./header.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./header.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#cdr" >cdr</a>
+                            </li>
+                            <li>
+                                <a href="#isMaximize" >isMaximize</a>
+                            </li>
+                            <li>
+                                <a href="#isMobileDevice" >isMobileDevice</a>
+                            </li>
+                            <li>
+                                <a href="#isVisibleScrollToTop" >isVisibleScrollToTop</a>
+                            </li>
+                            <li>
+                                <a href="#listItemNavigation" >listItemNavigation</a>
+                            </li>
+                            <li>
+                                <a href="#navigation" >navigation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#handleDevice" >handleDevice</a>
+                            </li>
+                            <li>
+                                <a href="#handlerNavigation" >handlerNavigation</a>
+                            </li>
+                            <li>
+                                <a href="#handleScroll" >handleScroll</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleDevice"></a>
+                    <span class="name">
+                        <span ><b>handleDevice</b></span>
+                        <a href="#handleDevice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleDevice(event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="132"
+                                    class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:132</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Handle device viewport event</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handlerNavigation"></a>
+                    <span class="name">
+                        <span ><b>handlerNavigation</b></span>
+                        <a href="#handlerNavigation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handlerNavigation(event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="142"
+                                    class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:142</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Handle navigation to element</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleScroll"></a>
+                    <span class="name">
+                        <span ><b>handleScroll</b></span>
+                        <a href="#handleScroll"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleScroll(event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:121</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Handle scroll event</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>event</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cdr"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>cdr</b></span>
+                        <a href="#cdr"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ChangeDetectorRef</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>inject(ChangeDetectorRef)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:114</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instance of ChangeDetectorRef</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isMaximize"></a>
+                    <span class="name">
+                        <span ><b>isMaximize</b></span>
+                        <a href="#isMaximize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>WritableSignal&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>signal&lt;boolean&gt;(false)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:69</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Validate if is header maximized</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isMobileDevice"></a>
+                    <span class="name">
+                        <span ><b>isMobileDevice</b></span>
+                        <a href="#isMobileDevice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>WritableSignal&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>signal&lt;boolean&gt;(false)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Validate if is menu opened</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isVisibleScrollToTop"></a>
+                    <span class="name">
+                        <span ><b>isVisibleScrollToTop</b></span>
+                        <a href="#isVisibleScrollToTop"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>WritableSignal&lt;boolean&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>signal&lt;boolean&gt;(false)</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:76</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Validate if is visible scroll to top</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listItemNavigation"></a>
+                    <span class="name">
+                        <span ><b>listItemNavigation</b></span>
+                        <a href="#listItemNavigation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/NavigationItems.html" target="_self" >WritableSignal&lt;NavigationItems[]&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>signal&lt;NavigationItems[]&gt;([
+    {
+      description: $localize &#x60;:@@linkHeaderAbout:Nosotros&#x60;,
+      section: Sections.aboutSection
+    },
+    {
+      description: $localize &#x60;:@@linkHeaderServices:Servicios&#x60;,
+      section: Sections.serviceSection
+    },
+    {
+      description: $localize &#x60;:@@linkHeaderClients:Clientes&#x60;,
+      section: Sections.clientSection
+    },
+    {
+      description: $localize &#x60;:@@linkHeaderContact:Contacto&#x60;,
+      section: Sections.contactSection
+    }
+  ])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:90</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Array with navigation items</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="navigation"></a>
+                    <span class="name">
+                        <span ><b>navigation</b></span>
+                        <a href="#navigation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>OutputEmitterRef&lt;string&gt;</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>output&lt;string&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/domain/home/sections/header/header.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Emit navigation section</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  inject,
+  output,
+  OutputEmitterRef,
+  signal,
+  WritableSignal
+} from &#x27;@angular/core&#x27;;
+import { animate, state, style, transition, trigger } from &#x27;@angular/animations&#x27;;
+import { ObserverVisibilityDirective } from &#x27;@shared/directives/observer-visibility.directive&#x27;;
+import { ObserverDeviceDirective } from &#x27;@shared/directives/observer-device.directive&#x27;;
+import { NavigationItems, Sections } from &#x27;@home/interfaces&#x27;;
+import { NavComponent } from &#x27;@home/components/nav/nav.component&#x27;;
+import { ScrollTopComponent } from &#x27;@home/components/scroll-top/scroll-top.component&#x27;;
+
+@Component({
+  selector: &#x27;app-header&#x27;,
+  standalone: true,
+  imports: [
+    ObserverVisibilityDirective,
+    ObserverDeviceDirective,
+    NavComponent,
+    ScrollTopComponent
+  ],
+  templateUrl: &#x27;./header.component.html&#x27;,
+  styleUrl: &#x27;./header.component.scss&#x27;,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [
+    trigger(&#x27;scrollTrigger&#x27;, [
+      state(
+          &#x27;minimize&#x27;,
+          style({
+            transform: &#x27;translate(-50%, 48px)&#x27;,
+            padding: &#x27;0px 3%&#x27;
+          }),
+      ),
+      state(
+          &#x27;maximize&#x27;,
+          style({
+            transform: &#x27;translate(-50%, 0px)&#x27;,
+            padding: &#x27;0px&#x27;
+          }),
+      ),
+      transition(&#x27;minimize &#x3D;&gt; maximize&#x27;, [animate(&#x27;0.3s ease-in&#x27;)]),
+      transition(&#x27;maximize &#x3D;&gt; minimize&#x27;, [animate(&#x27;0.3s ease-in&#x27;)]),
+    ])
+  ]
+})
+/**
+ * Header Section
+ * @class
+ */
+export class HeaderComponent {
+  /**
+   * Emit navigation section
+   * @type {OutputEmitterRef}
+   * @default OutputEmitterRef
+   * @public
+   */
+  navigation: OutputEmitterRef&lt;string&gt; &#x3D; output&lt;string&gt;();
+  /**
+   * Validate if is header maximized
+   * @type {WritableSignal}
+   * @default false
+   * @public
+   */
+  isMaximize: WritableSignal&lt;boolean&gt; &#x3D; signal&lt;boolean&gt;(false);
+  /**
+   * Validate if is visible scroll to top
+   * @type {WritableSignal}
+   * @default false
+   * @public
+   */
+  isVisibleScrollToTop: WritableSignal&lt;boolean&gt; &#x3D; signal&lt;boolean&gt;(false);
+  /**
+   * Validate if is menu opened
+   * @type {WritableSignal}
+   * @default false
+   * @public
+   */
+  isMobileDevice: WritableSignal&lt;boolean&gt; &#x3D; signal&lt;boolean&gt;(false);
+  /**
+   * Array with navigation items
+   * @type {WritableSignal}
+   * @default []
+   * @public
+   */
+  listItemNavigation: WritableSignal&lt;NavigationItems[]&gt; &#x3D; signal&lt;NavigationItems[]&gt;([
+    {
+      description: $localize &#x60;:@@linkHeaderAbout:Nosotros&#x60;,
+      section: Sections.aboutSection
+    },
+    {
+      description: $localize &#x60;:@@linkHeaderServices:Servicios&#x60;,
+      section: Sections.serviceSection
+    },
+    {
+      description: $localize &#x60;:@@linkHeaderClients:Clientes&#x60;,
+      section: Sections.clientSection
+    },
+    {
+      description: $localize &#x60;:@@linkHeaderContact:Contacto&#x60;,
+      section: Sections.contactSection
+    }
+  ]);
+  /**
+   * Instance of ChangeDetectorRef
+   * @type {ChangeDetectorRef}
+   * @default ChangeDetectorRef
+   * @private
+   */
+  private cdr: ChangeDetectorRef &#x3D; inject(ChangeDetectorRef);
+
+  /**
+   * Handle scroll event
+   * @param {boolean} event
+   * @public
+   */
+  handleScroll(event: boolean): void {
+    this.isMaximize.set(event);
+    this.isVisibleScrollToTop.set(!event);
+    this.cdr.detectChanges();
+  }
+
+  /**
+   * Handle device viewport event
+   * @param {boolean} event
+   * @public
+   */
+  handleDevice(event: boolean) {
+    this.isMobileDevice.set(event);
+    this.cdr.detectChanges();
+  }
+
+  /**
+   * Handle navigation to element
+   * @param {string} event
+   * @public
+   */
+  handlerNavigation(event: string): void {
+    this.navigation.emit(event);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- Header Section Start --&gt;
+&lt;section class&#x3D;&quot;header-section&quot; id&#x3D;&quot;headerSection&quot; appObserverVisibility (scrolledToTop)&#x3D;&quot;handleScroll($event)&quot; appObserverDevice (mobileDeviceDetermined)&#x3D;&quot;handleDevice($event)&quot;&gt;
+    &lt;div class&#x3D;&quot;header&quot; [@scrollTrigger]&#x3D;&quot;isMaximize() &amp;&amp; !this.isMobileDevice() ? &#x27;minimize&#x27; : &#x27;maximize&#x27;&quot;&gt;
+        &lt;app-nav [navItems]&#x3D;&quot;listItemNavigation()&quot; (navSection)&#x3D;&quot;handlerNavigation($event)&quot;/&gt;
+    &lt;/div&gt;
+
+    @defer (when isVisibleScrollToTop(); prefetch on idle) {
+        &lt;app-scroll-top [isVisible]&#x3D;&quot;isVisibleScrollToTop()&quot; (scrollToTop)&#x3D;&quot;handlerNavigation($event)&quot;/&gt;
+    }
+&lt;/section&gt;
+&lt;!-- Header Section End --&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- Header Section Start --><section class="header-section" id="headerSection" appObserverVisibility (scrolledToTop)="handleScroll($event)" appObserverDevice (mobileDeviceDetermined)="handleDevice($event)">    <div class="header" [@scrollTrigger]="isMaximize() && !this.isMobileDevice() ? \'minimize\' : \'maximize\'">        <app-nav [navItems]="listItemNavigation()" (navSection)="handlerNavigation($event)"/>    </div>    @defer (when isVisibleScrollToTop(); prefetch on idle) {        <app-scroll-top [isVisible]="isVisibleScrollToTop()" (scrollToTop)="handlerNavigation($event)"/>    }</section><!-- Header Section End --></div>'
+    var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BrandComponent', 'selector': 'app-brand'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'ClientsComponent', 'selector': 'app-clients'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': ''},{'name': 'InformationComponent', 'selector': 'app-information'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PresentationComponent', 'selector': 'app-presentation'},{'name': 'ScrollTopComponent', 'selector': 'app-scroll-top'},{'name': 'ServicesComponent', 'selector': 'app-services'},{'name': 'TitleComponent', 'selector': 'app-title'}];
+    var DIRECTIVES = [{'name': 'ObserverDeviceDirective', 'selector': '[appObserverDevice]'},{'name': 'ObserverVisibilityDirective', 'selector': '[appObserverVisibility]'}];
+    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

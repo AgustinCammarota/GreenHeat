@@ -1,0 +1,287 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>green-heat documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avaoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+
+               if ($darkModeToggles.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="./" class="navbar-brand">green-heat documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1>Readme</h1>
+<h1 align="center">Green Heat Clima</h1>
+<p align="center"> Green Heat Clima es una empresa dedicada a brindar servicios de asesoramiento, mantenimiento, venta e instalación de productos de calefacción y refrigeración. </p>
+<p align="center"><img src="src/assets/icons/favicon-192x192.png"/></p>
+
+<h2>Tabla de contenidos:</h2>
+<hr>
+<ul>
+<li><a href="#descripci%C3%B3n-y-contexto">Descripción y contexto</a></li>
+<li><a href="#gu%C3%ADa-de-instalaci%C3%B3n">Guía de instalación</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#dependencias">Dependencias</a></li>
+<li><a href="#autores">Autor/es</a></li>
+</ul>
+<h2>Descripción y contexto</h2>
+<hr>
+<p>Green Heat Clima es una empresa de calefacción y refrigeración, radicada en Argentina, que brinda sus servicios exclusivamente a clientes establecidos en Buenos Aires o alrededores.</p>
+<p>Esta herramienta tiene el objetivo de presentar los servicios, clientes, trabajos y medios de comunicación que brinda Green Heat Clima a sus clientes.</p>
+<h2>Guía de instalación</h2>
+<hr>
+<p>Pasos de instalación:</p>
+<ol>
+<li>Abrir una terminal de comando y, sobre la raíz del proyecto escribir npm i.</li>
+<li>Al terminar la instalación, usar el comando npm run build para preparar el entorno en modo producción.</li>
+<li>Ejecutar el comando npm run serve:ssr:green-heat y abrir la url localhost:4000/es o localhost:4000/en.</li>
+</ol>
+<p>Tecnologías necesarias:</p>
+<ul>
+<li>Node &gt; 20.0.0.</li>
+<li>Sistema Operativo Windows, MacOS o Linux.</li>
+<li>Compilador Vite. </li>
+<li>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 17.3.0.</li>
+</ul>
+<h2>Comandos</h2>
+<hr>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&quot;ng&quot;: &quot;ng&quot;,
+&quot;start&quot;: &quot;ng serve&quot;,
+&quot;start:en&quot;: &quot;ng serve --configuration=en&quot;,
+&quot;build&quot;: &quot;ng build &amp;&amp; node scripts/copy-proxy-server.js &amp;&amp; node scripts/move-server-directory.js&quot;,
+&quot;watch&quot;: &quot;ng build --watch --configuration development&quot;,
+&quot;test&quot;: &quot;ng test&quot;,
+&quot;serve:ssr:green-heat&quot;: &quot;node dist/green-heat/proxy-server.mjs&quot;,
+&quot;extract:locales&quot;: &quot;ng extract-i18n --output-path src/locale&quot;,
+&quot;lint&quot;: &quot;ng lint&quot;,
+&quot;lint:styles&quot;: &quot;stylelint \&quot;src/**/*.scss\&quot;&quot;,
+&quot;compodoc:build&quot;: &quot;compodoc -p tsconfig.doc.json&quot;,
+&quot;compodoc:build-and-serve&quot;: &quot;compodoc -p tsconfig.doc.json -s&quot;,
+&quot;compodoc:serve&quot;: &quot;compodoc -s&quot;</code></pre></div><h2>Development server</h2>
+<p>Run <code>npm run serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The application will automatically reload if you change any of the source files.</p>
+<h2>Build</h2>
+<p>Run <code>npm run build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory.</p>
+<h2>Running unit tests</h2>
+<p>Run <code>npm run test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
+<h2>Running end-to-end tests</h2>
+<p>Run <code>npm run e2e</code> to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.</p>
+<h2>Running lint component</h2>
+<p>Run <code>npm run lint</code> to execute the linter component validations.</p>
+<h2>Running lint styles</h2>
+<p>Run <code>npm run lint:styles</code> to execute the linter styles validations.</p>
+<h2>Running documentation</h2>
+<p>Run <code>npm run compodoc:build</code> to execute the documentation generate command.</p>
+<h2>Running extract locales</h2>
+<p>Run <code>npm run extract:locales</code> to execute the extract and merge locales.</p>
+<h2>Running production server</h2>
+<p>Run <code>npm run serve:ssr:green-heat</code> to execute the production server. Firsts it is necessary run <code>npm run build</code>.</p>
+<h2>Dependencias</h2>
+<hr>
+<b>Example :</b><div><pre class="line-numbers"><code class="language-none">&quot;dependencies&quot;:
+    &quot;&#64;angular/animations&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/common&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/compiler&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/core&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/forms&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/platform-browser&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/platform-browser-dynamic&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/platform-server&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/router&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/ssr&quot;: &quot;^17.3.0&quot;,
+    &quot;express&quot;: &quot;^4.18.2&quot;,
+    &quot;ngx-device-detector&quot;: &quot;^7.0.0&quot;,
+    &quot;rxjs&quot;: &quot;~7.8.0&quot;,
+    &quot;tslib&quot;: &quot;^2.3.0&quot;,
+    &quot;zone.js&quot;: &quot;~0.14.3&quot;
+
+&quot;devDependencies&quot;:
+    &quot;&#64;angular-devkit/build-angular&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular-eslint/builder&quot;: &quot;17.3.0&quot;,
+    &quot;&#64;angular-eslint/eslint-plugin&quot;: &quot;17.3.0&quot;,
+    &quot;&#64;angular-eslint/eslint-plugin-template&quot;: &quot;17.3.0&quot;,
+    &quot;&#64;angular-eslint/schematics&quot;: &quot;17.3.0&quot;,
+    &quot;&#64;angular-eslint/template-parser&quot;: &quot;17.3.0&quot;,
+    &quot;&#64;angular/cli&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/compiler-cli&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;angular/localize&quot;: &quot;^17.3.0&quot;,
+    &quot;&#64;compodoc/compodoc&quot;: &quot;^1.1.23&quot;,
+    &quot;&#64;types/express&quot;: &quot;^4.17.17&quot;,
+    &quot;&#64;types/jasmine&quot;: &quot;~5.1.0&quot;,
+    &quot;&#64;types/node&quot;: &quot;^18.18.0&quot;,
+    &quot;&#64;typescript-eslint/eslint-plugin&quot;: &quot;7.2.0&quot;,
+    &quot;&#64;typescript-eslint/parser&quot;: &quot;7.2.0&quot;,
+    &quot;eslint&quot;: &quot;^8.57.0&quot;,
+    &quot;jasmine-core&quot;: &quot;~5.1.0&quot;,
+    &quot;karma&quot;: &quot;~6.4.0&quot;,
+    &quot;karma-chrome-launcher&quot;: &quot;~3.2.0&quot;,
+    &quot;karma-coverage&quot;: &quot;~2.2.0&quot;,
+    &quot;karma-jasmine&quot;: &quot;~5.1.0&quot;,
+    &quot;karma-jasmine-html-reporter&quot;: &quot;~2.1.0&quot;,
+    &quot;ng-extract-i18n-merge&quot;: &quot;^2.11.2&quot;,
+    &quot;stylelint&quot;: &quot;^16.3.0&quot;,
+    &quot;stylelint-config-sass-guidelines&quot;: &quot;^11.1.0&quot;,
+    &quot;stylelint-scss&quot;: &quot;^6.2.1&quot;,
+    &quot;typescript&quot;: &quot;~5.4.2&quot;</code></pre></div><h2>Autor/es</h2>
+<hr>
+<p>Agustin Cammarota Muti - <a href="mailto:agustincammarota@hotmail.com">agustincammarota@hotmail.com</a> </p>
+<h2>Further help</h2>
+<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
