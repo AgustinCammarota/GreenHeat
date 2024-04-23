@@ -2,20 +2,7 @@
 [build]
   command = "npm run build"
   functions = "netlify/functions"
-  publish = "dist/green-heat/browser"
-[[redirects]]
-  from = "https://greenheatclima.com.ar/*"
-  to = "https://greenheatclima.com.ar/es/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "/robots.txt"
-  to = "/es/robots.txt"
-  status = 200
-[[redirects]]
-  from = "/sitemap.xml"
-  to = "/es/sitemap.xml"
-  status = 200
+  publish = "dist/green-heat/browser/es"
 [[redirects]]
   from = "/*"
   to = "/index.html"
