@@ -28,6 +28,10 @@ import { fadeIn, fadeOut } from '@shared/animations/animations';
     ])
   ]
 })
+/**
+ * Card Component
+ * @class
+ */
 export class CardComponent {
   /**
    * Array with cards items

@@ -6,7 +6,9 @@
                 <img class="slide-container__image"
                      [ngSrc]="getUrlImage(i)"
                      alt="Imagen Carousel"
-                     i18n-alt="@@imageCarousel"
+                     title="Nuestros Trabajos"
+                     i18n-title="@@titleImageCarousel"
+                     i18n-alt="@@altImageCarousel"
                      sizes="(max-width: 600px) 100vw,(max-width: 900px) 100vw,50vw"
                      priority
                      fill>
@@ -16,11 +18,11 @@
 
     <div class="buttons-container">
         <button (click)="onNextClick()" class="button-action action-right" type="button" i18n-aria-label="@@carouselButtonRight" aria-label="Avanzar">
-            <img class="button-action__image" ngSrc="/green-heat/arrow-right.svg" i18n-alt="@@iconCarouselRightAlt" alt="Flecha" i18n-aria-label aria-label="Menu" width="24" height="24" fetchpriority="auto" loading="eager">
+            <img class="button-action__image" ngSrc="/green-heat/arrow-right.svg" i18n-alt="@@iconCarouselRightAlt" alt="Flecha" i18n-title="@@iconCarouselRightTitle" title="Avanzar" width="24" height="24" fetchpriority="auto" loading="eager">
         </button>
 
         <button (click)="onPreviousClick()" class="button-action action-left" type="button" i18n-aria-label="@@carouselButtonLeft" aria-label="Retroceder">
-            <img class="button-action__image" ngSrc="/green-heat/arrow-left.svg" i18n-alt="@@iconCarouselLeftAlt" alt="Flecha" i18n-aria-label aria-label="Menu" width="24" height="24" fetchpriority="auto" loading="eager">
+            <img class="button-action__image" ngSrc="/green-heat/arrow-left.svg" i18n-alt="@@iconCarouselLeftAlt" alt="Flecha" i18n-title="@@iconCarouselLeftTitle" title="Retroceder" width="24" height="24" fetchpriority="auto" loading="eager">
         </button>
     </div>
 </div>

@@ -28,6 +28,10 @@ import { Information } from '@home/interfaces';
     ])
   ]
 })
+/**
+ * Information Component
+ * @class
+ */
 export class InformationComponent {
   /**
    * Array with information items

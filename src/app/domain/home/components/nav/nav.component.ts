@@ -44,6 +44,10 @@ import { visibilityIn, visibilityOut } from '@shared/animations/animations';
     ])
   ]
 })
+/**
+ * Nav Component
+ * @class
+ */
 export class NavComponent {
   /**
    * Emit navigation section

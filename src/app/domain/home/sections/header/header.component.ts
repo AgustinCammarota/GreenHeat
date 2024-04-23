@@ -48,6 +48,10 @@ import { ScrollTopComponent } from '@home/components/scroll-top/scroll-top.compo
     ])
   ]
 })
+/**
+ * Header Section
+ * @class
+ */
 export class HeaderComponent {
   /**
    * Emit navigation section

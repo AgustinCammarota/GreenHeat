@@ -3,7 +3,7 @@
     <div class="contact-section" #formContainer>
         <app-form class="form"/>
 
-        @defer (on viewport(formContainer)) {
+        @defer (on viewport(formContainer); prefetch on idle) {
             <app-information [informationItems]="contactInformation()" class="information"/>
         }
     </div>

@@ -11,6 +11,10 @@ import {
   selector: '[appObserverVisibility]',
   standalone: true
 })
+/**
+ * Observer Visibility Directive
+ * @class
+ */
 export class ObserverVisibilityDirective implements OnDestroy {
   /**
    * Emit scrolled to top event

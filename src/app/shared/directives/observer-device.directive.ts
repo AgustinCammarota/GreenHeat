@@ -5,6 +5,10 @@ import { DeviceDetectorService } from "ngx-device-detector";
   selector: '[appObserverDevice]',
   standalone: true
 })
+/**
+ * Observer Device Directive
+ * @class
+ */
 export class ObserverDeviceDirective implements OnDestroy {
   /**
    * Determinate if device is mobile / tablet

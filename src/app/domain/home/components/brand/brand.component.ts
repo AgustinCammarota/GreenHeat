@@ -28,6 +28,10 @@ import { fadeIn, fadeOut } from '@shared/animations/animations';
     ])
   ]
 })
+/**
+ * Brand Component
+ * @class
+ */
 export class BrandComponent {
   /**
    * Brands card information

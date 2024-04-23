@@ -13,6 +13,10 @@ import { Sections } from '@home/interfaces';
   styleUrl: './scroll-top.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+/**
+ * Scroll Top Component
+ * @class
+ */
 export class ScrollTopComponent {
   /**
    * Emit event when scroll to top

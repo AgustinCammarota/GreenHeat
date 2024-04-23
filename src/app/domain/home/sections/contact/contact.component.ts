@@ -15,6 +15,10 @@ import { environment } from '@environments/environment.development';
   styleUrl: './contact.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+/**
+ * Contact Section
+ * @class
+ */
 export class ContactComponent {
   /**
    * Array with contact information

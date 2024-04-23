@@ -14,6 +14,10 @@ import { Brand, Presentation } from '@home/interfaces';
   styleUrl: './clients.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+/**
+ * Client Section
+ * @class
+ */
 export class ClientsComponent {
   /**
    * Presentation information

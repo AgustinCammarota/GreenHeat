@@ -1,7 +1,7 @@
 {
-  "name": "angular-starter",
-  "short_name": "angular-starter",
-  "theme_color": "#1976d2",
+  "name": "Green Heat Clima - Climatización Sustentable",
+  "short_name": "Green Heat Clima",
+  "theme_color": "#ffffff",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

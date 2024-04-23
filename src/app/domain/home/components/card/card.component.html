@@ -1,14 +1,14 @@
 <!-- Card Start -->
 <div class="card-container" @cardAnimation>
     @for (card of cards(); track card.title) {
-        <div class="card">
+        <article class="card">
             <picture class="card-image-container">
-                <img class="card-image-container__image" [ngSrc]="card.icon" [alt]="card.altImg" width="45" height="45" fetchpriority="auto" loading="eager">
+                <img class="card-image-container__image" [ngSrc]="card.icon" [alt]="card.altImg" [title]="card.title" width="45" height="45" fetchpriority="auto" loading="eager">
             </picture>
 
             <h3 class="card__title">{{ card.title }}</h3>
             <p class="card__text">{{ card.description }}</p>
-        </div>
+        </article>
     }
 </div>
 <!-- Card End -->

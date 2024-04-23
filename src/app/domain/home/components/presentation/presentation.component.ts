@@ -9,6 +9,10 @@ import { environment } from '@environments/environment.development';
   styleUrl: './presentation.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+/**
+ * Presentation Component
+ * @class
+ */
 export class PresentationComponent {
   /**
    * Return whatsapp URL

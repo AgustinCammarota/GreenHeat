@@ -4,7 +4,7 @@
         <app-nav [navItems]="listItemNavigation()" (navSection)="handlerNavigation($event)"/>
     </div>
 
-    @defer (when isVisibleScrollToTop()) {
+    @defer (when isVisibleScrollToTop(); prefetch on idle) {
         <app-scroll-top [isVisible]="isVisibleScrollToTop()" (scrollToTop)="handlerNavigation($event)"/>
     }
 </section>

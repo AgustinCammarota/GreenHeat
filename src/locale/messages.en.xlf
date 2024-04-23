@@ -1,9 +1,57 @@
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="es" trgLang="en">
   <file id="ngi18n" original="ng.template">
-    <unit id="imageCarousel">
+    <unit id="appTitle">
+      <segment state="initial">
+        <source>Green Heat Clima - Climatización Sustentable</source>
+        <target>Green Heat Clima - Climatización Sustentable</target>
+      </segment>
+    </unit>
+    <unit id="appDescription">
+      <segment state="initial">
+        <source>Somos Green Heat Clima, una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.</source>
+        <target>Somos Green Heat Clima, una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.</target>
+      </segment>
+    </unit>
+    <unit id="appKeywords">
+      <segment state="initial">
+        <source>Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Reparaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.</source>
+        <target>Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Reparaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.</target>
+      </segment>
+    </unit>
+    <unit id="appAuthor">
+      <segment state="initial">
+        <source>Agustin Cammarota Muti</source>
+        <target>Agustin Cammarota Muti</target>
+      </segment>
+    </unit>
+    <unit id="appPublisher">
+      <segment state="initial">
+        <source>Cammarota</source>
+        <target>Cammarota</target>
+      </segment>
+    </unit>
+    <unit id="appRobots">
+      <segment state="initial">
+        <source>index, follow</source>
+        <target>index, follow</target>
+      </segment>
+    </unit>
+    <unit id="appCanonical">
+      <segment state="initial">
+        <source>https://greenheatclima.com.ar/es/</source>
+        <target>https://greenheatclima.com.ar/es/</target>
+      </segment>
+    </unit>
+    <unit id="altImageCarousel">
       <segment state="initial">
         <source>Imagen Carousel</source>
         <target>Imagen Carousel</target>
+      </segment>
+    </unit>
+    <unit id="titleImageCarousel">
+      <segment state="initial">
+        <source>Nuestros Trabajos</source>
+        <target>Nuestros Trabajos</target>
       </segment>
     </unit>
     <unit id="carouselButtonRight">
@@ -18,10 +66,10 @@
         <target>Flecha</target>
       </segment>
     </unit>
-    <unit id="2102825898069375693">
+    <unit id="iconCarouselRightTitle">
       <segment state="initial">
-        <source>Menu</source>
-        <target>Menu</target>
+        <source>Avanzar</source>
+        <target>Avanzar</target>
       </segment>
     </unit>
     <unit id="carouselButtonLeft">
@@ -34,6 +82,12 @@
       <segment state="initial">
         <source>Flecha</source>
         <target>Flecha</target>
+      </segment>
+    </unit>
+    <unit id="iconCarouselLeftTitle">
+      <segment state="initial">
+        <source>Retroceder</source>
+        <target>Retroceder</target>
       </segment>
     </unit>
     <unit id="formContactTitle">
@@ -66,6 +120,12 @@
         <target>Green Heat Clima</target>
       </segment>
     </unit>
+    <unit id="iconLogoHeaderTitle">
+      <segment state="initial">
+        <source>Green Heat Clima - Climatización Sustentable</source>
+        <target>Green Heat Clima - Climatización Sustentable</target>
+      </segment>
+    </unit>
     <unit id="iconLogoHeaderText">
       <segment state="initial">
         <source>Green Heat Clima</source>
@@ -84,10 +144,16 @@
         <target>Menu</target>
       </segment>
     </unit>
-    <unit id="iconHeaderWhatsappLabel">
+    <unit id="iconMenuHeaderTitle">
       <segment state="initial">
-        <source>Whatsapp</source>
-        <target>Whatsapp</target>
+        <source>Menu</source>
+        <target>Menu</target>
+      </segment>
+    </unit>
+    <unit id="iconHeaderWhatsappTitle">
+      <segment state="initial">
+        <source>Contáctenos</source>
+        <target>Contáctenos</target>
       </segment>
     </unit>
     <unit id="iconHeaderWhatsappAlt">
@@ -114,6 +180,12 @@
         <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente, por lo que usamos la tecnología disponible para el ahorro de energía y la menor emisión de contaminantes, sin perder el confort y rendimiento. Nuestro equipo de trabajo está formado por técnicos y personal altamente calificado.</target>
       </segment>
     </unit>
+    <unit id="presentationContactTitle">
+      <segment state="initial">
+        <source>Contáctenos</source>
+        <target>Contáctenos</target>
+      </segment>
+    </unit>
     <unit id="presentationContactLink">
       <segment state="initial">
         <source>Contáctenos</source>
@@ -132,40 +204,10 @@
         <target>Flecha Arriba</target>
       </segment>
     </unit>
-    <unit id="servicesLoadingSection">
+    <unit id="iconScrollTopTitle">
       <segment state="initial">
-        <source>Cargando sección de servicios...</source>
-        <target>Cargando sección de servicios...</target>
-      </segment>
-    </unit>
-    <unit id="clientsLoadingSection">
-      <segment state="initial">
-        <source>Cargando sección de clientes...</source>
-        <target>Cargando sección de clientes...</target>
-      </segment>
-    </unit>
-    <unit id="contactLoadingSection">
-      <segment state="initial">
-        <source>Cargando sección de contacto...</source>
-        <target>Cargando sección de contacto...</target>
-      </segment>
-    </unit>
-    <unit id="appTitle">
-      <segment state="initial">
-        <source>GreenHeatClima</source>
-        <target>GreenHeatClima</target>
-      </segment>
-    </unit>
-    <unit id="appDescription">
-      <segment state="initial">
-        <source>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</source>
-        <target>Somos una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina.</target>
-      </segment>
-    </unit>
-    <unit id="appKeywords">
-      <segment state="initial">
-        <source>Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.</source>
-        <target>Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.</target>
+        <source>Subir</source>
+        <target>Subir</target>
       </segment>
     </unit>
     <unit id="clientTitle">
@@ -436,6 +478,12 @@
       <segment state="initial">
         <source>Te brindamos</source>
         <target>Te brindamos</target>
+      </segment>
+    </unit>
+    <unit id="linkHeaderWhatsappTitle">
+      <segment state="initial">
+        <source>Whatsapp</source>
+        <target>Whatsapp</target>
       </segment>
     </unit>
   </file>

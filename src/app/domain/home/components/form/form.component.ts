@@ -11,6 +11,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './form.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+/**
+ * Form Component
+ * @class
+ */
 export class FormComponent {
   /**
    * Inject instance of FormBuilder

@@ -17,6 +17,10 @@ import { PresentationComponent } from '@home/components/presentation/presentatio
   styleUrl: './about.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+/**
+ * About Section
+ * @class
+ */
 export class AboutComponent {
   /**
    * Array with number of carrousel images

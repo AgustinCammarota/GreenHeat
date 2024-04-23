@@ -29,6 +29,10 @@ import { translateAnimation } from '@shared/animations/animations';
     ])
   ]
 })
+/**
+ * Carousel Component
+ * @class
+ */
 export class CarouselComponent implements OnDestroy {
   /**
    * Number of slider

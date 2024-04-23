@@ -14,6 +14,10 @@ import { Card, Presentation } from '@home/interfaces';
   styleUrl: './services.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+/**
+ * Services Section
+ * @class
+ */
 export class ServicesComponent {
   /**
    * Array with cards items

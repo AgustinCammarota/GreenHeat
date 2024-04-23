@@ -8,6 +8,10 @@ import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular
   styleUrl: './title.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+/**
+ * Title Component
+ * @class
+ */
 export class TitleComponent {
   /**
    * Input title required
