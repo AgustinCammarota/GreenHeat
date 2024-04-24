@@ -410,7 +410,7 @@ export class AppComponent implements OnInit {
       { name: &#x27;author&#x27;, content:  $localize &#x60;:@@appAuthor:Agustin Cammarota Muti&#x60; },
       { name: &#x27;publisher&#x27;, content:  $localize &#x60;:@@appPublisher:Cammarota&#x60; },
       { name: &#x27;robots&#x27;, content:  $localize &#x60;:@@appRobots:index, follow&#x60; },
-      { name: &#x27;canonical&#x27;, content: $localize &#x60;:@@appCanonical:https://greenheatclima.com.ar/es/&#x60; }
+      { rel: &#x27;canonical&#x27;, href: $localize &#x60;:@@appCanonical:https://greenheatclima.com.ar&#x60; }
     ]);
   }
 }
