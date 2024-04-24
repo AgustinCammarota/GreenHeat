@@ -1,14 +1,20 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { CommonEngine } from '@angular/ssr';
-import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { basename, dirname, join, resolve } from 'node:path';
-import bootstrap from './src/main.server';
 import { LOCALE_ID } from '@angular/core';
 import { REQUEST, RESPONSE } from './src/express.tokens';
+import express from 'express';
+import bootstrap from './src/main.server';
 
 export function app(): express.Express {
+  /**
+   * Server express
+   */
   const server = express();
+  /**
+   * Route of server dist folder
+   */
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   /**
    * Get the language from the corresponding folder
@@ -17,11 +23,22 @@ export function app(): express.Express {
   /**
    * Set the route for static content and APP_BASE_HREF
    */
-  const langPath = `/${lang}/`;
+  let langPath = '';
+
   /**
    * Note that the 'browser' folder is located two directories above 'server/{lang}/'
    */
-  const browserDistFolder = resolve(serverDistFolder, `../../browser/${lang}`);
+  let browserDistFolder = null;
+
+  if (lang === 'es' || lang === 'en') {
+    browserDistFolder = resolve(serverDistFolder, `../../browser/${lang}`);
+    langPath = `/${lang}/`;
+  } else {
+    browserDistFolder = resolve(serverDistFolder, '../browser');
+    langPath = '';
+  }
+
+
   const indexHtml = join(serverDistFolder, 'index.server.html');
 
   const commonEngine = new CommonEngine();
@@ -39,6 +56,7 @@ export function app(): express.Express {
         maxAge: '1y',
       })
   );
+
 
   // All regular routes use the Angular engine
   server.get('*', (req, res, next) => {

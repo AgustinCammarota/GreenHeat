@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
       { name: 'author', content:  $localize `:@@appAuthor:Agustin Cammarota Muti` },
       { name: 'publisher', content:  $localize `:@@appPublisher:Cammarota` },
       { name: 'robots', content:  $localize `:@@appRobots:index, follow` },
-      { rel: 'canonical', href: $localize `:@@appCanonical:https://greenheatclima.com.ar/es/` }
+      { rel: 'canonical', href: $localize `:@@appCanonical:https://greenheatclima.com.ar` }
     ]);
   }
 }

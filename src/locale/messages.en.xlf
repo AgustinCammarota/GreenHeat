@@ -38,8 +38,8 @@
     </unit>
     <unit id="appCanonical">
       <segment state="initial">
-        <source>https://greenheatclima.com.ar/es/</source>
-        <target>https://greenheatclima.com.ar/es/</target>
+        <source>https://greenheatclima.com.ar</source>
+        <target>https://greenheatclima.com.ar</target>
       </segment>
     </unit>
     <unit id="altImageCarousel">

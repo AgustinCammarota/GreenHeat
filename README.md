@@ -59,6 +59,10 @@ Run `npm run serve` for a dev server. Navigate to `http://localhost:4200/`. The 
 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Build localize
+
+Run `npm run build:localize` to build the project with localize. The build artifacts will be stored in the `dist/` directory.
+
 ## Running unit tests
 
 Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
