@@ -254,7 +254,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/domain/home/components/information/information.component.ts:42</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/domain/home/components/information/information.component.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -275,8 +275,6 @@
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectionStrategy, Component, input, InputSignal } from &#x27;@angular/core&#x27;;
 import { NgOptimizedImage } from &#x27;@angular/common&#x27;;
-import { query, transition, trigger, useAnimation } from &#x27;@angular/animations&#x27;;
-import { fadeIn, fadeOut } from &#x27;@shared/animations/animations&#x27;;
 import { Information } from &#x27;@home/interfaces&#x27;;
 
 @Component({
@@ -287,21 +285,7 @@ import { Information } from &#x27;@home/interfaces&#x27;;
   ],
   templateUrl: &#x27;./information.component.html&#x27;,
   styleUrl: &#x27;./information.component.scss&#x27;,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger(&#x27;contactAnimation&#x27;, [
-      transition(&#x27;:enter&#x27;, [
-        query(&#x27;.information-link&#x27;, [
-          useAnimation(fadeIn, { params: { time: &quot;1s&quot; } })
-        ])
-      ]),
-      transition(&#x27;:leave&#x27;, [
-        query(&#x27;.information-link&#x27;, [
-          useAnimation(fadeOut, { params: { time: &quot;500ms&quot; } })
-        ])
-      ])
-    ])
-  ]
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 /**
  * Information Component
@@ -321,7 +305,7 @@ export class InformationComponent {
 
     <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;!-- Information Start --&gt;
-&lt;div class&#x3D;&quot;information-container&quot; [@contactAnimation]&gt;
+&lt;div class&#x3D;&quot;information-container&quot;&gt;
     @for(item of informationItems(); track item.text) {
         &lt;a class&#x3D;&quot;information-link&quot; [href]&#x3D;&quot;item.href&quot; [title]&#x3D;&quot;item.text&quot; rel&#x3D;&quot;contact&quot; target&#x3D;&quot;_blank&quot;&gt;
             &lt;picture class&#x3D;&quot;information-link__picture&quot;&gt;
@@ -360,7 +344,7 @@ export class InformationComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Information Start --><div class="information-container" [@contactAnimation]>    @for(item of informationItems(); track item.text) {        <a class="information-link" [href]="item.href" [title]="item.text" rel="contact" target="_blank">            <picture class="information-link__picture">                <img [ngSrc]="item.image" [alt]="item.altImage" [title]="item.text" width="45" height="45" fetchpriority="auto" loading="eager">            </picture>            <p class="information-link__text">{{ item.text }}</p>        </a>    }</div><!-- Information End --></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- Information Start --><div class="information-container">    @for(item of informationItems(); track item.text) {        <a class="information-link" [href]="item.href" [title]="item.text" rel="contact" target="_blank">            <picture class="information-link__picture">                <img [ngSrc]="item.image" [alt]="item.altImage" [title]="item.text" width="45" height="45" fetchpriority="auto" loading="eager">            </picture>            <p class="information-link__text">{{ item.text }}</p>        </a>    }</div><!-- Information End --></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BrandComponent', 'selector': 'app-brand'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'ClientsComponent', 'selector': 'app-clients'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': ''},{'name': 'InformationComponent', 'selector': 'app-information'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PresentationComponent', 'selector': 'app-presentation'},{'name': 'ScrollTopComponent', 'selector': 'app-scroll-top'},{'name': 'ServicesComponent', 'selector': 'app-services'},{'name': 'TitleComponent', 'selector': 'app-title'}];
     var DIRECTIVES = [{'name': 'ObserverDeviceDirective', 'selector': '[appObserverDevice]'},{'name': 'ObserverVisibilityDirective', 'selector': '[appObserverVisibility]'}];
     var ACTUAL_COMPONENT = {'name': 'InformationComponent'};

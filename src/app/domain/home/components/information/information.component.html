@@ -1,5 +1,5 @@
 <!-- Information Start -->
-<div class="information-container" [@contactAnimation]>
+<div class="information-container">
     @for(item of informationItems(); track item.text) {
         <a class="information-link" [href]="item.href" [title]="item.text" rel="contact" target="_blank">
             <picture class="information-link__picture">

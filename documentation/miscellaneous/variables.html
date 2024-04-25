@@ -192,7 +192,11 @@
           withComponentInputBinding(),
           withPreloading(PreloadAllModules)
       ),
-    provideClientHydration(),
+    provideClientHydration(
+        withHttpTransferCacheOptions({
+          includePostRequests: true
+        })
+    ),
     provideAnimationsAsync(),
     provideCloudinaryLoader(&#x27;https://res.cloudinary.com/ddkyg5hdq/&#x27;),
     { provide: LOCALE_ID, useValue: &#x27;es-AR&#x27; },

@@ -1,11 +1,9 @@
 <!-- Contact Section Start -->
 <section class="contact-container" id="contactSection">
-    <div class="contact-section" #formContainer>
+    <div class="contact-section">
         <app-form class="form"/>
 
-        @defer (on viewport(formContainer); prefetch on idle) {
-            <app-information [informationItems]="contactInformation()" class="information"/>
-        }
+        <app-information [informationItems]="contactInformation()" class="information"/>
     </div>
 
     <div class="author-section">
