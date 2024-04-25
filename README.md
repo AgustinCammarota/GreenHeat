@@ -59,6 +59,10 @@ Run `npm run serve` for a dev server. Navigate to `http://localhost:4200/`. The 
 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Build sourcemap
+
+Run `npm run build:sourcemap` to build the sourcemap project. See result on `node_modules/.bin/source-map-explorer dist/green-heat/browser/main*`.
+
 ## Build localize
 
 Run `npm run build:localize` to build the project with localize. The build artifacts will be stored in the `dist/` directory.
