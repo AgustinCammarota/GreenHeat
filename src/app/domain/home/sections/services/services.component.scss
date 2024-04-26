@@ -15,4 +15,9 @@
   @media only screen and (max-width: 660px) {
     min-height: 2300px;
   }
+
+  .card-placeholder {
+    margin-top: 84px;
+    color: vars.$primary-grey;
+  }
 }

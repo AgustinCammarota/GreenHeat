@@ -5,6 +5,8 @@
 
     @defer (on viewport(reference); prefetch on idle) {
         <app-card [cards]="cards()"/>
+    } @placeholder {
+        <h4 class="card-placeholder" i18n="@@cardPlaceholder">Contamos con los mejores servicios: Tecnología, Materiales, Formación, Asesoramiento, Planificación, Post Venta...</h4>
     }
 </section>
 <!-- Service Section End -->
