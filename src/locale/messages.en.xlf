@@ -326,8 +326,8 @@
     </unit>
     <unit id="informationIconMailAlt">
       <segment state="initial">
-        <source>Correo</source>
-        <target>Correo</target>
+        <source>Email</source>
+        <target>Email</target>
       </segment>
     </unit>
     <unit id="informationMailText">
@@ -484,6 +484,18 @@
       <segment state="initial">
         <source>Whatsapp</source>
         <target>Whatsapp</target>
+      </segment>
+    </unit>
+    <unit id="brandPlaceholder">
+      <segment state="initial">
+        <source>Trabajamos con las mejores marcas: Ariston, Baxi, Triangular, Wilo, Peisa, Giacomini...</source>
+        <target>Trabajamos con las mejores marcas: Ariston, Baxi, Triangular, Wilo, Peisa, Giacomini...</target>
+      </segment>
+    </unit>
+    <unit id="cardPlaceholder">
+      <segment state="initial">
+        <source>Contamos con los mejores servicios: Tecnología, Materiales, Formación, Asesoramiento, Planificación, Post Venta...</source>
+        <target>Contamos con los mejores servicios: Tecnología, Materiales, Formación, Asesoramiento, Planificación, Post Venta...</target>
       </segment>
     </unit>
   </file>

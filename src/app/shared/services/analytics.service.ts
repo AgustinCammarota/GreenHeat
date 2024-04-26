@@ -23,7 +23,7 @@ export class AnalyticsService {
       event: 'page-view',
       pageName
     }).then();
-  };
+  }
 
   /**
    * Fire custom event analytic
@@ -35,5 +35,5 @@ export class AnalyticsService {
       event: 'page-custom-event',
       data
     }).then();
-  };
+  }
 }
