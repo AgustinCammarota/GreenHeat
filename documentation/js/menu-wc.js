@@ -90,6 +90,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="components/NavComponent.html" data-type="entity-link" >NavComponent</a>
                             </li>
                             <li class="link">
+                                <a href="components/NotFoundComponent.html" data-type="entity-link" >NotFoundComponent</a>
+                            </li>
+                            <li class="link">
                                 <a href="components/PresentationComponent.html" data-type="entity-link" >PresentationComponent</a>
                             </li>
                             <li class="link">
