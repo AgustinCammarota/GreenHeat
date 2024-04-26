@@ -441,6 +441,8 @@ export class ServicesComponent {
 
     @defer (on viewport(reference); prefetch on idle) {
         &lt;app-card [cards]&#x3D;&quot;cards()&quot;/&gt;
+    } @placeholder {
+        &lt;h4 class&#x3D;&quot;card-placeholder&quot; i18n&#x3D;&quot;@@cardPlaceholder&quot;&gt;Contamos con los mejores servicios: Tecnología, Materiales, Formación, Asesoramiento, Planificación, Post Venta...&lt;/h4&gt;
     }
 &lt;/section&gt;
 &lt;!-- Service Section End --&gt;</code></pre>
@@ -472,7 +474,7 @@ export class ServicesComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- Service Section Start --><section class="service-section" id="serviceSection">    <app-title [title]="presentation().title" [subTitle]="presentation().subTitle"/>    <div #reference aria-hidden="true"></div>    @defer (on viewport(reference); prefetch on idle) {        <app-card [cards]="cards()"/>    }</section><!-- Service Section End --></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- Service Section Start --><section class="service-section" id="serviceSection">    <app-title [title]="presentation().title" [subTitle]="presentation().subTitle"/>    <div #reference aria-hidden="true"></div>    @defer (on viewport(reference); prefetch on idle) {        <app-card [cards]="cards()"/>    } @placeholder {        <h4 class="card-placeholder" i18n="@@cardPlaceholder">Contamos con los mejores servicios: Tecnología, Materiales, Formación, Asesoramiento, Planificación, Post Venta...</h4>    }</section><!-- Service Section End --></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BrandComponent', 'selector': 'app-brand'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CarouselComponent', 'selector': 'app-carousel'},{'name': 'ClientsComponent', 'selector': 'app-clients'},{'name': 'ContactComponent', 'selector': 'app-contact'},{'name': 'FormComponent', 'selector': 'app-form'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': ''},{'name': 'InformationComponent', 'selector': 'app-information'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PresentationComponent', 'selector': 'app-presentation'},{'name': 'ScrollTopComponent', 'selector': 'app-scroll-top'},{'name': 'ServicesComponent', 'selector': 'app-services'},{'name': 'TitleComponent', 'selector': 'app-title'}];
     var DIRECTIVES = [{'name': 'ObserverDeviceDirective', 'selector': '[appObserverDevice]'},{'name': 'ObserverVisibilityDirective', 'selector': '[appObserverVisibility]'}];
     var ACTUAL_COMPONENT = {'name': 'ServicesComponent'};
