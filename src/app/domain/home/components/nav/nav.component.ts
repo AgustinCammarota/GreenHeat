@@ -1,6 +1,6 @@
 import {
   ChangeDetectionStrategy,
-  Component,
+  Component, inject,
   input,
   InputSignal, output, OutputEmitterRef,
   signal,
@@ -11,6 +11,7 @@ import { state, style, transition, trigger, useAnimation } from '@angular/animat
 import { NavigationItems } from '@home/interfaces';
 import { environment } from '@environments/environment.development';
 import { visibilityIn, visibilityOut } from '@shared/animations/animations';
+import { AnalyticsService } from '@shared/services/analytics.service';
 
 @Component({
   selector: 'app-nav',
@@ -70,6 +71,13 @@ export class NavComponent {
    * @public
    */
   isMenuOpen: WritableSignal<boolean> = signal<boolean>(false);
+  /**
+   * Instance of AnalyticsService
+   * @type {AnalyticsService}
+   * @default AnalyticsService
+   * @private
+   */
+  private analyticsService: AnalyticsService = inject(AnalyticsService);
 
   /**
    * Handle on click open menu
@@ -87,6 +95,14 @@ export class NavComponent {
   navToElement(section: string): void {
     this.navSection.emit(section);
     this.isMenuOpen.set(false);
+  }
+
+  /**
+   * Fire custom analytic
+   * @public
+   */
+  fireAnalytic(): void {
+    this.analyticsService.customEvent('on-click-contact-whatsapp');
   }
 
   /**

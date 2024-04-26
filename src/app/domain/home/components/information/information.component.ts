@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input, InputSignal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { Information } from '@home/interfaces';
+import { AnalyticsService } from '@shared/services/analytics.service';
 
 @Component({
   selector: 'app-information',
@@ -24,4 +25,20 @@ export class InformationComponent {
    * @public
    */
   informationItems: InputSignal<Information[]> = input.required<Information[]>();
+  /**
+   * Instance of AnalyticsService
+   * @type {AnalyticsService}
+   * @default AnalyticsService
+   * @private
+   */
+  private analyticsService: AnalyticsService = inject(AnalyticsService);
+
+  /**
+   * Fire custom analytic
+   * @param {string} event
+   * @public
+   */
+  fireAnalytic(event: string): void {
+    this.analyticsService.customEvent(`on-click-contact-${event.toLowerCase()}`);
+  }
 }

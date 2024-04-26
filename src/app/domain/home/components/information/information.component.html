@@ -1,7 +1,7 @@
 <!-- Information Start -->
 <div class="information-container">
     @for(item of informationItems(); track item.text) {
-        <a class="information-link" [href]="item.href" [title]="item.text" rel="contact" target="_blank">
+        <a class="information-link" (click)="fireAnalytic(item.altImage)" [href]="item.href" [title]="item.text" rel="contact" target="_blank">
             <picture class="information-link__picture">
                 <img [ngSrc]="item.image" [alt]="item.altImage" [title]="item.text" width="45" height="45" fetchpriority="auto" loading="eager">
             </picture>

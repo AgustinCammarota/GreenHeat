@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AnalyticsService } from '@shared/services/analytics.service';
 
 @Component({
   selector: 'app-form',
@@ -24,6 +25,13 @@ export class FormComponent {
    */
   private formBuilder: FormBuilder = inject(FormBuilder);
   /**
+   * Instance of AnalyticsService
+   * @type {AnalyticsService}
+   * @default AnalyticsService
+   * @private
+   */
+  private analyticsService: AnalyticsService = inject(AnalyticsService);
+  /**
    * Config of form email
    * @type {FormGroup}
    * @default FormGroup
@@ -40,5 +48,6 @@ export class FormComponent {
    */
   sendEmail(): void {
     this.formEmail.reset();
+    this.analyticsService.customEvent('on-click-contact-email');
   }
 }

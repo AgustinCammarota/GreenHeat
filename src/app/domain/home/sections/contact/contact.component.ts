@@ -42,7 +42,7 @@ export class ContactComponent {
     {
       href: environment.gmailUrl,
       image: '/green-heat/mail.svg',
-      altImage: $localize`:@@informationIconMailAlt:Correo`,
+      altImage: $localize`:@@informationIconMailAlt:Email`,
       text: $localize`:@@informationMailText:infoghclima@gmail.com`,
     }
   ]);

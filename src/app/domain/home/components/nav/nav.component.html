@@ -18,7 +18,7 @@
             }
         </ul>
 
-        <a class="action-link-container" i18n-title="@@linkHeaderWhatsappTitle" title="Whatsapp" [href]="whatsappUrl" target="_blank">
+        <a class="action-link-container" i18n-title="@@linkHeaderWhatsappTitle" title="Whatsapp" [href]="whatsappUrl" target="_blank" (click)="fireAnalytic()">
             <img class="action-link-container__image" ngSrc="/green-heat/whatsapp.svg" i18n-alt="@@iconHeaderWhatsappAlt" alt="Whatsapp" i18n-title="@@iconHeaderWhatsappTitle" title="Contáctenos" width="32" height="32" fetchpriority="auto" loading="eager">
         </a>
     </div>
