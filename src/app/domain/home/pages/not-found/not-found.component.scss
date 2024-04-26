@@ -1,0 +1,41 @@
+@use "vars";
+@use "mixins";
+
+.notfound-404 {
+  width: 100%;
+  height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: column;
+  text-align: center;
+  background-color: vars.$primary-white;
+  text-transform: uppercase;
+  @include mixins.flexbox(center, center);
+
+  // Desktop media query
+  @media only screen and (min-width: vars.$desktop) {
+    padding-bottom: 10%;
+  }
+
+  .notfound-404__title {
+    color: vars.$primary-grey;
+    @include mixins.font(vars.$font-family-inter, 2rem, 500);
+  }
+
+  .notfound-404__subtitle {
+    @include mixins.font(vars.$font-family-heebo, 8rem, 700);
+  }
+
+  .notfound-404__text {
+    color: vars.$primary-grey;
+    @include mixins.font(vars.$font-family-inter, 1.5rem, 500);
+  }
+
+  .notfound-404__link {
+    display: block;
+    margin-top: 32px;
+    cursor: pointer;
+    @include mixins.font(vars.$font-family-inter, 1.5rem, 500);
+  }
+}

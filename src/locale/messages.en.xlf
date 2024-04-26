@@ -8,8 +8,8 @@
     </unit>
     <unit id="appDescription">
       <segment state="initial">
-        <source>Somos Green Heat Clima, una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.</source>
-        <target>Somos Green Heat Clima, una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.</target>
+        <source>Somos una empresa dedicada a la climatización sustentable en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.</source>
+        <target>Somos una empresa dedicada a la climatización sustentable en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.</target>
       </segment>
     </unit>
     <unit id="appKeywords">
@@ -332,8 +332,8 @@
     </unit>
     <unit id="informationMailText">
       <segment state="initial">
-        <source>infoghclima@gmail.com</source>
-        <target>infoghclima@gmail.com</target>
+        <source>infoghclima</source>
+        <target>infoghclima</target>
       </segment>
     </unit>
     <unit id="linkHeaderAbout">
@@ -496,6 +496,36 @@
       <segment state="initial">
         <source>Contamos con los mejores servicios: Tecnología, Materiales, Formación, Asesoramiento, Planificación, Post Venta...</source>
         <target>Contamos con los mejores servicios: Tecnología, Materiales, Formación, Asesoramiento, Planificación, Post Venta...</target>
+      </segment>
+    </unit>
+    <unit id="notFoundTitle">
+      <segment state="initial">
+        <source>Oops! Page not found</source>
+        <target>Oops! Page not found</target>
+      </segment>
+    </unit>
+    <unit id="notFoundSubtitle">
+      <segment state="initial">
+        <source>404</source>
+        <target>404</target>
+      </segment>
+    </unit>
+    <unit id="notFoundText">
+      <segment state="initial">
+        <source>We are sorry, but the page you requested was not found</source>
+        <target>We are sorry, but the page you requested was not found</target>
+      </segment>
+    </unit>
+    <unit id="notFoundLinkTitle">
+      <segment state="initial">
+        <source>Home page</source>
+        <target>Home page</target>
+      </segment>
+    </unit>
+    <unit id="notFoundLink">
+      <segment state="initial">
+        <source>Go to home page</source>
+        <target>Go to home page</target>
       </segment>
     </unit>
   </file>

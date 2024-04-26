@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.title.setTitle($localize `:@@appTitle:Green Heat Clima - Climatización Sustentable`);
     this.meta.addTags([
-      { name: 'description', content: $localize `:@@appDescription:Somos Green Heat Clima, una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.` },
+      { name: 'description', content: $localize `:@@appDescription:Somos una empresa dedicada a la climatización sustentable en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.` },
       { name: 'keywords', content: $localize `:@@appKeywords:Green Heat Clima, Argentina, Reparaciones, Sistemas de refrigeración, Sistemas de calefacción, Instalaciones, Reparaciones, Cotizaciones, Climatización, Calderas, Heladeras, Aires Acondicionados, Calefacción, Termotanques, Calefones, Piso Radiante, Losa Radiante.` },
       { name: 'author', content:  $localize `:@@appAuthor:Agustin Cammarota Muti` },
       { name: 'publisher', content:  $localize `:@@appPublisher:Cammarota` },

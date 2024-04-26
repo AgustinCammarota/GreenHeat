@@ -48,7 +48,7 @@
     </unit>
     <unit id="appDescription">
       <segment>
-        <source>Somos Green Heat Clima, una empresa dedicada a la climatización amigable con el medio ambiente radicada en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.</source>
+        <source>Somos una empresa dedicada a la climatización sustentable en Argentina. Contamos con servicios de instalación, cotización y reparación de sistemas de calefacción / refrigeración.</source>
       </segment>
     </unit>
     <unit id="appKeywords">
@@ -303,7 +303,7 @@
     </unit>
     <unit id="informationMailText">
       <segment>
-        <source>infoghclima@gmail.com</source>
+        <source>infoghclima</source>
       </segment>
     </unit>
     <unit id="informationWhatsappText">
@@ -414,6 +414,31 @@
     <unit id="cardPlaceholder">
       <segment>
         <source>Contamos con los mejores servicios: Tecnología, Materiales, Formación, Asesoramiento, Planificación, Post Venta...</source>
+      </segment>
+    </unit>
+    <unit id="notFoundLink">
+      <segment>
+        <source>Go to home page</source>
+      </segment>
+    </unit>
+    <unit id="notFoundLinkTitle">
+      <segment>
+        <source>Home page</source>
+      </segment>
+    </unit>
+    <unit id="notFoundSubtitle">
+      <segment>
+        <source>404</source>
+      </segment>
+    </unit>
+    <unit id="notFoundText">
+      <segment>
+        <source>We are sorry, but the page you requested was not found</source>
+      </segment>
+    </unit>
+    <unit id="notFoundTitle">
+      <segment>
+        <source>Oops! Page not found</source>
       </segment>
     </unit>
   </file>
