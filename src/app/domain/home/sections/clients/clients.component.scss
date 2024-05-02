@@ -1,4 +1,5 @@
 @use "vars";
+@use "mixins";
 
 .client-section {
   // the min-height is necessary for the scroll to element and deferrals views
@@ -19,5 +20,6 @@
   .brand-placeholder {
     margin-top: 84px;
     color: vars.$primary-grey;
+    @include mixins.font(vars.$font-family-heebo, 1rem, 300);
   }
 }

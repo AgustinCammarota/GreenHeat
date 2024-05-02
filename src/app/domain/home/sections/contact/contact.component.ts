@@ -31,7 +31,7 @@ export class ContactComponent {
       href: environment.whatsappUrl,
       image: '/green-heat/whatsapp.svg',
       altImage: $localize`:@@informationIconWhatsappAlt:Whatsapp`,
-      text: $localize`:@@informationWhatsappText:+54 9 11 6218-8835`,
+      text: $localize`:@@informationWhatsappText:+54 9 11 6652-5996`,
     },
     {
       href: environment.instagramUrl,
