@@ -129,5 +129,6 @@ export class CarouselComponent implements OnDestroy {
    */
   private endInterval(): void {
     this.interval$?.unsubscribe();
+    this.interval$ = null;
   }
 }

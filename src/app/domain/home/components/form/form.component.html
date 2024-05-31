@@ -4,7 +4,7 @@
     <form (ngSubmit)="sendEmail()" [formGroup]="formEmail" class="form" name="form-email">
         <input formControlName="email" class="form__input" autocomplete="on" name="email" type="email" placeholder="Email" i18n-placeholder="@@formContactInputPlaceholder">
         <textarea formControlName="message" class="form__textarea" autocomplete="off" name="message" placeholder="Mensaje" i18n-placeholder="@@formContactTextareaPlaceholder"></textarea>
-        <button class="form__button" type="submit" i18n="@@formContactButton">Enviar</button>
+        <button [disabled]="disabledButton()" class="form__button" type="submit" i18n="@@formContactButton">Enviar</button>
     </form>
 </div>
 <!-- Form End -->

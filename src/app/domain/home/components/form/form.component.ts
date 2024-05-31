@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal, WritableSignal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AnalyticsService } from '@shared/services/analytics.service';
 
@@ -17,6 +17,13 @@ import { AnalyticsService } from '@shared/services/analytics.service';
  * @class
  */
 export class FormComponent {
+  /**
+   * Validate if the button is disabled
+   * @type {WritableSignal}
+   * @default false
+   * @private
+   */
+  disabledButton: WritableSignal<boolean> = signal<boolean>(false);
   /**
    * Inject instance of FormBuilder
    * @type {FormBuilder}
@@ -48,6 +55,9 @@ export class FormComponent {
    */
   sendEmail(): void {
     this.formEmail.reset();
-    this.analyticsService.customEvent('on-click-contact-email');
+    if (this.formEmail.valid) {
+      this.analyticsService.customEvent('on-click-contact-email');
+      this.disabledButton.set(true);
+    }
   }
 }
