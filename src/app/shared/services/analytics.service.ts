@@ -1,17 +1,17 @@
 import { inject, Injectable } from '@angular/core';
-import { GoogleTagManagerService } from 'angular-google-tag-manager';
+import { WindowsReferenceService } from '@shared/services/windows-reference.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnalyticsService {
   /**
-   * Instance of google tag manager service
-   * @type {GoogleTagManagerService}
-   * @default GoogleTagManagerService
+   * Instance of windows reference service
+   * @type {WindowsReferenceService}
+   * @default WindowsReferenceService
    * @private
    */
-  private gtmService: GoogleTagManagerService = inject(GoogleTagManagerService);
+  private window: WindowsReferenceService = inject(WindowsReferenceService);
 
   /**
    * Fire page view analytic
@@ -19,10 +19,11 @@ export class AnalyticsService {
    * @public
    */
   pageView(pageName: string): void {
-    this.gtmService.pushTag({
+    if (!this.window?.nativeWindow?.dataLayer) return;
+    this.window.nativeWindow.dataLayer.push({
       event: 'page-view',
       pageName
-    }).then();
+    });
   }
 
   /**
@@ -31,9 +32,10 @@ export class AnalyticsService {
    * @public
    */
   customEvent(data: string): void {
-    this.gtmService.pushTag({
+    if (!this.window?.nativeWindow?.dataLayer) return;
+    this.window.nativeWindow.dataLayer.push({
       event: 'page-custom-event',
       data
-    }).then();
+    });
   }
 }

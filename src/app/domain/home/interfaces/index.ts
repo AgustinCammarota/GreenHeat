@@ -3,6 +3,7 @@ import { Card } from './card.interface';
 import { Presentation } from './presentation-interface';
 import { Brand } from './brand.interface';
 import { Information } from './information.interface';
+import { DataLayer, ICustomWindow } from './windows-reference.interface';
 
 export {
   NavigationItems,
@@ -10,5 +11,7 @@ export {
   Sections,
   Presentation,
   Brand,
-  Information
+  Information,
+  DataLayer,
+  ICustomWindow
 }

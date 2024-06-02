@@ -1,8 +1,6 @@
 import {
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
-  inject,
   output,
   OutputEmitterRef,
   signal,
@@ -105,13 +103,6 @@ export class HeaderComponent {
       section: Sections.contactSection
     }
   ]);
-  /**
-   * Instance of ChangeDetectorRef
-   * @type {ChangeDetectorRef}
-   * @default ChangeDetectorRef
-   * @private
-   */
-  private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
 
   /**
    * Handle scroll event
@@ -121,7 +112,6 @@ export class HeaderComponent {
   handleScroll(event: boolean): void {
     this.isMaximize.set(event);
     this.isVisibleScrollToTop.set(!event);
-    this.cdr.detectChanges();
   }
 
   /**
@@ -131,7 +121,6 @@ export class HeaderComponent {
    */
   handleDevice(event: boolean) {
     this.isMobileDevice.set(event);
-    this.cdr.detectChanges();
   }
 
   /**

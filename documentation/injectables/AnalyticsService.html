@@ -143,7 +143,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#gtmService" >gtmService</a>
+                                <a href="#window" >window</a>
                             </li>
                         </ul>
                     </td>
@@ -201,8 +201,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="33"
-                                    class="link-to-prism">src/app/shared/services/analytics.service.ts:33</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="34"
+                                    class="link-to-prism">src/app/shared/services/analytics.service.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -329,23 +329,23 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="gtmService"></a>
+                    <a name="window"></a>
                     <span class="name">
                             <span class="modifier">Private</span>
-                        <span ><b>gtmService</b></span>
-                        <a href="#gtmService"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>window</b></span>
+                        <a href="#window"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>GoogleTagManagerService</code>
+                        <i>Type : </i>        <code><a href="../injectables/WindowsReferenceService.html" target="_self" >WindowsReferenceService</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>inject(GoogleTagManagerService)</code>
+                        <i>Default value : </i><code>inject(WindowsReferenceService)</code>
                     </td>
                 </tr>
                     <tr>
@@ -356,7 +356,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Instance of google tag manager service</p>
+                    <div class="io-description"><p>Instance of windows reference service</p>
 </div>
                 </td>
             </tr>
@@ -370,19 +370,19 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { inject, Injectable } from &#x27;@angular/core&#x27;;
-import { GoogleTagManagerService } from &#x27;angular-google-tag-manager&#x27;;
+import { WindowsReferenceService } from &#x27;@shared/services/windows-reference.service&#x27;;
 
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class AnalyticsService {
   /**
-   * Instance of google tag manager service
-   * @type {GoogleTagManagerService}
-   * @default GoogleTagManagerService
+   * Instance of windows reference service
+   * @type {WindowsReferenceService}
+   * @default WindowsReferenceService
    * @private
    */
-  private gtmService: GoogleTagManagerService &#x3D; inject(GoogleTagManagerService);
+  private window: WindowsReferenceService &#x3D; inject(WindowsReferenceService);
 
   /**
    * Fire page view analytic
@@ -390,10 +390,11 @@ export class AnalyticsService {
    * @public
    */
   pageView(pageName: string): void {
-    this.gtmService.pushTag({
+    if (!this.window?.nativeWindow?.dataLayer) return;
+    this.window.nativeWindow.dataLayer.push({
       event: &#x27;page-view&#x27;,
       pageName
-    }).then();
+    });
   }
 
   /**
@@ -402,10 +403,11 @@ export class AnalyticsService {
    * @public
    */
   customEvent(data: string): void {
-    this.gtmService.pushTag({
+    if (!this.window?.nativeWindow?.dataLayer) return;
+    this.window.nativeWindow.dataLayer.push({
       event: &#x27;page-custom-event&#x27;,
       data
-    }).then();
+    });
   }
 }
 </code></pre>

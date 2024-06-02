@@ -133,6 +133,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <li class="link">
                                     <a href="injectables/AnalyticsService.html" data-type="entity-link" >AnalyticsService</a>
                                 </li>
+                                <li class="link">
+                                    <a href="injectables/WindowsReferenceService.html" data-type="entity-link" >WindowsReferenceService</a>
+                                </li>
                             </ul>
                         </li>
                     <li class="chapter">
@@ -148,6 +151,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/Card.html" data-type="entity-link" >Card</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/DataLayer.html" data-type="entity-link" >DataLayer</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/ICustomWindow.html" data-type="entity-link" >ICustomWindow</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Information.html" data-type="entity-link" >Information</a>
@@ -170,6 +179,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
                             <li class="link">
                                 <a href="miscellaneous/enumerations.html" data-type="entity-link">Enums</a>
+                            </li>
+                            <li class="link">
+                                <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
                             </li>
                             <li class="link">
                                 <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>

@@ -9,7 +9,7 @@ import {
 import { NgOptimizedImage } from '@angular/common';
 import { state, style, transition, trigger, useAnimation } from '@angular/animations';
 import { NavigationItems } from '@home/interfaces';
-import { environment } from '@environments/environment.development';
+import { environment } from '@environments/environment';
 import { visibilityIn, visibilityOut } from '@shared/animations/animations';
 import { AnalyticsService } from '@shared/services/analytics.service';
 

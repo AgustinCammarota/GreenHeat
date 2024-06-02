@@ -1,7 +1,7 @@
 import {
   afterNextRender,
-  ChangeDetectionStrategy, ChangeDetectorRef,
-  Component, inject,
+  ChangeDetectionStrategy,
+  Component,
   input,
   InputSignal, OnDestroy,
   signal,
@@ -55,13 +55,6 @@ export class CarouselComponent implements OnDestroy {
    * @private
    */
   private interval$: Subscription | null = null;
-  /**
-   * Instance of ChangeDetectorRef
-   * @type {ChangeDetectorRef}
-   * @default ChangeDetectorRef
-   * @private
-   */
-  private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
 
   constructor() {
     afterNextRender(() => {
@@ -119,7 +112,6 @@ export class CarouselComponent implements OnDestroy {
         )
         .subscribe(() => {
       this.currentIndex.update(value => (value + 1) % this.slides().length);
-      this.cdr.detectChanges();
     });
   }
 

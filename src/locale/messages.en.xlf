@@ -308,8 +308,8 @@
     </unit>
     <unit id="informationWhatsappText">
       <segment state="initial">
-        <source>+54 9 11 6218-8835</source>
-        <target>+54 9 11 6218-8835</target>
+        <source>+54 9 11 6652-5996</source>
+        <target>+54 9 11 6652-5996</target>
       </segment>
     </unit>
     <unit id="informationIconInstagramAlt">
@@ -332,8 +332,8 @@
     </unit>
     <unit id="informationMailText">
       <segment state="initial">
-        <source>infoghclima</source>
-        <target>infoghclima</target>
+        <source>infoghclimaarg@gmail.com</source>
+        <target>infoghclimaarg@gmail.com</target>
       </segment>
     </unit>
     <unit id="linkHeaderAbout">

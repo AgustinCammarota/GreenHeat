@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, signal, WritableSignal } from '@ang
 import { FormComponent } from '@home/components/form/form.component';
 import { InformationComponent } from '@home/components/information/information.component';
 import { Information } from '@home/interfaces';
-import { environment } from '@environments/environment.development';
+import { environment } from '@environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -43,7 +43,7 @@ export class ContactComponent {
       href: environment.gmailUrl,
       image: '/green-heat/mail.svg',
       altImage: $localize`:@@informationIconMailAlt:Email`,
-      text: $localize`:@@informationMailText:infoghclima`,
+      text: $localize`:@@informationMailText:infoghclimaarg@gmail.com`,
     }
   ]);
 }

@@ -1,5 +1,4 @@
-import { afterNextRender, Directive, inject, OnDestroy, output, OutputEmitterRef } from '@angular/core';
-import { DeviceDetectorService } from "ngx-device-detector";
+import { afterNextRender, Directive, OnDestroy, output, OutputEmitterRef } from '@angular/core';
 
 @Directive({
   selector: '[appObserverDevice]',
@@ -18,13 +17,6 @@ export class ObserverDeviceDirective implements OnDestroy {
    */
   mobileDeviceDetermined: OutputEmitterRef<boolean> = output<boolean>();
   /**
-   * Instance of device detector service
-   * @type {DeviceDetectorService}
-   * @default DeviceDetectorService
-   * @private
-   */
-  private deviceDetectorService: DeviceDetectorService = inject(DeviceDetectorService);
-  /**
    * Instance of resize observer
    * @type {ResizeObserver}
    * @default null
@@ -35,7 +27,7 @@ export class ObserverDeviceDirective implements OnDestroy {
   constructor() {
     afterNextRender(() => {
       // If it is a mobile or tablet device not do anything.
-      if (this.deviceDetectorService.isMobile() || this.deviceDetectorService.isTablet()) {
+      if (this.isMobileUserAgent() || this.isTabletUserAgent()) {
         this.mobileDeviceDetermined.emit(true);
         return;
       }
@@ -53,6 +45,26 @@ export class ObserverDeviceDirective implements OnDestroy {
 
       this.resizeObserver.observe(document.documentElement);
     });
+  }
+
+  /**
+   * Validate is mobile user agent
+   * @private
+   * @return boolean
+   */
+  private isMobileUserAgent(): boolean {
+    const userAgent = navigator.userAgent || navigator.vendor || '';
+    return (/android/i.test(userAgent)) || (/iPhone|iPod/i.test(userAgent));
+  }
+
+  /**
+   * Validate is tablet user agent
+   * @private
+   * @return boolean
+   */
+  private isTabletUserAgent(): boolean {
+    const userAgent = navigator.userAgent || navigator.vendor || '';
+    return (/iPad/i.test(userAgent)) || (/(android)/i.test(userAgent));
   }
 
   /**

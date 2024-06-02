@@ -193,15 +193,16 @@
           withPreloading(PreloadAllModules)
       ),
     provideClientHydration(
+        withEventReplay(),
         withHttpTransferCacheOptions({
           includePostRequests: true
         })
     ),
+    provideHttpClient(withFetch()),
     provideAnimationsAsync(),
     provideCloudinaryLoader(&#x27;https://res.cloudinary.com/ddkyg5hdq/&#x27;),
     { provide: LOCALE_ID, useValue: &#x27;es-AR&#x27; },
-    { provide: PRECONNECT_CHECK_BLOCKLIST, useValue: &#x27;https://res.cloudinary.com&#x27; },
-    { provide: &#x27;googleTagManagerId&#x27;,  useValue: &#x27;GTM-NH4M434S&#x27; }
+    { provide: PRECONNECT_CHECK_BLOCKLIST, useValue: &#x27;https://res.cloudinary.com&#x27; }
   ]
 }</code>
                     </td>
@@ -312,7 +313,7 @@
   production: false,
   whatsappUrl: &#x27;https://wa.me/+5491166525996&#x27;,
   instagramUrl: &#x27;https://instagram.com/greenheatclima?igshid&#x3D;YmMyMTA2M2Y&#x3D;&#x27;,
-  gmailUrl: &#x27;mailto:infoghclima@gmail.com&#x27;
+  gmailUrl: &#x27;mailto:infoghclimaarg@gmail.com&#x27;
 }</code>
                     </td>
                 </tr>
@@ -346,7 +347,7 @@
   production: true,
   whatsappUrl: &#x27;https://wa.me/+5491166525996&#x27;,
   instagramUrl: &#x27;https://instagram.com/greenheatclima?igshid&#x3D;YmMyMTA2M2Y&#x3D;&#x27;,
-  gmailUrl: &#x27;mailto:infoghclima@gmail.com&#x27;
+  gmailUrl: &#x27;mailto:infoghclimaarg@gmail.com&#x27;
 }</code>
                     </td>
                 </tr>

@@ -210,10 +210,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#cdr" >cdr</a>
-                            </li>
-                            <li>
                                 <a href="#currentIndex" >currentIndex</a>
                             </li>
                             <li>
@@ -278,7 +274,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:64</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:57</a></div>
                             </td>
                         </tr>
 
@@ -317,8 +313,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="130"
-                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:130</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="122"
+                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:122</a></div>
                         </td>
                     </tr>
 
@@ -359,8 +355,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="107"
-                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:107</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="100"
+                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:100</a></div>
                         </td>
                     </tr>
 
@@ -429,8 +425,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="75"
-                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:75</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="68"
+                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:68</a></div>
                         </td>
                     </tr>
 
@@ -468,8 +464,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="94"
-                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:94</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="87"
+                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:87</a></div>
                         </td>
                     </tr>
 
@@ -507,8 +503,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="83"
-                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:83</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="76"
+                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:76</a></div>
                         </td>
                     </tr>
 
@@ -548,8 +544,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="115"
-                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:115</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="108"
+                                    class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:108</a></div>
                         </td>
                     </tr>
 
@@ -576,44 +572,6 @@
     <h3 id="inputs">
         Properties
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="cdr"></a>
-                    <span class="name">
-                            <span class="modifier">Private</span>
-                        <span ><b>cdr</b></span>
-                        <a href="#cdr"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>ChangeDetectorRef</code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>inject(ChangeDetectorRef)</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/domain/home/components/carousel/carousel.component.ts:64</a></div>
-                        </td>
-                    </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Instance of ChangeDetectorRef</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -734,8 +692,8 @@
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
   afterNextRender,
-  ChangeDetectionStrategy, ChangeDetectorRef,
-  Component, inject,
+  ChangeDetectionStrategy,
+  Component,
   input,
   InputSignal, OnDestroy,
   signal,
@@ -789,13 +747,6 @@ export class CarouselComponent implements OnDestroy {
    * @private
    */
   private interval$: Subscription | null &#x3D; null;
-  /**
-   * Instance of ChangeDetectorRef
-   * @type {ChangeDetectorRef}
-   * @default ChangeDetectorRef
-   * @private
-   */
-  private cdr: ChangeDetectorRef &#x3D; inject(ChangeDetectorRef);
 
   constructor() {
     afterNextRender(() &#x3D;&gt; {
@@ -853,7 +804,6 @@ export class CarouselComponent implements OnDestroy {
         )
         .subscribe(() &#x3D;&gt; {
       this.currentIndex.update(value &#x3D;&gt; (value + 1) % this.slides().length);
-      this.cdr.detectChanges();
     });
   }
 
@@ -863,6 +813,7 @@ export class CarouselComponent implements OnDestroy {
    */
   private endInterval(): void {
     this.interval$?.unsubscribe();
+    this.interval$ &#x3D; null;
   }
 }
 </code></pre>
