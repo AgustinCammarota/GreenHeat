@@ -13,7 +13,7 @@
     </head>
     <body>
           <script>
-               // Blocking script to avaoid flickering dark mode
+               // Blocking script to avoid flickering dark mode
                // Dark mode toggle button
                var useDark = window.matchMedia('(prefers-color-scheme: dark)');
                var darkModeState = useDark.matches;
@@ -60,20 +60,13 @@
                     darkModeState = darkModeStateLocal === 'true';
                }
                toggleDarkMode(darkModeState);
-
-               if ($darkModeToggles.length > 0) {
-                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
-                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
-                              darkModeState = !darkModeState;
-                              toggleDarkMode(darkModeState);
-                         });
-                    }
-               }
           </script>
 
-        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
-            <a href="../" class="navbar-brand">green-heat documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">green-heat documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
@@ -82,7 +75,7 @@
 
         <div class="container-fluid main">
            <div class="row main">
-               <div class="hidden-xs menu">
+               <div class="d-none d-md-block menu">
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
@@ -189,14 +182,22 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#isMobileUserAgent" >isMobileUserAgent</a>
+                                <a href="#emitMobileDevice" >emitMobileDevice</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#isTabletUserAgent" >isTabletUserAgent</a>
+                                <a href="#isMobileUserAgent" >isMobileUserAgent</a>
                             </li>
                             <li>
                                 <a href="#ngOnDestroy" >ngOnDestroy</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateEntries" >validateEntries</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#validateMobileDevice" >validateMobileDevice</a>
                             </li>
                         </ul>
                     </td>
@@ -242,6 +243,50 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="emitMobileDevice"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>emitMobileDevice</b></span>
+                        <a href="#emitMobileDevice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>emitMobileDevice()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="45"
+                                    class="link-to-prism">src/app/shared/directives/observer-device.directive.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Emit mobile device</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="isMobileUserAgent"></a>
                     <span class="name">
                             <span class="modifier">Private</span>
@@ -260,8 +305,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="55"
-                                    class="link-to-prism">src/app/shared/directives/observer-device.directive.ts:55</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="84"
+                                    class="link-to-prism">src/app/shared/directives/observer-device.directive.ts:84</a></div>
                         </td>
                     </tr>
 
@@ -269,51 +314,6 @@
             <tr>
                 <td class="col-md-4">
                         <div class="io-description"><p>Validate is mobile user agent</p>
-</div>
-
-                        <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                        </div>
-                            <div class="io-description">
-                                <p>boolean</p>
-
-                            </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="isTabletUserAgent"></a>
-                    <span class="name">
-                            <span class="modifier">Private</span>
-                        <span ><b>isTabletUserAgent</b></span>
-                        <a href="#isTabletUserAgent"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>isTabletUserAgent()</code>
-                </td>
-            </tr>
-
-
-                    <tr>
-                        <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="65"
-                                    class="link-to-prism">src/app/shared/directives/observer-device.directive.ts:65</a></div>
-                        </td>
-                    </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                        <div class="io-description"><p>Validate is tablet user agent</p>
 </div>
 
                         <div class="io-description">
@@ -348,8 +348,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="74"
-                                    class="link-to-prism">src/app/shared/directives/observer-device.directive.ts:74</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="37"
+                                    class="link-to-prism">src/app/shared/directives/observer-device.directive.ts:37</a></div>
                         </td>
                     </tr>
 
@@ -363,6 +363,121 @@
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                         </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateEntries"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateEntries</b></span>
+                        <a href="#validateEntries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateEntries(entries: ResizeObserverEntry[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="56"
+                                    class="link-to-prism">src/app/shared/directives/observer-device.directive.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Validate entries</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>entries</td>
+                                            <td>
+                                                        <code>ResizeObserverEntry[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateMobileDevice"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>validateMobileDevice</b></span>
+                        <a href="#validateMobileDevice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>validateMobileDevice()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="71"
+                                    class="link-to-prism">src/app/shared/directives/observer-device.directive.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Validate mobile device</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
                 </td>
             </tr>
         </tbody>
@@ -483,45 +598,8 @@ export class ObserverDeviceDirective implements OnDestroy {
 
   constructor() {
     afterNextRender(() &#x3D;&gt; {
-      // If it is a mobile or tablet device not do anything.
-      if (this.isMobileUserAgent() || this.isTabletUserAgent()) {
-        this.mobileDeviceDetermined.emit(true);
-        return;
-      }
-
-      this.resizeObserver &#x3D; new ResizeObserver(entries &#x3D;&gt; {
-        const entry &#x3D; entries[0];
-        const { width } &#x3D; entry.contentRect;
-
-        if (width &lt;&#x3D; 900) {
-          this.mobileDeviceDetermined.emit(true);
-        } else {
-          this.mobileDeviceDetermined.emit(false);
-        }
-      });
-
-      this.resizeObserver.observe(document.documentElement);
+      this.emitMobileDevice();
     });
-  }
-
-  /**
-   * Validate is mobile user agent
-   * @private
-   * @return boolean
-   */
-  private isMobileUserAgent(): boolean {
-    const userAgent &#x3D; navigator.userAgent || navigator.vendor || &#x27;&#x27;;
-    return (/android/i.test(userAgent)) || (/iPhone|iPod/i.test(userAgent));
-  }
-
-  /**
-   * Validate is tablet user agent
-   * @private
-   * @return boolean
-   */
-  private isTabletUserAgent(): boolean {
-    const userAgent &#x3D; navigator.userAgent || navigator.vendor || &#x27;&#x27;;
-    return (/iPad/i.test(userAgent)) || (/(android)/i.test(userAgent));
   }
 
   /**
@@ -530,6 +608,54 @@ export class ObserverDeviceDirective implements OnDestroy {
    */
   ngOnDestroy(): void {
     this.resizeObserver?.disconnect();
+  }
+
+  /**
+   * Emit mobile device
+   * @private
+   */
+  private emitMobileDevice(): void {
+    this.validateMobileDevice();
+    this.resizeObserver &#x3D; new ResizeObserver(entries &#x3D;&gt; this.validateEntries(entries));
+    this.resizeObserver.observe(document.documentElement);
+  }
+
+  /**
+   * Validate entries
+   * @private
+   * @param {ResizeObserverEntry[]} entries
+   */
+  private validateEntries(entries: ResizeObserverEntry[]) {
+    const entry &#x3D; entries[0];
+    const { width } &#x3D; entry.contentRect;
+
+    if (width &lt;&#x3D; 900) {
+      this.mobileDeviceDetermined.emit(true);
+    } else {
+      this.mobileDeviceDetermined.emit(false);
+    }
+  }
+
+  /**
+   * Validate mobile device
+   * @private
+   */
+  private validateMobileDevice() {
+    // If it is a mobile or tablet device not do anything.
+    if (this.isMobileUserAgent()) {
+      this.mobileDeviceDetermined.emit(true);
+      return;
+    }
+  }
+
+  /**
+   * Validate is mobile user agent
+   * @private
+   * @return boolean
+   */
+  private isMobileUserAgent(): boolean {
+    const userAgent &#x3D; navigator.userAgent || navigator.vendor;
+    return (/iPhone|iPod|iPad|android/i.test(userAgent));
   }
 }
 </code></pre>
@@ -579,6 +705,19 @@ export class ObserverDeviceDirective implements OnDestroy {
             var COMPODOC_CURRENT_PAGE_URL = 'ObserverDeviceDirective.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>

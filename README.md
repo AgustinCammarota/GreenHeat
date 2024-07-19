@@ -29,10 +29,10 @@ Pasos de instalación:
 3. Ejecutar el comando npm run serve:ssr:green-heat y abrir la url localhost:4000/es o localhost:4000/en.
 
 Tecnologías necesarias:
-- Node > 20.0.0.
+- Node >= 20.11.1.
 - Sistema Operativo Windows, MacOS o Linux.
 - Compilador Vite. 
-- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.
 
 ## Comandos
 ---
@@ -99,50 +99,50 @@ Run `npm run serve:ssr:green-heat` to execute the production server. Firsts it i
 ---
 
     "dependencies":
-        "@angular/animations": "^17.3.0",
-        "@angular/common": "^17.3.0",
-        "@angular/compiler": "^17.3.0",
-        "@angular/core": "^17.3.0",
-        "@angular/forms": "^17.3.0",
-        "@angular/platform-browser": "^17.3.0",
-        "@angular/platform-browser-dynamic": "^17.3.0",
-        "@angular/platform-server": "^17.3.0",
-        "@angular/router": "^17.3.0",
-        "@angular/ssr": "^17.3.0",
-        "express": "^4.18.2",
-        "ngx-device-detector": "^7.0.0",
-        "rxjs": "~7.8.0",
-        "tslib": "^2.3.0",
-        "zone.js": "~0.14.3"
+        "@angular/animations": "^18.0.1",
+        "@angular/common": "^18.0.1",
+        "@angular/compiler": "^18.0.1",
+        "@angular/core": "^18.0.1",
+        "@angular/forms": "^18.0.1",
+        "@angular/platform-browser": "^18.0.1",
+        "@angular/platform-browser-dynamic": "^18.0.1",
+        "@angular/platform-server": "^18.0.1",
+        "@angular/router": "^18.0.1",
+        "@angular/ssr": "^18.0.2",
+        "express": "^4.19.2",
+        "rxjs": "~7.8.1",
+        "tslib": "^2.6.2",
+        "zone.js": "~0.14.6"
 
     "devDependencies":
-        "@angular-devkit/build-angular": "^17.3.0",
-        "@angular-eslint/builder": "17.3.0",
-        "@angular-eslint/eslint-plugin": "17.3.0",
-        "@angular-eslint/eslint-plugin-template": "17.3.0",
-        "@angular-eslint/schematics": "17.3.0",
-        "@angular-eslint/template-parser": "17.3.0",
-        "@angular/cli": "^17.3.0",
-        "@angular/compiler-cli": "^17.3.0",
-        "@angular/localize": "^17.3.0",
-        "@compodoc/compodoc": "^1.1.23",
-        "@types/express": "^4.17.17",
-        "@types/jasmine": "~5.1.0",
-        "@types/node": "^18.18.0",
-        "@typescript-eslint/eslint-plugin": "7.2.0",
-        "@typescript-eslint/parser": "7.2.0",
-        "eslint": "^8.57.0",
-        "jasmine-core": "~5.1.0",
-        "karma": "~6.4.0",
+        "@angular-devkit/build-angular": "^18.0.2",
+        "@angular-eslint/builder": "18.0.1",
+        "@angular-eslint/eslint-plugin": "18.0.1",
+        "@angular-eslint/eslint-plugin-template": "18.0.1",
+        "@angular-eslint/schematics": "18.0.1",
+        "@angular-eslint/template-parser": "18.0.1",
+        "@angular/cli": "^18.0.2",
+        "@angular/compiler-cli": "^18.0.1",
+        "@angular/localize": "^18.0.1",
+        "@compodoc/compodoc": "^1.1.25",
+        "@types/express": "^4.17.21",
+        "@types/jasmine": "~5.1.4",
+        "@types/node": "^20.13.0",
+        "@typescript-eslint/eslint-plugin": "7.11.0",
+        "@typescript-eslint/parser": "7.11.0",
+        "eslint": "8.57.0",
+        "jasmine-core": "~5.1.2",
+        "karma": "~6.4.3",
         "karma-chrome-launcher": "~3.2.0",
-        "karma-coverage": "~2.2.0",
+        "karma-coverage": "~2.2.1",
         "karma-jasmine": "~5.1.0",
         "karma-jasmine-html-reporter": "~2.1.0",
         "ng-extract-i18n-merge": "^2.11.2",
-        "stylelint": "^16.3.0",
+        "source-map-explorer": "^2.5.3",
+        "stylelint": "^16.6.1",
         "stylelint-config-sass-guidelines": "^11.1.0",
-        "stylelint-scss": "^6.2.1",
-        "typescript": "~5.4.2"
+        "stylelint-scss": "^6.3.0",
+        "typescript": "~5.4.5"
 
 ## Autor/es
 ---

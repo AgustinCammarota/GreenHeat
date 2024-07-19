@@ -13,7 +13,7 @@
     </head>
     <body>
           <script>
-               // Blocking script to avaoid flickering dark mode
+               // Blocking script to avoid flickering dark mode
                // Dark mode toggle button
                var useDark = window.matchMedia('(prefers-color-scheme: dark)');
                var darkModeState = useDark.matches;
@@ -60,20 +60,13 @@
                     darkModeState = darkModeStateLocal === 'true';
                }
                toggleDarkMode(darkModeState);
-
-               if ($darkModeToggles.length > 0) {
-                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
-                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
-                              darkModeState = !darkModeState;
-                              toggleDarkMode(darkModeState);
-                         });
-                    }
-               }
           </script>
 
-        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
-            <a href="./" class="navbar-brand">green-heat documentation</a>
-            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="./" class="navbar-brand">green-heat documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
@@ -82,7 +75,7 @@
 
         <div class="container-fluid main">
            <div class="row main">
-               <div class="hidden-xs menu">
+               <div class="d-none d-md-block menu">
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
@@ -117,10 +110,10 @@
 </ol>
 <p>Tecnologías necesarias:</p>
 <ul>
-<li>Node &gt; 20.0.0.</li>
+<li>Node &gt;= 20.11.1.</li>
 <li>Sistema Operativo Windows, MacOS o Linux.</li>
 <li>Compilador Vite. </li>
-<li>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 17.3.0.</li>
+<li>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 18.</li>
 </ul>
 <h2>Comandos</h2>
 <hr>
@@ -161,50 +154,50 @@
 <h2>Dependencias</h2>
 <hr>
 <b>Example :</b><div><pre class="line-numbers"><code class="language-none">&quot;dependencies&quot;:
-    &quot;&#64;angular/animations&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/common&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/compiler&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/core&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/forms&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/platform-browser&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/platform-browser-dynamic&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/platform-server&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/router&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/ssr&quot;: &quot;^17.3.0&quot;,
-    &quot;express&quot;: &quot;^4.18.2&quot;,
-    &quot;ngx-device-detector&quot;: &quot;^7.0.0&quot;,
-    &quot;rxjs&quot;: &quot;~7.8.0&quot;,
-    &quot;tslib&quot;: &quot;^2.3.0&quot;,
-    &quot;zone.js&quot;: &quot;~0.14.3&quot;
+    &quot;&#64;angular/animations&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/common&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/compiler&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/core&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/forms&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/platform-browser&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/platform-browser-dynamic&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/platform-server&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/router&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/ssr&quot;: &quot;^18.0.2&quot;,
+    &quot;express&quot;: &quot;^4.19.2&quot;,
+    &quot;rxjs&quot;: &quot;~7.8.1&quot;,
+    &quot;tslib&quot;: &quot;^2.6.2&quot;,
+    &quot;zone.js&quot;: &quot;~0.14.6&quot;
 
 &quot;devDependencies&quot;:
-    &quot;&#64;angular-devkit/build-angular&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular-eslint/builder&quot;: &quot;17.3.0&quot;,
-    &quot;&#64;angular-eslint/eslint-plugin&quot;: &quot;17.3.0&quot;,
-    &quot;&#64;angular-eslint/eslint-plugin-template&quot;: &quot;17.3.0&quot;,
-    &quot;&#64;angular-eslint/schematics&quot;: &quot;17.3.0&quot;,
-    &quot;&#64;angular-eslint/template-parser&quot;: &quot;17.3.0&quot;,
-    &quot;&#64;angular/cli&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/compiler-cli&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;angular/localize&quot;: &quot;^17.3.0&quot;,
-    &quot;&#64;compodoc/compodoc&quot;: &quot;^1.1.23&quot;,
-    &quot;&#64;types/express&quot;: &quot;^4.17.17&quot;,
-    &quot;&#64;types/jasmine&quot;: &quot;~5.1.0&quot;,
-    &quot;&#64;types/node&quot;: &quot;^18.18.0&quot;,
-    &quot;&#64;typescript-eslint/eslint-plugin&quot;: &quot;7.2.0&quot;,
-    &quot;&#64;typescript-eslint/parser&quot;: &quot;7.2.0&quot;,
-    &quot;eslint&quot;: &quot;^8.57.0&quot;,
-    &quot;jasmine-core&quot;: &quot;~5.1.0&quot;,
-    &quot;karma&quot;: &quot;~6.4.0&quot;,
+    &quot;&#64;angular-devkit/build-angular&quot;: &quot;^18.0.2&quot;,
+    &quot;&#64;angular-eslint/builder&quot;: &quot;18.0.1&quot;,
+    &quot;&#64;angular-eslint/eslint-plugin&quot;: &quot;18.0.1&quot;,
+    &quot;&#64;angular-eslint/eslint-plugin-template&quot;: &quot;18.0.1&quot;,
+    &quot;&#64;angular-eslint/schematics&quot;: &quot;18.0.1&quot;,
+    &quot;&#64;angular-eslint/template-parser&quot;: &quot;18.0.1&quot;,
+    &quot;&#64;angular/cli&quot;: &quot;^18.0.2&quot;,
+    &quot;&#64;angular/compiler-cli&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;angular/localize&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;compodoc/compodoc&quot;: &quot;^1.1.25&quot;,
+    &quot;&#64;types/express&quot;: &quot;^4.17.21&quot;,
+    &quot;&#64;types/jasmine&quot;: &quot;~5.1.4&quot;,
+    &quot;&#64;types/node&quot;: &quot;^20.13.0&quot;,
+    &quot;&#64;typescript-eslint/eslint-plugin&quot;: &quot;7.11.0&quot;,
+    &quot;&#64;typescript-eslint/parser&quot;: &quot;7.11.0&quot;,
+    &quot;eslint&quot;: &quot;8.57.0&quot;,
+    &quot;jasmine-core&quot;: &quot;~5.1.2&quot;,
+    &quot;karma&quot;: &quot;~6.4.3&quot;,
     &quot;karma-chrome-launcher&quot;: &quot;~3.2.0&quot;,
-    &quot;karma-coverage&quot;: &quot;~2.2.0&quot;,
+    &quot;karma-coverage&quot;: &quot;~2.2.1&quot;,
     &quot;karma-jasmine&quot;: &quot;~5.1.0&quot;,
     &quot;karma-jasmine-html-reporter&quot;: &quot;~2.1.0&quot;,
     &quot;ng-extract-i18n-merge&quot;: &quot;^2.11.2&quot;,
-    &quot;stylelint&quot;: &quot;^16.3.0&quot;,
+    &quot;source-map-explorer&quot;: &quot;^2.5.3&quot;,
+    &quot;stylelint&quot;: &quot;^16.6.1&quot;,
     &quot;stylelint-config-sass-guidelines&quot;: &quot;^11.1.0&quot;,
-    &quot;stylelint-scss&quot;: &quot;^6.2.1&quot;,
-    &quot;typescript&quot;: &quot;~5.4.2&quot;</code></pre></div><h2>Autor/es</h2>
+    &quot;stylelint-scss&quot;: &quot;^6.3.0&quot;,
+    &quot;typescript&quot;: &quot;~5.4.5&quot;</code></pre></div><h2>Autor/es</h2>
 <hr>
 <p>Agustin Cammarota Muti - <a href="mailto:agustincammarota@hotmail.com">agustincammarota@hotmail.com</a> </p>
 <h2>Further help</h2>
@@ -259,6 +252,19 @@
             var COMPODOC_CURRENT_PAGE_URL = 'index.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
 
        <script src="./js/libs/custom-elements.min.js"></script>
        <script src="./js/libs/lit-html.js"></script>
