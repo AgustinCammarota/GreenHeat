@@ -53,8 +53,6 @@ export class HomeComponent implements OnInit {
    */
   scrollToElement(event: string): void {
     const element = this.elementRef.nativeElement.querySelector(`#${event}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }

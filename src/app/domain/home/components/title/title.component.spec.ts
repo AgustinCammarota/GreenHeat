@@ -28,29 +28,31 @@ describe('TitleComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('validate title', () => {
-    const body: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.title-container__title'),
-    ).nativeElement;
+  describe('Validate dom elements', () => {
+    it('should have a title', () => {
+      const body: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.title-container__title'),
+      ).nativeElement;
 
-    expect(body).toBeTruthy();
-    expect(body.textContent).toContain('Green Heat');
-  });
+      expect(body).toBeTruthy();
+      expect(body.textContent).toContain('Green Heat');
+    });
 
-  it('validate subtitle', () => {
-    const body: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.title-container__subtitle'),
-    ).nativeElement;
+    it('should have a subtitle', () => {
+      const body: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.title-container__subtitle'),
+      ).nativeElement;
 
-    expect(body).toBeTruthy();
-    expect(body.textContent).toContain('Acclimatization');
-  });
+      expect(body).toBeTruthy();
+      expect(body.textContent).toContain('Acclimatization');
+    });
 
-  it('validate divider', () => {
-    const body: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.title-container__divider'),
-    ).nativeElement;
+    it('should have a divider', () => {
+      const body: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.title-container__divider'),
+      ).nativeElement;
 
-    expect(body).toBeTruthy();
+      expect(body).toBeTruthy();
+    });
   });
 });

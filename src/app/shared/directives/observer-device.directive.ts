@@ -26,45 +26,8 @@ export class ObserverDeviceDirective implements OnDestroy {
 
   constructor() {
     afterNextRender(() => {
-      // If it is a mobile or tablet device not do anything.
-      if (this.isMobileUserAgent() || this.isTabletUserAgent()) {
-        this.mobileDeviceDetermined.emit(true);
-        return;
-      }
-
-      this.resizeObserver = new ResizeObserver(entries => {
-        const entry = entries[0];
-        const { width } = entry.contentRect;
-
-        if (width <= 900) {
-          this.mobileDeviceDetermined.emit(true);
-        } else {
-          this.mobileDeviceDetermined.emit(false);
-        }
-      });
-
-      this.resizeObserver.observe(document.documentElement);
+      this.emitMobileDevice();
     });
-  }
-
-  /**
-   * Validate is mobile user agent
-   * @private
-   * @return boolean
-   */
-  private isMobileUserAgent(): boolean {
-    const userAgent = navigator.userAgent || navigator.vendor || '';
-    return (/android/i.test(userAgent)) || (/iPhone|iPod/i.test(userAgent));
-  }
-
-  /**
-   * Validate is tablet user agent
-   * @private
-   * @return boolean
-   */
-  private isTabletUserAgent(): boolean {
-    const userAgent = navigator.userAgent || navigator.vendor || '';
-    return (/iPad/i.test(userAgent)) || (/(android)/i.test(userAgent));
   }
 
   /**
@@ -73,5 +36,53 @@ export class ObserverDeviceDirective implements OnDestroy {
    */
   ngOnDestroy(): void {
     this.resizeObserver?.disconnect();
+  }
+
+  /**
+   * Emit mobile device
+   * @private
+   */
+  private emitMobileDevice(): void {
+    this.validateMobileDevice();
+    this.resizeObserver = new ResizeObserver(entries => this.validateEntries(entries));
+    this.resizeObserver.observe(document.documentElement);
+  }
+
+  /**
+   * Validate entries
+   * @private
+   * @param {ResizeObserverEntry[]} entries
+   */
+  private validateEntries(entries: ResizeObserverEntry[]) {
+    const entry = entries[0];
+    const { width } = entry.contentRect;
+
+    if (width <= 900) {
+      this.mobileDeviceDetermined.emit(true);
+    } else {
+      this.mobileDeviceDetermined.emit(false);
+    }
+  }
+
+  /**
+   * Validate mobile device
+   * @private
+   */
+  private validateMobileDevice() {
+    // If it is a mobile or tablet device not do anything.
+    if (this.isMobileUserAgent()) {
+      this.mobileDeviceDetermined.emit(true);
+      return;
+    }
+  }
+
+  /**
+   * Validate is mobile user agent
+   * @private
+   * @return boolean
+   */
+  private isMobileUserAgent(): boolean {
+    const userAgent = navigator.userAgent || navigator.vendor;
+    return (/iPhone|iPod|iPad|android/i.test(userAgent));
   }
 }

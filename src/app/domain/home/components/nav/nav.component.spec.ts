@@ -10,21 +10,24 @@ import { AnalyticsService } from '@shared/services/analytics.service';
 describe('NavComponent', () => {
   let component: NavComponent;
   let fixture: ComponentFixture<NavComponent>;
-  let analyticsService: AnalyticsService;
+  let analyticsService: jasmine.SpyObj<AnalyticsService>;
 
   beforeEach(async () => {
+    const analyticsServiceSpy = jasmine.createSpyObj('AnalyticsService', ['customEvent']);
     await TestBed.configureTestingModule({
       imports: [
           NavComponent,
           BrowserAnimationsModule
       ],
-      providers: [AnalyticsService]
+      providers: [
+        { provide: AnalyticsService, useValue: analyticsServiceSpy }
+      ]
     })
     .compileComponents();
     
     fixture = TestBed.createComponent(NavComponent);
     component = fixture.componentInstance;
-    analyticsService = TestBed.inject(AnalyticsService);
+    analyticsService = TestBed.inject(AnalyticsService) as jasmine.SpyObj<AnalyticsService>;
     const sidebarItems = signal([
       {
         description: 'Nosotros',
@@ -51,75 +54,82 @@ describe('NavComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('validate click on nav button', () => {
-    component.isMenuOpen.set(false);
-    const element: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.nav-button-container')
-    ).nativeElement;
+  describe('Validate dom elements', () => {
+    it('should change the isMenuOpen state when click nav button', () => {
+      component.isMenuOpen.set(false);
+      const element: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.nav-button-container')
+      ).nativeElement;
 
-    element.click();
-    expect(component.isMenuOpen()).toBeTruthy();
-  });
-
-  it('validate number of elements on the list item', () => {
-    const elements = fixture.debugElement.queryAll(
-        By.css('.list-item-container')
-    );
-    expect(elements.length).toEqual(4);
-  });
-
-  it('validate click on list item', () => {
-    component.navSection.subscribe((value: string) => {
-      expect(component.isMenuOpen()).toBeFalse();
-      expect(value).toBeDefined();
-      expect(value).toMatch(/aboutSection|serviceSection|clientSection|contactSection/);
+      element.click();
+      expect(component.isMenuOpen()).toBeTruthy();
     });
 
-    fixture.debugElement.queryAll(
-        By.css('.list-item-container')
-    ).map(element => {
-      const li: HTMLParagraphElement = element.nativeElement;
-      const button: HTMLButtonElement | null = li.querySelector('.list-item-container__link');
-      button?.click();
+    it('should have a four list item container', () => {
+      const elements = fixture.debugElement.queryAll(
+          By.css('.list-item-container')
+      );
+      expect(elements.length).toEqual(4);
+    });
+
+    it('should emit nav section event', () => {
+      component.navSection.subscribe((value: string) => {
+        expect(component.isMenuOpen()).toBeFalse();
+        expect(value).toBeDefined();
+        expect(value).toMatch(/aboutSection|serviceSection|clientSection|contactSection/);
+      });
+
+      fixture.debugElement.queryAll(
+          By.css('.list-item-container')
+      ).map(element => {
+        const li: HTMLParagraphElement = element.nativeElement;
+        const button: HTMLButtonElement | null = li.querySelector('.list-item-container__link');
+        button?.click();
+      });
+    });
+
+    it('should call customEvent in analytics services when click action link', () => {
+      const element: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.action-link-container')
+      ).nativeElement;
+
+      element.removeAttribute('href');
+
+      element.click();
+      expect(analyticsService.customEvent).toHaveBeenCalledWith('on-click-contact-whatsapp');
     });
   });
 
-  it('validate click on action link', () => {
-    const spy = spyOn(analyticsService, 'customEvent');
-    const element: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.action-link-container')
-    ).nativeElement;
+  describe('Validate openMenu method', () => {
+    it('should change isMenuOpen status', () => {
+      component.isMenuOpen.set(false);
+      component.openMenu();
 
-    element.removeAttribute('href');
-
-    element.click();
-    expect(spy).toHaveBeenCalledWith('on-click-contact-whatsapp');
-  });
-
-  it('validate openMenu method', () => {
-    component.isMenuOpen.set(false);
-    component.openMenu();
-
-    expect(component.isMenuOpen()).toBeTruthy();
-  });
-
-  it('validate navToElement method', () => {
-    component.navSection.subscribe((value: string) => {
-      expect(value).toEqual('aboutSection');
-      expect(component.isMenuOpen()).toBeFalse();
+      expect(component.isMenuOpen()).toBeTruthy();
     });
-
-    component.navToElement(Sections.aboutSection);
   });
 
-  it('validate fireAnalytic method', () => {
-    const spy = spyOn(analyticsService, 'customEvent');
-    component.fireAnalytic();
+  describe('Validate navToElement method', () => {
+    it('should emit nav section event', () => {
+      component.navSection.subscribe((value: string) => {
+        expect(value).toEqual('aboutSection');
+        expect(component.isMenuOpen()).toBeFalse();
+      });
 
-    expect(spy).toHaveBeenCalledWith('on-click-contact-whatsapp');
+      component.navToElement(Sections.aboutSection);
+    });
   });
 
-  it('validate whatsappUrl method', () => {
-    expect(component.whatsappUrl).toEqual('https://wa.me/+5491166525996');
+  describe('Validate fireAnalytic method', () => {
+    it('should call customEvent in analytics service', () => {
+      component.fireAnalytic();
+      expect(analyticsService.customEvent).toHaveBeenCalledWith('on-click-contact-whatsapp');
+    });
+  });
+
+  describe('Validate whatsappUrl method', () => {
+    it('should return wp url', () => {
+      expect(component.whatsappUrl).toEqual('https://wa.me/+5491166525996');
+    });
   });
 });

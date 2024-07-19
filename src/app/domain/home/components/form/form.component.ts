@@ -54,10 +54,10 @@ export class FormComponent {
    * @public
    */
   sendEmail(): void {
-    this.formEmail.reset();
     if (this.formEmail.valid) {
       this.analyticsService.customEvent('on-click-contact-email');
       this.disabledButton.set(true);
     }
+    this.formEmail.reset();
   }
 }

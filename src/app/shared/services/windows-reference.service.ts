@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ICustomWindow } from '@home/interfaces';
 
-function getWindow (): Window | null {
+function getWindow(): Window | null {
   return typeof window !== 'undefined' ? window : null;
 }
 

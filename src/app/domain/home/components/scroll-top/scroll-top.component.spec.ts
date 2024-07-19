@@ -25,31 +25,35 @@ describe('ScrollTopComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('validate visible class', () => {
-    const element: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.scroll-top-container')
-    ).nativeElement;
+  describe('Validate dom elements', () => {
+    it('should have a visible class', () => {
+      const element: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.scroll-top-container')
+      ).nativeElement;
 
-    expect(element.getAttribute('class')).toContain('visible');
-  });
-
-  it('validate click on scroll top button', () => {
-    component.scrollToTop.subscribe((value: string) => {
-      expect(value).toEqual('aboutSection');
+      expect(element.getAttribute('class')).toContain('visible');
     });
 
-    const element: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.scroll-top-button')
-    ).nativeElement;
+    it('should emit scroll to top event', () => {
+      component.scrollToTop.subscribe((value: string) => {
+        expect(value).toEqual('aboutSection');
+      });
 
-    element.click();
+      const element: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.scroll-top-button')
+      ).nativeElement;
+
+      element.click();
+    });
   });
 
-  it('Validate navigateToTop method', () => {
-    component.scrollToTop.subscribe((value: string) => {
-      expect(value).toEqual('aboutSection');
-    });
+  describe('Validate navigateToTop method', () => {
+    it('should emit scroll to top event', () => {
+      component.scrollToTop.subscribe((value: string) => {
+        expect(value).toEqual('aboutSection');
+      });
 
-    component.navigateToTop();
+      component.navigateToTop();
+    });
   });
 });

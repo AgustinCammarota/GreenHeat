@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { signal } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { By } from '@angular/platform-browser';
@@ -28,49 +28,70 @@ describe('CarouselComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('validate number of slides in the carousel', () => {
-    const elements = fixture.debugElement.queryAll(
-        By.css('.slide-container')
-    );
+  describe('Validate dom elements', () => {
+    it('should have five slide container', () => {
+      const elements = fixture.debugElement.queryAll(
+          By.css('.slide-container')
+      );
 
-    expect(elements.length).toEqual(5);
+      expect(elements.length).toEqual(5);
+    });
+
+    it('should increase currentIndex when click button action right', () => {
+      component.currentIndex.set(3);
+
+      const element: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.action-right')
+      ).nativeElement;
+
+      element.click();
+
+      expect(component.currentIndex()).toEqual(4);
+    });
+
+    it('should decrease currentIndex when click button action left', () => {
+      component.currentIndex.set(3);
+
+      const element: HTMLParagraphElement = fixture.debugElement.query(
+          By.css('.action-left')
+      ).nativeElement;
+
+      element.click();
+
+      expect(component.currentIndex()).toEqual(2);
+    });
   });
 
-  it('validate click on button action right', () => {
-    component.currentIndex.set(3);
+  describe('Validate onPreviousClick method', () => {
+    it('should decrease currentIndex', () => {
+      component.currentIndex.set(0);
 
-    const element: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.action-right')
-    ).nativeElement;
-
-    element.click();
-
-    expect(component.currentIndex()).toEqual(4);
+      component.onPreviousClick();
+      expect(component.currentIndex()).toEqual(4);
+    });
   });
 
-  it('validate click on button action left', () => {
-    component.currentIndex.set(3);
+  describe('Validate onNextClick method', () => {
+    it('should increase currentIndex', () => {
+      component.currentIndex.set(4);
 
-    const element: HTMLParagraphElement = fixture.debugElement.query(
-        By.css('.action-left')
-    ).nativeElement;
+      component.onNextClick();
+      expect(component.currentIndex()).toEqual(0);
+    });
 
-    element.click();
+    it('should emit values in intervals of time', fakeAsync( ()=> {
+      expect(component.currentIndex()).toEqual(0);
 
-    expect(component.currentIndex()).toEqual(2);
-  });
+      component.onNextClick();
+      fixture.detectChanges();
 
-  it('validate onPreviousClick method', () => {
-    component.currentIndex.set(0);
+      expect(component.currentIndex()).toEqual(1);
 
-    component.onPreviousClick();
-    expect(component.currentIndex()).toEqual(4);
-  });
+      tick(6000);
+      fixture.detectChanges();
 
-  it('validate onNextClick method', () => {
-    component.currentIndex.set(4);
-
-    component.onNextClick();
-    expect(component.currentIndex()).toEqual(0);
+      expect(component.currentIndex()).toEqual(2);
+      component.ngOnDestroy();
+    }));
   });
 });

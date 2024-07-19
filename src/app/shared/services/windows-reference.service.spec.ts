@@ -13,4 +13,8 @@ describe('WindowsReferenceService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('Validate windows getter', () => {
+    expect(service.nativeWindow).toBe(window);
+  });
 });
