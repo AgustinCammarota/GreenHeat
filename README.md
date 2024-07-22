@@ -43,6 +43,7 @@ Tecnologías necesarias:
     "build": "ng build && node scripts/copy-proxy-server.js && node scripts/move-server-directory.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "e2e": "ng e2e",
     "serve:ssr:green-heat": "node dist/green-heat/proxy-server.mjs",
     "extract:locales": "ng extract-i18n --output-path src/locale",
     "lint": "ng lint",
@@ -70,6 +71,10 @@ Run `npm run build:localize` to build the project with localize. The build artif
 ## Running unit tests
 
 Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running unit tests
+
+Run `npm run e2e` to execute the e2e tests via [Puppeteer](https://github.com/puppeteer/puppeteer).
 
 ## Running end-to-end tests
 
@@ -142,7 +147,9 @@ Run `npm run serve:ssr:green-heat` to execute the production server. Firsts it i
         "stylelint": "^16.6.1",
         "stylelint-config-sass-guidelines": "^11.1.0",
         "stylelint-scss": "^6.3.0",
-        "typescript": "~5.4.5"
+        "typescript": "~5.4.5",
+        "puppeteer": "22.13.1",
+        "jasmine": "5.2.0"
 
 ## Autor/es
 ---

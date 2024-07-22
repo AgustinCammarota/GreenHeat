@@ -123,6 +123,7 @@
 &quot;build&quot;: &quot;ng build &amp;&amp; node scripts/copy-proxy-server.js &amp;&amp; node scripts/move-server-directory.js&quot;,
 &quot;watch&quot;: &quot;ng build --watch --configuration development&quot;,
 &quot;test&quot;: &quot;ng test&quot;,
+&quot;e2e&quot;: &quot;ng e2e&quot;,
 &quot;serve:ssr:green-heat&quot;: &quot;node dist/green-heat/proxy-server.mjs&quot;,
 &quot;extract:locales&quot;: &quot;ng extract-i18n --output-path src/locale&quot;,
 &quot;lint&quot;: &quot;ng lint&quot;,
@@ -139,6 +140,8 @@
 <p>Run <code>npm run build:localize</code> to build the project with localize. The build artifacts will be stored in the <code>dist/</code> directory.</p>
 <h2>Running unit tests</h2>
 <p>Run <code>npm run test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
+<h2>Running unit tests</h2>
+<p>Run <code>npm run e2e</code> to execute the e2e tests via <a href="https://github.com/puppeteer/puppeteer">Puppeteer</a>.</p>
 <h2>Running end-to-end tests</h2>
 <p>Run <code>npm run e2e</code> to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.</p>
 <h2>Running lint component</h2>
@@ -197,7 +200,9 @@
     &quot;stylelint&quot;: &quot;^16.6.1&quot;,
     &quot;stylelint-config-sass-guidelines&quot;: &quot;^11.1.0&quot;,
     &quot;stylelint-scss&quot;: &quot;^6.3.0&quot;,
-    &quot;typescript&quot;: &quot;~5.4.5&quot;</code></pre></div><h2>Autor/es</h2>
+    &quot;typescript&quot;: &quot;~5.4.5&quot;,
+    &quot;puppeteer&quot;: &quot;22.13.1&quot;,
+    &quot;jasmine&quot;: &quot;5.2.0&quot;</code></pre></div><h2>Autor/es</h2>
 <hr>
 <p>Agustin Cammarota Muti - <a href="mailto:agustincammarota@hotmail.com">agustincammarota@hotmail.com</a> </p>
 <h2>Further help</h2>
