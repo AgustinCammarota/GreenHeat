@@ -52,17 +52,12 @@
   .author-section {
     width: 100%;
     height: auto;
-    margin-top: 24px;
-    border-top: 1px solid vars.$primary-white;
-
-    // Tablet and mobile media query
-    @media only screen and (max-width: vars.$desktop) {
-      margin-top: 16px;
-    }
+    margin-top: 32px;
 
     .author-section__text {
       color: vars.$primary-white;
       margin-bottom: 0;
+      font-size: 0.8rem;
 
       span {
         border-bottom: 1px solid vars.$primary-white;
