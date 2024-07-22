@@ -10,6 +10,7 @@
     "build:localize": "ng build --localize && node scripts/copy-proxy-server.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "e2e": "ng e2e",
     "serve:ssr:green-heat": "node dist/green-heat/proxy-server.mjs",
     "extract:locales": "ng extract-i18n --output-path src/locale",
     "lint": "ng lint",
@@ -46,6 +47,7 @@
     "@angular/compiler-cli": "^18.0.1",
     "@angular/localize": "^18.0.1",
     "@compodoc/compodoc": "^1.1.25",
+    "@puppeteer/ng-schematics": "^0.6.1",
     "@types/express": "^4.17.21",
     "@types/jasmine": "~5.1.4",
     "@types/node": "^20.13.0",
@@ -63,6 +65,8 @@
     "stylelint": "^16.6.1",
     "stylelint-config-sass-guidelines": "^11.1.0",
     "stylelint-scss": "^6.3.0",
-    "typescript": "~5.4.5"
+    "typescript": "~5.4.5",
+    "puppeteer": "22.13.1",
+    "jasmine": "5.2.0"
   }
 }

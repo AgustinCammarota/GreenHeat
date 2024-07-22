@@ -162,6 +162,19 @@
               "src/**/*.html"
             ]
           }
+        },
+        "e2e": {
+          "builder": "@puppeteer/ng-schematics:puppeteer",
+          "options": {
+            "devServerTarget": "GreenHeat:serve",
+            "testRunner": "jasmine",
+            "port": 8080
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "GreenHeat:serve:production"
+            }
+          }
         }
       }
     }
