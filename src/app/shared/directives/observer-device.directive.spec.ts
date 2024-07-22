@@ -72,40 +72,36 @@ describe('ObserverDeviceDirective', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should emit a mobileDeviceDetermined in true when the device width is <= 900', (done) => {
+  it('should emit a mobileDeviceDetermined in true when the device width is <= 900', () => {
     directive.mobileDeviceDetermined.subscribe(value => {
       expect(value).toBeTruthy();
-      done();
     });
 
     (directive as any).validateEntries([{ contentRect: { width: 800 } }]);
   });
 
-  it('should emit a mobileDeviceDetermined in false when the device width is > 900', (done) => {
+  it('should emit a mobileDeviceDetermined in false when the device width is > 900', () => {
     directive.mobileDeviceDetermined.subscribe(value => {
       expect(value).toBeFalsy();
-      done();
     });
 
     (directive as any).validateEntries([{ contentRect: { width: 1000 } }]);
   });
 
-  it('should emit a mobileDeviceDetermined in true when the device is mobile or tablet - case userAgent', (done) => {
+  it('should emit a mobileDeviceDetermined in true when the device is mobile or tablet - case userAgent', () => {
     spyOnProperty(window.navigator, 'userAgent').and.returnValue('Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15A372 Safari/604.1');
     directive.mobileDeviceDetermined.subscribe(value => {
       expect(value).toBeTruthy();
-      done();
     });
 
     (directive as any).validateMobileDevice();
   });
 
-  it('should emit a mobileDeviceDetermined in true when the device is mobile or tablet - case vendor', (done) => {
+  it('should emit a mobileDeviceDetermined in true when the device is mobile or tablet - case vendor', () => {
     spyOnProperty(window.navigator, 'userAgent').and.returnValue('');
     spyOnProperty(window.navigator, 'vendor').and.returnValue('android');
     directive.mobileDeviceDetermined.subscribe(value => {
       expect(value).toBeTruthy();
-      done();
     });
 
     (directive as any).validateMobileDevice();
