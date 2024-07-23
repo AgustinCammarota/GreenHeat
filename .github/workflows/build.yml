@@ -18,6 +18,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 20 ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -28,9 +31,8 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.3
         with:
-          node-version: 20.11.1
-          node-version-file: package.json
-          cache: npm
+          node-version: $
+          cache: 'npm'
           cache-dependency-path: package-lock.json
 
       # Runs a set of commands using the runners shell
