@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "start:en": "ng serve --configuration=en",
-    "build": "ng build --prod && node scripts/copy-proxy-server.js",
+    "build": "ng build && node scripts/copy-proxy-server.js",
     "build:sourcemap": "ng build --source-map",
     "build:localize": "ng build --localize && node scripts/copy-proxy-server.js",
     "watch": "ng build --watch --configuration development",
