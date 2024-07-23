@@ -32,8 +32,6 @@ jobs:
         uses: actions/setup-node@v4.0.3
         with:
           node-version: 20.11.1
-          cache: 'npm'
-          cache-dependency-path: package-lock.json
 
       # Runs a set of commands using the runners shell
       - name: Install dependencies
