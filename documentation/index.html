@@ -122,7 +122,7 @@
 &quot;start:en&quot;: &quot;ng serve --configuration=en&quot;,
 &quot;build&quot;: &quot;ng build &amp;&amp; node scripts/copy-proxy-server.js &amp;&amp; node scripts/move-server-directory.js&quot;,
 &quot;watch&quot;: &quot;ng build --watch --configuration development&quot;,
-&quot;test&quot;: &quot;ng test&quot;,
+&quot;test&quot;: &quot;ng test --no-watch --no-progress --browsers=ChromeHeadless&quot;,
 &quot;e2e&quot;: &quot;ng e2e&quot;,
 &quot;serve:ssr:green-heat&quot;: &quot;node dist/green-heat/proxy-server.mjs&quot;,
 &quot;extract:locales&quot;: &quot;ng extract-i18n --output-path src/locale&quot;,

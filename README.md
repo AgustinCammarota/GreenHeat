@@ -42,7 +42,7 @@ Tecnologías necesarias:
     "start:en": "ng serve --configuration=en",
     "build": "ng build && node scripts/copy-proxy-server.js && node scripts/move-server-directory.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
     "e2e": "ng e2e",
     "serve:ssr:green-heat": "node dist/green-heat/proxy-server.mjs",
     "extract:locales": "ng extract-i18n --output-path src/locale",
