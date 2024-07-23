@@ -31,7 +31,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.3
         with:
-          node-version: $
+          node-version: 20.11.1
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
