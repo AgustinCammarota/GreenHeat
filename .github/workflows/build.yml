@@ -33,6 +33,17 @@ jobs:
         with:
           node-version: 20.11.1
 
+      # Runs cache node modules
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.npm
+            !~/.npm/_logs
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       # Runs a set of commands using the runners shell
       - name: Install dependencies
         run: npm i
