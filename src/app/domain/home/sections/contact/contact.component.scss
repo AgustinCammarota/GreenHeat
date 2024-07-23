@@ -6,11 +6,15 @@
   width: 100%;
   height: 100%;
   max-width: 1600px;
-  padding: 16px;
   margin: 0 auto;
   box-sizing: border-box;
   overflow: hidden;
-  background-color: vars.$tertiary-green;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(78,114,31,1) 50%, rgba(78,114,31,1) 100%);
+
+  // Tablet and mobile media query
+  @media only screen and (max-width: vars.$desktop) {
+    background: vars.$tertiary-green;
+  }
 
   .contact-section {
     width: 100%;
@@ -21,26 +25,31 @@
     @media only screen and (max-width: vars.$desktop) {
       flex-direction: column;
     }
-  }
 
-  .form {
-    width: 50%;
-    height: 400px;
+    .form {
+      width: 50%;
+      height: 400px;
+      box-sizing: border-box;
+      padding: 16px;
 
-    // Tablet and mobile media query
-    @media only screen and (max-width: vars.$desktop) {
-      width: 100%;
+      // Tablet and mobile media query
+      @media only screen and (max-width: vars.$desktop) {
+        background-color: vars.$primary-white;
+        width: 100%;
+      }
     }
   }
 
   .information {
     width: 50%;
     height: 400px;
+    @include mixins.flexbox(center, start);
 
     // Tablet and mobile media query
     @media only screen and (max-width: vars.$desktop) {
       width: 100%;
       height: 200px;
+      background-color: vars.$tertiary-green;
     }
 
     // Mobile media query
@@ -50,17 +59,29 @@
   }
 
   .author-section {
-    width: 100%;
+    width: 50%;
     height: auto;
-    margin-top: 32px;
+    padding-top: 32px;
+    padding-bottom: 8px;
 
     .author-section__text {
-      color: vars.$primary-white;
-      margin-bottom: 0;
+      margin: 0;
       font-size: 0.8rem;
 
       span {
-        border-bottom: 1px solid vars.$primary-white;
+        border-bottom: 1px solid;
+      }
+    }
+
+    // Tablet and mobile media query
+    @media only screen and (max-width: vars.$desktop) {
+      width: 100%;
+      color: vars.$primary-white;
+
+      .author-section__text {
+        span {
+          border-bottom: 1px solid vars.$primary-white;
+        }
       }
     }
   }
