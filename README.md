@@ -130,6 +130,7 @@ Run `npm run serve:ssr:green-heat` to execute the production server. Firsts it i
         "@angular/cli": "^18.0.2",
         "@angular/compiler-cli": "^18.0.1",
         "@angular/localize": "^18.0.1",
+        "@axe-core/puppeteer": "^4.9.1",
         "@compodoc/compodoc": "^1.1.25",
         "@types/express": "^4.17.21",
         "@types/jasmine": "~5.1.4",
