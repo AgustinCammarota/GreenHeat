@@ -1,5 +1,6 @@
 # This is a basic workflow to update angular version
 name: Update Angular Action
+run-name: ¡Update Angular Version!
 
 # Controls when the workflow will run
 on:

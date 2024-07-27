@@ -79,7 +79,14 @@ jobs:
           max_attempts: 3
           command: npm run test
 
-      # 7) Run e2e test
+      # 7) Save coverage
+      - name: Save coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/green-heat/
+
+      # 8) Run e2e test
       - name: Run e2e
         uses: nick-fields/retry@v3
         with:
@@ -87,6 +94,6 @@ jobs:
           max_attempts: 3
           command: npm run e2e
 
-      # 8) Run build
+      # 9) Run build
       - name: Build
         run: npm run build

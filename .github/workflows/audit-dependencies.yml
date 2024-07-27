@@ -1,5 +1,6 @@
 # This is a basic workflow to audit dependencies
 name: Audit Dependencies
+run-name: ¡Audit Dependencies!
 
 # Controls when the workflow will run
 on:
