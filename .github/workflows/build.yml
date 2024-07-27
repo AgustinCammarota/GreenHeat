@@ -15,8 +15,12 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+
+
+  # This workflow contains a single job called "extract-locales"
+  extract-locales:
+    # Define a time-out flow
+    timeout-minutes: 15
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -32,6 +36,12 @@ jobs:
         with:
           node-version: 20.11.1
 
+      # Get npm cache directory
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
       # 1) Install dependencies
       - name: Install dependencies
         run: npm i
@@ -40,18 +50,7 @@ jobs:
       - name: Extract locales
         run: npm run extract:locales
 
-      # 3) Generate documentation
-      - name: Generate documentation
-        run: npm run compodoc:build
-
-      # 4) Save documentation
-      - name: Save Documentation
-        uses: actions/upload-artifact@v4
-        with:
-          name: documentation
-          path: documentation/
-
-      # 5) Check for changes, commit and push
+      # 3) Check for changes, commit and push
       - name: Check for changes and commit
         if: github.actor != 'github-actions[bot]'
         run: |
@@ -59,15 +58,128 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           if [ -n "$(git status --porcelain)" ]; then
             git add .
-            git commit -m "Auto-commit: Update locales and documentation"
+            git commit -m "Auto-commit: Update locales"
             git push || { echo 'Merge conflict or other error detected. Failing the job.'; exit 1; }
           fi
 
-      # 6) Run linters
+
+  # This workflow contains a single job called "generate-documentation"
+  generate-documentation:
+    # Define a time-out flow
+    timeout-minutes: 15
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Runs a setup node environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 20.11.1
+
+      # Get npm cache directory
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      # 1) Install dependencies
+      - name: Install dependencies
+        run: npm i
+
+      # 2) Generate documentation
+      - name: Generate documentation
+        run: npm run compodoc:build
+
+      # 3) Check for changes, commit and push
+      - name: Check for changes and commit
+        if: github.actor != 'github-actions[bot]'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Auto-commit: Update documentation"
+            git push || { echo 'Merge conflict or other error detected. Failing the job.'; exit 1; }
+          fi
+
+      # 4) Deploy artifact documentation
+      - name: Deploy artifact documentation
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation
+          path: documentation/
+
+
+  # This workflow contains a single job called "linter"
+  linter:
+    # Define a time-out flow
+    timeout-minutes: 15
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Runs a setup node environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 20.11.1
+
+      # Get npm cache directory
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      # 1) Install dependencies
+      - name: Install dependencies
+        run: npm i
+
+      # 2) Run linters
       - name: Run linter
         run: npm run lint && npm run lint:styles
 
-      # 7) Run unit test
+
+  # This workflow contains a single job called "unit-test"
+  unit-test:
+    # Define a time-out flow
+    timeout-minutes: 15
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Runs a setup node environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 20.11.1
+
+      # Get npm cache directory
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      # 1) Install dependencies
+      - name: Install dependencies
+        run: npm i
+
+      # 2) Run unit test
       - name: Run test
         uses: nick-fields/retry@v3
         with:
@@ -75,14 +187,44 @@ jobs:
           max_attempts: 3
           command: npm run test
 
-      # 8) Save coverage
-      - name: Save coverage
+      # 3) Deploy artifact coverage
+      - name: Deploy artifact coverage
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: coverage/green-heat/
 
-      # 9) Run e2e test
+
+  # This workflow contains a single job called "e2e-test"
+  e2e-test:
+    # Define a time-out flow
+    timeout-minutes: 15
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Runs a setup node environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 20.11.1
+
+      # Get npm cache directory
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      # 1) Install dependencies
+      - name: Install dependencies
+        run: npm i
+
+      # 2) Run e2e test
       - name: Run e2e
         uses: nick-fields/retry@v3
         with:
@@ -90,6 +232,36 @@ jobs:
           max_attempts: 3
           command: npm run e2e
 
-      # 10) Run build
+
+  # This workflow contains a single job called "build"
+  build:
+    # Define a time-out flow
+    timeout-minutes: 15
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Runs a setup node environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 20.11.1
+
+      # Get npm cache directory
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      # 1) Install dependencies
+      - name: Install dependencies
+        run: npm i
+
+      # 2) Run e2e test
       - name: Build
         run: npm run build
