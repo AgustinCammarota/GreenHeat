@@ -2,6 +2,7 @@
 
 <h1 align="center">Green Heat Clima</h1>
 <p align="center"> Green Heat Clima es una empresa dedicada a brindar servicios de asesoramiento, mantenimiento, venta e instalación de productos de calefacción y refrigeración. </p>
+<p><img src="https://api.netlify.com/api/v1/badges/61cce66f-167b-4dba-af85-6d66da2457c8/deploy-status"></p>
 <p align="center"><img src="src/assets/icons/favicon-192x192.png"/></p>
 
 ## Tabla de contenidos:
@@ -42,7 +43,7 @@ Tecnologías necesarias:
     "start:en": "ng serve --configuration=en",
     "build": "ng build && node scripts/copy-proxy-server.js && node scripts/move-server-directory.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
     "e2e": "ng e2e",
     "serve:ssr:green-heat": "node dist/green-heat/proxy-server.mjs",
     "extract:locales": "ng extract-i18n --output-path src/locale",
@@ -129,6 +130,7 @@ Run `npm run serve:ssr:green-heat` to execute the production server. Firsts it i
         "@angular/cli": "^18.0.2",
         "@angular/compiler-cli": "^18.0.1",
         "@angular/localize": "^18.0.1",
+        "@axe-core/puppeteer": "^4.9.1",
         "@compodoc/compodoc": "^1.1.25",
         "@types/express": "^4.17.21",
         "@types/jasmine": "~5.1.4",

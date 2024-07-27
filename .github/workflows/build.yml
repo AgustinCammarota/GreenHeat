@@ -1,0 +1,95 @@
+# This is a basic workflow to build the app
+
+name: Build
+run-name: ¡Build App!
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+  pull_request:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Runs a setup node environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 20.11.1
+
+      # 1) Install dependencies
+      - name: Install dependencies
+        run: npm i
+
+      # 2) Extract locales
+      - name: Extract locales
+        run: npm run extract:locales
+
+      # 3) Generate documentation
+      - name: Generate documentation
+        run: npm run compodoc:build
+
+      # 4) Save documentation
+      - name: Save Documentation
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation
+          path: documentation/
+
+      # 5) Check for changes, commit and push
+      - name: Check for changes and commit
+        if: github.actor != 'github-actions[bot]'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Auto-commit: Update locales and documentation"
+            git push || { echo 'Merge conflict or other error detected. Failing the job.'; exit 1; }
+          fi
+
+      # 6) Run linters
+      - name: Run linter
+        run: npm run lint && npm run lint:styles
+
+      # 7) Run unit test
+      - name: Run test
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          command: npm run test
+
+      # 8) Save coverage
+      - name: Save coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/green-heat/
+
+      # 9) Run e2e test
+      - name: Run e2e
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          command: npm run e2e
+
+      # 10) Run build
+      - name: Build
+        run: npm run build

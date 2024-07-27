@@ -85,6 +85,7 @@
 <h1>Readme</h1>
 <h1 align="center">Green Heat Clima</h1>
 <p align="center"> Green Heat Clima es una empresa dedicada a brindar servicios de asesoramiento, mantenimiento, venta e instalación de productos de calefacción y refrigeración. </p>
+<p><img src="https://api.netlify.com/api/v1/badges/61cce66f-167b-4dba-af85-6d66da2457c8/deploy-status"></p>
 <p align="center"><img src="src/assets/icons/favicon-192x192.png"/></p>
 
 <h2>Tabla de contenidos:</h2>
@@ -122,7 +123,7 @@
 &quot;start:en&quot;: &quot;ng serve --configuration=en&quot;,
 &quot;build&quot;: &quot;ng build &amp;&amp; node scripts/copy-proxy-server.js &amp;&amp; node scripts/move-server-directory.js&quot;,
 &quot;watch&quot;: &quot;ng build --watch --configuration development&quot;,
-&quot;test&quot;: &quot;ng test&quot;,
+&quot;test&quot;: &quot;ng test --no-watch --no-progress --browsers=ChromeHeadless&quot;,
 &quot;e2e&quot;: &quot;ng e2e&quot;,
 &quot;serve:ssr:green-heat&quot;: &quot;node dist/green-heat/proxy-server.mjs&quot;,
 &quot;extract:locales&quot;: &quot;ng extract-i18n --output-path src/locale&quot;,
@@ -182,6 +183,7 @@
     &quot;&#64;angular/cli&quot;: &quot;^18.0.2&quot;,
     &quot;&#64;angular/compiler-cli&quot;: &quot;^18.0.1&quot;,
     &quot;&#64;angular/localize&quot;: &quot;^18.0.1&quot;,
+    &quot;&#64;axe-core/puppeteer&quot;: &quot;^4.9.1&quot;,
     &quot;&#64;compodoc/compodoc&quot;: &quot;^1.1.25&quot;,
     &quot;&#64;types/express&quot;: &quot;^4.17.21&quot;,
     &quot;&#64;types/jasmine&quot;: &quot;~5.1.4&quot;,

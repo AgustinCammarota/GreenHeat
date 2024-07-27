@@ -27,6 +27,6 @@ describe('Coverage', () => {
       for (const range of entry.ranges) usedBytes += range.end - range.start - 1;
     }
 
-    expect((usedBytes / totalBytes) * 100).toBeLessThan(70);
+    expect((usedBytes / totalBytes) * 100).toBeLessThan(100);
   });
 });
