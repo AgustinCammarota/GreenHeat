@@ -32,17 +32,6 @@ jobs:
         with:
           node-version: 20.11.1
 
-      # Runs cache node modules
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.npm
-            !~/.npm/_logs
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
       # 1) Install dependencies
       - name: Install dependencies
         run: npm i
@@ -55,7 +44,14 @@ jobs:
       - name: Generate documentation
         run: npm run compodoc:build
 
-      # 4) Check for changes, commit and push
+      # 4) Save documentation
+      - name: Save Documentation
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentation
+          path: documentation/
+
+      # 5) Check for changes, commit and push
       - name: Check for changes and commit
         if: github.actor != 'github-actions[bot]'
         run: |
@@ -67,11 +63,11 @@ jobs:
             git push || { echo 'Merge conflict or other error detected. Failing the job.'; exit 1; }
           fi
 
-      # 5) Run linters
+      # 6) Run linters
       - name: Run linter
         run: npm run lint && npm run lint:styles
 
-      # 6) Run unit test
+      # 7) Run unit test
       - name: Run test
         uses: nick-fields/retry@v3
         with:
@@ -79,14 +75,14 @@ jobs:
           max_attempts: 3
           command: npm run test
 
-      # 7) Save coverage
+      # 8) Save coverage
       - name: Save coverage
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: coverage/green-heat/
 
-      # 8) Run e2e test
+      # 9) Run e2e test
       - name: Run e2e
         uses: nick-fields/retry@v3
         with:
@@ -94,6 +90,6 @@ jobs:
           max_attempts: 3
           command: npm run e2e
 
-      # 9) Run build
+      # 10) Run build
       - name: Build
         run: npm run build
