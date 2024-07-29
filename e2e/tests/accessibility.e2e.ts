@@ -12,7 +12,6 @@ describe('Accessibility', () => {
     await page.reload();
 
     const result = await new AxePuppeteer(page).analyze();
-    console.log(result.violations);
     expect(result.violations.length).toBeLessThan(2);
   }, 50000);
 });
