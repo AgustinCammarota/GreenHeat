@@ -1,12 +1,12 @@
 {
   "name": "green-heat",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "start:en": "ng serve --configuration=en",
     "build": "ng build && node scripts/copy-proxy-server.js",
-    "build:sourcemap": "ng build --source-map",
+    "build:sourcemap": "ng build --source-map && node_modules/.bin/source-map-explorer 'dist/green-heat/browser/main*.js'",
     "build:localize": "ng build --localize && node scripts/copy-proxy-server.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
